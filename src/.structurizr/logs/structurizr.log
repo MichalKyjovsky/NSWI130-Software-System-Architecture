@@ -23,3 +23,32 @@
 2021-10-29 17:25:51,469 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The destination element "driversRegistry" does not exist at line 46: hospitalBuildingMaintanance -> driversRegistry "Harvests metadata records from"
 2021-10-29 17:25:51,474 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The destination element "driversRegistry" does not exist at line 46: hospitalBuildingMaintanance -> driversRegistry "Harvests metadata records from"
 2021-10-29 17:26:22,388 WARN  [View] There is no layout information for the element named Devices Registry on view hospitalBuildingMaintananceContainerDiagram
+2021-10-29 17:44:12,917 WARN  [View] There is no layout information for the element named Device on view hospitalBuildingMaintananceSystemContextDiagram
+2021-10-29 17:44:12,918 WARN  [View] There is no layout information for the element named Device on view hospitalBuildingMaintananceContainerDiagram
+2021-10-29 17:50:59,823 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The destination element "recordStorage" does not exist at line 60: server -> recordStorage "Uses for fast retrieval of metadata records details"
+2021-10-29 17:50:59,823 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The destination element "recordStorage" does not exist at line 60: server -> recordStorage "Uses for fast retrieval of metadata records details"
+2021-10-29 17:51:17,486 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The destination element "recordStorage" does not exist at line 88: recordDetailGateway -> recordStorage "Provides access to"
+2021-10-29 17:51:17,486 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The destination element "recordStorage" does not exist at line 88: recordDetailGateway -> recordStorage "Provides access to"
+2021-10-29 17:51:36,425 WARN  [PageNotFound] No mapping found for HTTP request with URI [/error] in DispatcherServlet with name 'root'
+2021-10-29 17:51:36,456 WARN  [PageNotFound] Request method 'POST' not supported
+2021-10-29 17:53:40,793 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: Unexpected tokens at line 39: device = component "Device" "A device that is subject to the HBMS" "Consumer"
+2021-10-29 17:53:40,793 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: Unexpected tokens at line 39: device = component "Device" "A device that is subject to the HBMS" "Consumer"
+2021-10-29 17:53:45,760 WARN  [PageNotFound] No mapping found for HTTP request with URI [/error] in DispatcherServlet with name 'root'
+2021-10-29 17:53:45,761 WARN  [PageNotFound] Request method 'POST' not supported
+2021-10-29 17:53:59,070 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: Unexpected tokens at line 39: device = component "Device" "A device that is subject to the HBMS" "Component"
+2021-10-29 17:53:59,070 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: Unexpected tokens at line 39: device = component "Device" "A device that is subject to the HBMS" "Component"
+2021-10-29 17:54:10,346 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The identifier "device" is already in use at line 39: device = person "Device" "A device that is subject to the HBMS" "Consumer"
+2021-10-29 17:54:10,346 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The identifier "device" is already in use at line 39: device = person "Device" "A device that is subject to the HBMS" "Consumer"
+2021-10-29 17:54:19,061 WARN  [PageNotFound] No mapping found for HTTP request with URI [/error] in DispatcherServlet with name 'root'
+2021-10-29 17:54:19,062 WARN  [PageNotFound] Request method 'POST' not supported
+2021-10-29 17:54:20,417 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The identifier "device" is already in use at line 39: device = person "Device" "A device that is subject to the HBMS" "Consumer"
+2021-10-29 17:54:20,417 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The identifier "device" is already in use at line 39: device = person "Device" "A device that is subject to the HBMS" "Consumer"
+2021-10-29 17:54:51,522 WARN  [PageNotFound] No mapping found for HTTP request with URI [/error] in DispatcherServlet with name 'root'
+2021-10-29 17:54:51,524 WARN  [PageNotFound] Request method 'POST' not supported
+2021-10-29 17:54:52,871 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The destination element "recordIndex" does not exist at line 59: server -> recordIndex "Uses for fast retrieval of metadata records lists"
+2021-10-29 17:54:52,871 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The destination element "recordIndex" does not exist at line 59: server -> recordIndex "Uses for fast retrieval of metadata records lists"
+2021-10-29 17:55:23,968 WARN  [PageNotFound] No mapping found for HTTP request with URI [/error] in DispatcherServlet with name 'root'
+2021-10-29 17:55:23,971 WARN  [PageNotFound] Request method 'POST' not supported
+2021-10-29 17:59:36,774 INFO  [ContextLoaderListener] ********************************************************
+2021-10-29 17:59:36,775 INFO  [ContextLoaderListener]  Stopping Structurizr Lite
+2021-10-29 17:59:36,775 INFO  [ContextLoaderListener] ********************************************************
