@@ -1,0 +1,25 @@
+2021-10-29 16:20:30,416 INFO  [ContextLoaderListener] ***********************************************************************************
+2021-10-29 16:20:30,416 INFO  [ContextLoaderListener]    _____ _                   _              _          
+2021-10-29 16:20:30,416 INFO  [ContextLoaderListener]   / ____| |                 | |            (_)         
+2021-10-29 16:20:30,416 INFO  [ContextLoaderListener]  | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ _ _____ __ 
+2021-10-29 16:20:30,417 INFO  [ContextLoaderListener]   \___ \| __| '__| | | |/ __| __| | | | '__| |_  / '__|
+2021-10-29 16:20:30,417 INFO  [ContextLoaderListener]   ____) | |_| |  | |_| | (__| |_| |_| | |  | |/ /| |   
+2021-10-29 16:20:30,417 INFO  [ContextLoaderListener]  |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  |_/___|_|   
+2021-10-29 16:20:30,417 INFO  [ContextLoaderListener]                                                        
+2021-10-29 16:20:30,417 INFO  [ContextLoaderListener]  Structurizr Lite
+2021-10-29 16:20:30,418 INFO  [ContextLoaderListener]  Build: 2544
+2021-10-29 16:20:30,419 INFO  [ContextLoaderListener]  Built: 2021-10-18T18:38:30Z
+2021-10-29 16:20:30,439 INFO  [ContextLoaderListener]  Structurizr DSL: v1.16.0
+2021-10-29 16:20:30,439 INFO  [ContextLoaderListener] 
+2021-10-29 16:20:30,439 INFO  [ContextLoaderListener]  Memory: used=101MB; free=154MB; total=256MB; max=256MB
+2021-10-29 16:20:30,439 INFO  [ContextLoaderListener] ***********************************************************************************
+2021-10-29 16:45:48,709 WARN  [View] There is no layout information for the element named Index of all hospital's devices drivers on view hospitalBuildingMaintananceSystemContextDiagram
+2021-10-29 16:55:48,717 WARN  [View] There is no layout information for the element named Regular User on view hospitalBuildingMaintananceContainerDiagram
+2021-10-29 16:55:48,717 WARN  [View] There is no layout information for the element named Administrator on view hospitalBuildingMaintananceContainerDiagram
+2021-10-29 17:06:52,266 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The source element "harvestor" does not exist at line 59: harvestor -> hospitalEmployeeDatabase "Harvests metadata records from"
+2021-10-29 17:06:52,267 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The source element "harvestor" does not exist at line 59: harvestor -> hospitalEmployeeDatabase "Harvests metadata records from"
+2021-10-29 17:25:25,808 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: A container named 'Data Manager' already exists for this software system at line 24: deviceDataManager = container "Data Manager" "Manages data about the users and devices." "DeviceDataManager"
+2021-10-29 17:25:25,809 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: A container named 'Data Manager' already exists for this software system at line 24: deviceDataManager = container "Data Manager" "Manages data about the users and devices." "DeviceDataManager"
+2021-10-29 17:25:51,469 ERROR [FileSystemWorkspaceComponent] com.structurizr.dsl.StructurizrDslParserException: The destination element "driversRegistry" does not exist at line 46: hospitalBuildingMaintanance -> driversRegistry "Harvests metadata records from"
+2021-10-29 17:25:51,474 ERROR [ApiController] com.structurizr.lite.web.ApiException: workspace.dsl: The destination element "driversRegistry" does not exist at line 46: hospitalBuildingMaintanance -> driversRegistry "Harvests metadata records from"
+2021-10-29 17:26:22,388 WARN  [View] There is no layout information for the element named Devices Registry on view hospitalBuildingMaintananceContainerDiagram
