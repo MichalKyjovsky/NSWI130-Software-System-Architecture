@@ -49,7 +49,7 @@ Each room/section has an associated collection of **states** of each of the devi
    -  We can expect outer services that could help our purposes yet are out of the scope of this project
    -  The architecture should be moreover universal for Web/Mobile platforms (This could be tricky since web-servers, reverse-proxies, or monitoring won't be present on the mobile device - depends - to be discussed)
    -  Consider the physical/manual interaction with the devices simultaneously with the automated one - prepare precedence behavior/fallback strategies
-  
+
 
 #### Non-Functional Requirements
 
@@ -66,3 +66,44 @@ All architectonical decisions that consider the points listed above must be docu
 ### Output
 
 The C4 Model diagram on the first three levels of the abstraction with the detailed component description and the architectonical decisions that have been made.
+
+### Stakeholders
+
+- hospital employees working with the devices connected to the system
+  - doctors, maintenance workers, ...
+- hospital owner
+- hospital CEO (head of the hospital)
+- investors (relevant especially for private hospitals)
+- developers
+
+#### Concerns
+
+##### Employees
+
+- intuitive user interface
+- accessibility (the system shouldn't crash in case of power outage, it should have a backup server)
+- scalability, multi-platform usage (delivered as both web and mobile application, compatible with all widely used operating systems - Windows, Linux, Mac, Android, iOS)
+- safety (regarding user data protection)
+- support service (technical, quick response if an error occurs)
+- backlog (information storage for monitoring of performed operations, including names of the operators, for easier issue tracking)
+- safety handling (the manual control should be preferred over the remote control, system's security policy should prevent unauthorized users from manipulating with the devices)
+
+##### Owner
+
+- reliability, safety
+- reasonable price (for both system's setup and its maintenance, especially the maintenance as it's the long-term cost)
+- scalability (possibility to add new features in the future)
+- external security service
+- modern and well-documented (the employees might not be willing to work with a system that is too complex or obsolete)
+
+##### Developers
+
+- convenient maintenance (the system should be built on modern technologies with solid documentation, support and community)
+
+- well-documented API, code examples for different use cases
+- continuous integration, automatization, tests (unit tests, integration tests)
+- best code practices (readable code, suitable design patterns)
+- code reviews (from other developers, testers)
+- clear specification of new features
+- precisely maintained issue tracker
+
