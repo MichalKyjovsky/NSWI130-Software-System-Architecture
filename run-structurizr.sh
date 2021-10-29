@@ -1,1 +1,1 @@
-docker run -it --rm -p 8080:8080 -v WORKSPACE_PATH:./src structurizr/lite
+docker run -it --rm -p 8080:8080 -v `pwd`/src:/usr/local/structurizr structurizr/lite
