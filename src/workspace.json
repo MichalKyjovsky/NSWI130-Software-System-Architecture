@@ -1,0 +1,610 @@
+{
+  "id" : 1,
+  "name" : "Public Data Space",
+  "description" : "This workspace documents the architecture of the Public Data Space which enables public institutions in Czechia to share public data among each other in a guaranteed way.",
+  "revision" : 0,
+  "lastModifiedDate" : "2021-10-29T17:57:19Z",
+  "lastModifiedAgent" : "structurizr-web/2544/diagram",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJQdWJsaWMgRGF0YSBTcGFjZSIgIlRoaXMgd29ya3NwYWNlIGRvY3VtZW50cyB0aGUgYXJjaGl0ZWN0dXJlIG9mIHRoZSBQdWJsaWMgRGF0YSBTcGFjZSB3aGljaCBlbmFibGVzIHB1YmxpYyBpbnN0aXR1dGlvbnMgaW4gQ3plY2hpYSB0byBzaGFyZSBwdWJsaWMgZGF0YSBhbW9uZyBlYWNoIG90aGVyIGluIGEgZ3VhcmFudGVlZCB3YXkuIiB7CgogICAgbW9kZWwgewogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSA9IHNvZnR3YXJlU3lzdGVtICJIb3NwaXRhbCBCdWlsZGluZyBNYWludGFuYW5jZSBTeXN0ZW0gKEhCTVMpIiAiTWFuYWdlcyBhbmQgc2NoZWR1bGVzIGJ1aWxkaW5nIG1haW50YW5hbmNlIGRldmljZXMgYWNjcm9zcyB0aGUgaG9zcGl0YWwgc2VjdG9ycy4iICB7CiAgICAgICAgICAgIHdlYkZyb250ZW5kID0gY29udGFpbmVyICJIQk1TIFdlYiBGcm9udC1lbmQiICJQcm92aWRlcyBhbGwgZnVuY3Rpb25hbGl0eSBmb3IgYWxsIGRldmljZXMgc2NoZWR1bGxpbmcsIG1hbmFnZW1lbnQgYW5kIG1vbml0b3JpbmciICB7CgogICAgICAgICAgICB9CiAgICAgICAgICAgIHNlcnZlciA9IGNvbnRhaW5lciAiKEhCTVMpIFNlcnZlciIgIkltcGxlbWVudHMgbG9naWMgZm9yIGZ1bmN0aW9uYWxpdHkgb2YgdGhlIHJlZ3VsYXIgZGV2aWNlcyBtYW5hZ2VtZW50LiIgICAgewogICAgICAgICAgICAgICAgbGlzdEFQSSA9IGNvbXBvbmVudCAiUmVjb3JkIExpc3QgQVBJIiAiUHJvdmlkZXMgQVBJIGZvciBnZXR0aW5nIGEgbGlzdCBvZiBtZXRhZGF0YSByZWNvcmRzIGFjY29yZGluZyB0byBzcGVjaWZpZWQgc2VhcmNoIHBhcmFtZXRlcnMgdmlhIGEgSlNPTi9IVFRQUyBBUEkuIgogICAgICAgICAgICAgICAgZGV0YWlsQVBJID0gY29tcG9uZW50ICJSZWNvcmQgRGV0YWlsIEFQSSIgIlByb3ZpZGVzIEFQSSBmb3IgZ2V0dGluZyBhIGRldGFpbCBvZiBhIGdpdmVuIG1ldGFkYXRhIHJlY29yZCB2aWEgYSBKU09OL0hUVFBTIEFQSS4iCiAgICAgICAgICAgICAgICBzZWFyY2hDb250cm9sbGVyID0gY29tcG9uZW50ICJSZWNvcmRzIFNlYXJjaCBDb250cm9sbGVyIiAiSW1wbGVtZW50cyBhbmQgcHJvdmlkZXMgYnVzaW5lc3MgZnVuY3Rpb25hbGl0eSByZWxhdGVkIHRvIHNlYXJjaGluZyBmb3IgbWV0YWRhdGEgcmVjb3JkcyIKICAgICAgICAgICAgICAgIGRldGFpbENvbnRyb2xsZXIgPSBjb21wb25lbnQgIlJlY29yZCBEZXRhaWwgQ29udHJvbGxlciIgIkltcGxlbWVudHMgYW5kIHByb3ZpZGVzIGJ1c2luZXNzIGZ1bmN0aW9uYWxpdHkgcmVsYXRlZCB0byB2aWV3aW5nIGRldGFpbHMgb2YgbWV0YWRhdGEgcmVjb3JkcyIKICAgICAgICAgICAgICAgIGRpc3RyaWJ1dGlvbk1vZGVsID0gY29tcG9uZW50ICJEaXN0cmlidXRpb24gTW9kZWwiICJJbnRlcm5hbCBtb2RlbCBvZiBkaXN0cmlidXRpb24gbWV0YWRhdGEiCiAgICAgICAgICAgICAgICBkYXRhc2V0TW9kZWwgPSBjb21wb25lbnQgIkRhdGFzZXQgTW9kZWwiICJJbnRlcm5hbCBtb2RlbCBvZiBkYXRhc2V0IG1ldGFkYXRhIgogICAgICAgICAgICAgICAgcmVjb3JkSW5kZXhHYXRld2F5ID0gY29tcG9uZW50ICJNZXRhZGF0YSBJbmRleCBHYXRld2F5IiAiUHJvdmlkZXMgYWNjZXNzIHRvIGEgbWV0YWRhdGEgcmVjb3JkcyBpbmRleCIKICAgICAgICAgICAgICAgIHJlY29yZERldGFpbEdhdGV3YXkgPSBjb21wb25lbnQgIk1ldGFkYXRhIERldGFpbCBHYXRld2F5IiAiUHJvdmlkZXMgYWNjZXNzIHRvIGEgbWV0YWRhdGEgcmVjb3JkcyBzdG9yZSIKICAgICAgICAgICAgICAgIGNvZGVMaXN0QWNjZXNzID0gY29tcG9uZW50ICJDb2RlIExpc3QgR2F0ZXdheSIgIlByb3ZpZGVzIGFjY2VzcyB0byBjb2RlIGxpc3RzIGFuZCB0aGVpciBpdGVtcyB2aWEgSFRUUFMgZGVyZWZlcmVuY2luZyBXZWIgSVJJcy4iCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIGRldmljZVVwZGF0ZXIgPSBjb250YWluZXIgIkRldmljZSBVcGRhdGVyIiAiV29ya2VyIHJlc3BvbnNpYmxlIGZvciB0aGUgZmlybXdhcmUgYW5kIGRyaXZlciBtYWludGFuYWNlLiIgIlNvbWUgYmxhY2sgYm94IG1hZ2l4IE1pc28gZGlkIG5vdCBpbnZlbnRlZCB5ZXQuIgogICAgICAgICAgICAKICAgICAgICAgICAgdXNlckRhdGFNYW5hZ2VyID0gY29udGFpbmVyICJVc2VyIERhdGEgTWFuYWdlciIgIk1hbmFnZXMgZGF0YSBhYm91dCB1c2Vycy4iICJVc2VyRGF0YU1hbmFnZXIiCiAgICAgICAgICAgIGRldmljZURhdGFNYW5hZ2VyID0gY29udGFpbmVyICJEZXZpY2UgRGF0YSBNYW5hZ2VyIiAiTWFuYWdlcyBkYXRhIGFib3V0IGRldmljZXMuIiAiRGV2aWNlRGF0YU1hbmFnZXIiCgogICAgICAgICAgICAhZG9jcyBkb2NzCgogICAgICAgIH0KICAgICAgICAjIEhvc3BpdGFsIGVtcGxveWVlcyBnZW5lcmFsIGRhdGFiYXNlIHdpdGggQVBJCiAgICAgICAgaG9zcGl0YWxFbXBsb3llZURhdGFiYXNlID0gc29mdHdhcmVTeXN0ZW0gIkRhdGFiYXNlIG9mIHRoZSBob3NwaXRhbCBlbXBsb3llZXMiICJTdG9yZXMgZGF0YSByZWNvcmRzIGFib3V0IHRoZSBob3NwaXRhbCBlbXBsb3llZXMgYW5kIHByb3ZpZGVzIEFQSSBmb3IgSG9zcGl0YWwgQnVpbGRpbmcgTWFpbnRhbmFjZSBTeXN0ZW0uIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICBkZXZpY2VzUmVnaXN0cnkgPSBzb2Z0d2FyZVN5c3RlbSAiRGV2aWNlcyBSZWdpc3RyeSIgIlN0b3JlcyBhbmQgcHJlc2VudHMgdGhlIHJlY29yZHMgb2YgYWxsIGhvc3BpdGFsIGRldmljZXMuIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICBkcml2ZXJJbmRleCA9IHNvZnR3YXJlU3lzdGVtICJJbmRleCBvZiBhbGwgaG9zcGl0YWwncyBkZXZpY2VzIGRyaXZlcnMiICJBY3R1YWwgZGF0YSBzdG9yYWdlIGluZGV4IHdoZXJlIGFsbCBkcml2ZXJzIGFuZCBmaXJtd2FyZXMgb2YgaG9zcGl0YWwncyBkZXZpY2VzIGFyZSBzdG9yZWQgaW4gdGhlIG1vc3QgcmVjZW50IHZlcnNpb24uIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgIAogICAgICAgIHJlZ3VsYXJVc2VyID0gcGVyc29uICJSZWd1bGFyIFVzZXIiICJBbiBhY3RvciB3aG8gY29uZmlndXJlcyBhbmQgc2NoZWR1bGVzIHRoZSBjbGVhbmluZyBkZXZpY2VzIG9yIHRoZSBidWlsZGluZyBjb21wb25lbnRzICh3aW5kb3dzLCBsaWdodHMsIGFpcmNvbmRpdGlvbikuIiAiQ29uc3VtZXIiCgogICAgICAgIGFkbWluaXN0cmF0b3IgPSBwZXJzb24gIkFkbWluaXN0cmF0b3IiICJBbiBhY3RvciB3aG8gbWFuYWdlcyB0aGUgYnVpbGRpbmcgbWFpbnRhbmFuY2UgZGV2aWNlcyBhbmQgc3VwcG9ydHMuIiAiQ29uc3VtZXIiCgogICAgICAgIGRldmljZSA9IHBlcnNvbiAiRGV2aWNlIiAiQSBkZXZpY2UgdGhhdCBpcyBzdWJqZWN0IHRvIHRoZSBIQk1TIiAiQ29uc3VtZXIiCiAgICAgICAgCgogICAgICAgICMgUmVsYXRpb25zaGlwcyB0by9mcm9tIHNvZnR3YXJlIHN5c3RlbXMgKExldmVsIDEpCiAgICAgICAgcmVndWxhclVzZXIgLT4gaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlICJDb25maWd1cmVzIHRoZSBjbGVhaW5pbmcgZGV2aWNlcyBhbmQgYnVpbGRpbmcgc3lzdGVtcyIKICAgICAgICBhZG1pbmlzdHJhdG9yIC0+IGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAiQ29uZmlndXJlcyB0aGUgZHJpdmVycyBmb3IgdGhlIGNsZWFuaW5nIGRldmljZXMgYW5kIG1hbmFnZXMgYWNjZXNzZXMiCgogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAtPiBob3NwaXRhbEVtcGxveWVlRGF0YWJhc2UgIlVzZXMgaG9zcGl0YWwgZW1wbG95ZWUgcmVjb3JkcyBmcm9tIgogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAtPiBkZXZpY2VzUmVnaXN0cnkgIkhhcnZlc3RzIG1ldGFkYXRhIHJlY29yZHMgZnJvbSIKCiAgICAgICAgaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlIC0+IGRyaXZlckluZGV4ICJGZXRjaGVzIGEgbmV3ZXIgdmVyc2lvbiBvZiB0aGUgZmlybWF3YXJlcyBhbmQgZHJpdmVycyBmcm9tIgogICAgICAgIGRldmljZXNSZWdpc3RyeSAtPiBkcml2ZXJJbmRleCAiSW5kZXhlcyIKICAgICAgICAKICAgICAgICAKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgdG8vZnJvbSBjb250YWluZXJzIChMZXZlbCAyKQogICAgICAgIHJlZ3VsYXJVc2VyIC0+IHdlYkZyb250ZW5kICJDb25maWd1cmVzIHRoZSBjbGVhaW5pbmcgZGV2aWNlcyBhbmQgYnVpbGRpbmcgc3lzdGVtcyIKICAgICAgICBhZG1pbmlzdHJhdG9yIC0+IHdlYkZyb250ZW5kICJDb25maWd1cmVzIHRoZSBkcml2ZXJzIGZvciB0aGUgY2xlYW5pbmcgZGV2aWNlcyBhbmQgbWFuYWdlcyBhY2Nlc3NlcyIKCiAgICAgICAgd2ViRnJvbnRlbmQgLT4gc2VydmVyICJVc2VzIHRvIGRlbGl2ZXIgZnVuY3Rpb25hbGl0eSIKCiAgICAgICAgc2VydmVyIC0+IGRldmljZVVwZGF0ZXIgIlVzZXMgZm9yIGZhc3QgcmV0cmlldmFsIG9mIG1ldGFkYXRhIHJlY29yZHMgbGlzdHMiCiAgICAgICAgCiAgICAgICAgc2VydmVyIC0+IHVzZXJEYXRhTWFuYWdlciAiVXNlcyB0byByZXRyaWV2ZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgdXNlcnMgaW5jbHVkaW5nIHRoZWlyIHN5c3RlbSByb2xlcyBhbmQgcGVybWlzc2lvbnMuIgogICAgICAgIHNlcnZlciAtPiBkZXZpY2VEYXRhTWFuYWdlciAiVXNlcyB0byByZXRyaWV2ZSB0aGUgaW5mb3JtYXRpb24gYWJvdXQgdGhlIGF2YWlsYWJsZSBkZXZpY2VzIGFuZCB0aGVpciBjdXJyZW50IHN0YXRlLiIKCiAgICAgICAgdXNlckRhdGFNYW5hZ2VyIC0+IGhvc3BpdGFsRW1wbG95ZWVEYXRhYmFzZSAiQWNjZXNzZXMgdGhlIGVtcGxveWVlcyBkYXRhYmFzZSAiCiAgICAgICAgZGV2aWNlRGF0YU1hbmFnZXIgLT4gZGV2aWNlc1JlZ2lzdHJ5ICJBY2Nlc3NlcyB0aGUgZGV2aWNlcyBkYXRhYmFzZSAiCiAgICAgICAgZGV2aWNlRGF0YU1hbmFnZXIgLT4gZGV2aWNlICJSZXRyaWV2ZXMgZGV2aWNlIGluZm9ybWF0aW9uIGFuZCBjdXJyZW50IHN0YXR1cyBhbmQgc2VuZHMgcmVxdWVzdHMiCgogICAgICAgIGRldmljZSAtPiBkZXZpY2VEYXRhTWFuYWdlciAiUmV0cmlldmVzIGRldmljZSBpbmZvcm1hdGlvbiBhbmQgY3VycmVudCBzdGF0dXMgYW5kIHNlbmRzIHJlcXVlc3RzIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBjb21wb25lbnRzCiAgICAgICAgd2ViRnJvbnRlbmQgLT4gbGlzdEFQSSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyIKICAgICAgICB3ZWJGcm9udGVuZCAtPiBkZXRhaWxBUEkgIk1ha2VzIEFQSSBjYWxscyB0byIgIkpTT04vSFRUUFMiCgogICAgICAgIGxpc3RBUEkgLT4gc2VhcmNoQ29udHJvbGxlciAiVXNlcyB0byBhY2Nlc3Mgc2VhcmNoIGJ1c2luZXNzIGZ1bmN0aW9uYWxpdHkiCiAgICAgICAgZGV0YWlsQVBJIC0+IGRldGFpbENvbnRyb2xsZXIgIlVzZXMgdG8gYWNjZXNzIGRldGFpbCBidXNpbmVzcyBmdW5jdGlvbmFsaXR5IgoKICAgICAgICBzZWFyY2hDb250cm9sbGVyIC0+IGRhdGFzZXRNb2RlbCAiVXNlcyB0byBhY2Nlc3MgbWV0YWRhdGEgYWJvdXQgZGF0YXNldHMiCiAgICAgICAgZGV0YWlsQ29udHJvbGxlciAtPiBkYXRhc2V0TW9kZWwgIlVzZXMgdG8gYWNjZXNzIG1ldGFkYXRhIGFib3V0IGRhdGFzZXRzIgogICAgICAgIGRldGFpbENvbnRyb2xsZXIgLT4gZGlzdHJpYnV0aW9uTW9kZWwgIlVzZXMgdG8gYWNjZXNzIG1ldGFkYXRhIGFib3V0IGRpc3RyaWJ1dGlvbnMiCgogICAgICAgIGRhdGFzZXRNb2RlbCAtPiByZWNvcmRJbmRleEdhdGV3YXkgIlVzZXMgdG8gcmV0cmlldmUgbGlzdCBvZiBtZXRhZGF0YSByZWNvcmRzIHdpdGggZ2l2ZW4gdmFsdWVzIG9mIHNlbGVjdGVkIHByb3BlcnRpZXMiCiAgICAgICAgZGF0YXNldE1vZGVsIC0+IHJlY29yZERldGFpbEdhdGV3YXkgIlVzZXMgdG8gcmV0cmlldmUgZGV0YWlsZWQgbWV0YWRhdGEiCiAgICAgICAgZGlzdHJpYnV0aW9uTW9kZWwgLT4gcmVjb3JkRGV0YWlsR2F0ZXdheSAiVXNlcyB0byByZXRyaWV2ZSBkZXRhaWxlZCBtZXRhZGF0YSIKICAgICAgICBkYXRhc2V0TW9kZWwgLT4gY29kZUxpc3RBY2Nlc3MgIlVzZXMgdG8gcmV0cmlldmUgY29kZSBsaXN0IGl0ZW1zIGxhYmVscyBhbmQgZGVzY3JpcHRpb25zIgogICAgICAgIGRpc3RyaWJ1dGlvbk1vZGVsIC0+IGNvZGVMaXN0QWNjZXNzICJVc2VzIHRvIHJldHJpZXZlIGNvZGUgbGlzdCBpdGVtcyBsYWJlbHMgYW5kIGRlc2NyaXB0aW9ucyIKCiAgICAgICAgcmVjb3JkSW5kZXhHYXRld2F5IC0+IGRldmljZVVwZGF0ZXIgIlByb3ZpZGVzIGFjY2VzcyB0byIKICAgICAgICAKICAgIH0KICAgIAogICAgdmlld3MgewogICAgICAgIAogICAgICAgIHN5c3RlbUNvbnRleHQgaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlICJob3NwaXRhbEJ1aWxkaW5nTWFpbnRhbmFuY2VTeXN0ZW1Db250ZXh0RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBob3NwaXRhbEJ1aWxkaW5nTWFpbnRhbmFuY2UgImhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZUNvbnRhaW5lckRpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgc2VydmVyICJzZXJ2ZXJDb21wb25lbnREaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgdGhlbWUgZGVmYXVsdAoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJFeGlzdGluZyBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJDb25zdW1lciIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICB9Cgp9Cg=="
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "20",
+      "tags" : "Element,Person,Consumer",
+      "name" : "Administrator",
+      "description" : "An actor who manages the building maintanance devices and supports.",
+      "relationships" : [ {
+        "id" : "29",
+        "tags" : "Relationship",
+        "sourceId" : "20",
+        "destinationId" : "2",
+        "description" : "Configures the drivers for the cleaning devices and manages accesses"
+      }, {
+        "id" : "23",
+        "tags" : "Relationship",
+        "sourceId" : "20",
+        "destinationId" : "1",
+        "description" : "Configures the drivers for the cleaning devices and manages accesses"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "21",
+      "tags" : "Element,Person,Consumer",
+      "name" : "Device",
+      "description" : "A device that is subject to the HBMS",
+      "relationships" : [ {
+        "id" : "39",
+        "tags" : "Relationship",
+        "sourceId" : "21",
+        "destinationId" : "1",
+        "description" : "Retrieves device information and current status and sends requests"
+      }, {
+        "id" : "38",
+        "tags" : "Relationship",
+        "sourceId" : "21",
+        "destinationId" : "15",
+        "description" : "Retrieves device information and current status and sends requests"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "19",
+      "tags" : "Element,Person,Consumer",
+      "name" : "Regular User",
+      "description" : "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition).",
+      "relationships" : [ {
+        "id" : "22",
+        "tags" : "Relationship",
+        "sourceId" : "19",
+        "destinationId" : "1",
+        "description" : "Configures the cleaining devices and building systems"
+      }, {
+        "id" : "28",
+        "tags" : "Relationship",
+        "sourceId" : "19",
+        "destinationId" : "2",
+        "description" : "Configures the cleaining devices and building systems"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "18",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Index of all hospital's devices drivers",
+      "description" : "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version.",
+      "location" : "Unspecified"
+    }, {
+      "id" : "1",
+      "tags" : "Element,Software System",
+      "name" : "Hospital Building Maintanance System (HBMS)",
+      "description" : "Manages and schedules building maintanance devices accross the hospital sectors.",
+      "relationships" : [ {
+        "id" : "24",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "16",
+        "description" : "Uses hospital employee records from"
+      }, {
+        "id" : "25",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "17",
+        "description" : "Harvests metadata records from"
+      }, {
+        "id" : "26",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "18",
+        "description" : "Fetches a newer version of the firmawares and drivers from"
+      }, {
+        "id" : "37",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "21",
+        "description" : "Retrieves device information and current status and sends requests"
+      } ],
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "14",
+        "tags" : "Element,Container",
+        "name" : "User Data Manager",
+        "description" : "Manages data about users.",
+        "relationships" : [ {
+          "id" : "34",
+          "tags" : "Relationship",
+          "sourceId" : "14",
+          "destinationId" : "16",
+          "description" : "Accesses the employees database"
+        } ],
+        "technology" : "UserDataManager"
+      }, {
+        "id" : "13",
+        "tags" : "Element,Container",
+        "name" : "Device Updater",
+        "description" : "Worker responsible for the firmware and driver maintanace.",
+        "technology" : "Some black box magix Miso did not invented yet."
+      }, {
+        "id" : "2",
+        "tags" : "Element,Container",
+        "name" : "HBMS Web Front-end",
+        "description" : "Provides all functionality for all devices schedulling, management and monitoring",
+        "relationships" : [ {
+          "id" : "30",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "3",
+          "description" : "Uses to deliver functionality"
+        }, {
+          "id" : "40",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "4",
+          "description" : "Makes API calls to",
+          "technology" : "JSON/HTTPS"
+        }, {
+          "id" : "41",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "5",
+          "description" : "Makes API calls to",
+          "technology" : "JSON/HTTPS"
+        } ]
+      }, {
+        "id" : "3",
+        "tags" : "Element,Container",
+        "name" : "(HBMS) Server",
+        "description" : "Implements logic for functionality of the regular devices management.",
+        "relationships" : [ {
+          "id" : "31",
+          "tags" : "Relationship",
+          "sourceId" : "3",
+          "destinationId" : "13",
+          "description" : "Uses for fast retrieval of metadata records lists"
+        }, {
+          "id" : "33",
+          "tags" : "Relationship",
+          "sourceId" : "3",
+          "destinationId" : "15",
+          "description" : "Uses to retrieve the information about the available devices and their current state."
+        }, {
+          "id" : "32",
+          "tags" : "Relationship",
+          "sourceId" : "3",
+          "destinationId" : "14",
+          "description" : "Uses to retrieve information about the users including their system roles and permissions."
+        } ],
+        "components" : [ {
+          "id" : "5",
+          "tags" : "Element,Component",
+          "name" : "Record Detail API",
+          "description" : "Provides API for getting a detail of a given metadata record via a JSON/HTTPS API.",
+          "relationships" : [ {
+            "id" : "43",
+            "tags" : "Relationship",
+            "sourceId" : "5",
+            "destinationId" : "7",
+            "description" : "Uses to access detail business functionality"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "7",
+          "tags" : "Element,Component",
+          "name" : "Record Detail Controller",
+          "description" : "Implements and provides business functionality related to viewing details of metadata records",
+          "relationships" : [ {
+            "id" : "46",
+            "tags" : "Relationship",
+            "sourceId" : "7",
+            "destinationId" : "8",
+            "description" : "Uses to access metadata about distributions"
+          }, {
+            "id" : "45",
+            "tags" : "Relationship",
+            "sourceId" : "7",
+            "destinationId" : "9",
+            "description" : "Uses to access metadata about datasets"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "4",
+          "tags" : "Element,Component",
+          "name" : "Record List API",
+          "description" : "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API.",
+          "relationships" : [ {
+            "id" : "42",
+            "tags" : "Relationship",
+            "sourceId" : "4",
+            "destinationId" : "6",
+            "description" : "Uses to access search business functionality"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "9",
+          "tags" : "Element,Component",
+          "name" : "Dataset Model",
+          "description" : "Internal model of dataset metadata",
+          "relationships" : [ {
+            "id" : "47",
+            "tags" : "Relationship",
+            "sourceId" : "9",
+            "destinationId" : "10",
+            "description" : "Uses to retrieve list of metadata records with given values of selected properties"
+          }, {
+            "id" : "50",
+            "tags" : "Relationship",
+            "sourceId" : "9",
+            "destinationId" : "12",
+            "description" : "Uses to retrieve code list items labels and descriptions"
+          }, {
+            "id" : "48",
+            "tags" : "Relationship",
+            "sourceId" : "9",
+            "destinationId" : "11",
+            "description" : "Uses to retrieve detailed metadata"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "8",
+          "tags" : "Element,Component",
+          "name" : "Distribution Model",
+          "description" : "Internal model of distribution metadata",
+          "relationships" : [ {
+            "id" : "51",
+            "tags" : "Relationship",
+            "sourceId" : "8",
+            "destinationId" : "12",
+            "description" : "Uses to retrieve code list items labels and descriptions"
+          }, {
+            "id" : "49",
+            "tags" : "Relationship",
+            "sourceId" : "8",
+            "destinationId" : "11",
+            "description" : "Uses to retrieve detailed metadata"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "12",
+          "tags" : "Element,Component",
+          "name" : "Code List Gateway",
+          "description" : "Provides access to code lists and their items via HTTPS dereferencing Web IRIs.",
+          "size" : 0
+        }, {
+          "id" : "10",
+          "tags" : "Element,Component",
+          "name" : "Metadata Index Gateway",
+          "description" : "Provides access to a metadata records index",
+          "relationships" : [ {
+            "id" : "52",
+            "tags" : "Relationship",
+            "sourceId" : "10",
+            "destinationId" : "13",
+            "description" : "Provides access to"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "6",
+          "tags" : "Element,Component",
+          "name" : "Records Search Controller",
+          "description" : "Implements and provides business functionality related to searching for metadata records",
+          "relationships" : [ {
+            "id" : "44",
+            "tags" : "Relationship",
+            "sourceId" : "6",
+            "destinationId" : "9",
+            "description" : "Uses to access metadata about datasets"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "11",
+          "tags" : "Element,Component",
+          "name" : "Metadata Detail Gateway",
+          "description" : "Provides access to a metadata records store",
+          "size" : 0
+        } ]
+      }, {
+        "id" : "15",
+        "tags" : "Element,Container",
+        "name" : "Device Data Manager",
+        "description" : "Manages data about devices.",
+        "relationships" : [ {
+          "id" : "35",
+          "tags" : "Relationship",
+          "sourceId" : "15",
+          "destinationId" : "17",
+          "description" : "Accesses the devices database"
+        }, {
+          "id" : "36",
+          "tags" : "Relationship",
+          "sourceId" : "15",
+          "destinationId" : "21",
+          "description" : "Retrieves device information and current status and sends requests"
+        } ],
+        "technology" : "DeviceDataManager"
+      } ]
+    }, {
+      "id" : "16",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Database of the hospital employees",
+      "description" : "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System.",
+      "location" : "Unspecified"
+    }, {
+      "id" : "17",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Devices Registry",
+      "description" : "Stores and presents the records of all hospital devices.",
+      "relationships" : [ {
+        "id" : "27",
+        "tags" : "Relationship",
+        "sourceId" : "17",
+        "destinationId" : "18",
+        "description" : "Indexes"
+      } ],
+      "location" : "Unspecified"
+    } ]
+  },
+  "documentation" : {
+    "sections" : [ {
+      "elementId" : "1",
+      "title" : "Context",
+      "order" : 2,
+      "format" : "Markdown",
+      "content" : "## Context\n\nNODC stores metadata records about all open data sets published by individual open data publishers in Czechia and enables open data consumers to search for metadata records and view their details.\nOpen data publishers do not register metadata records about their data sets directly to NODC.\nThey operate their own local open data catalogs where they manage their records.\nNODC harvests the records from the local catalogs registered in the registry of local open data catalogs on a regular basis (daily).\nEuropean Open Data Catalog uses NODC as a single source of truth about open data sets in Czechia.\n\n\n![](embed:nationalCatalogSystemContextDiagramSystemContextDiagram)"
+    }, {
+      "elementId" : "1",
+      "title" : "Roadmap",
+      "order" : 1,
+      "format" : "Markdown",
+      "content" : "## Roadmap\n\nThis document describes the architecture of the National Open Data Catalog (NODC).\nIt is intended for primarily for the NODC development team and secondary for the publishers who operate their own local open data catalogs harvested by NODC."
+    } ]
+  },
+  "views" : {
+    "systemContextViews" : [ {
+      "softwareSystemId" : "1",
+      "key" : "hospitalBuildingMaintananceSystemContextDiagram",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 2480,
+        "height" : 1748
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 140,
+        "y" : 1130
+      }, {
+        "id" : "16",
+        "x" : 140,
+        "y" : 330
+      }, {
+        "id" : "17",
+        "x" : 1540,
+        "y" : 1155
+      }, {
+        "id" : "18",
+        "x" : 1555,
+        "y" : 675
+      }, {
+        "id" : "19",
+        "x" : 820,
+        "y" : 50
+      }, {
+        "id" : "20",
+        "x" : 1410,
+        "y" : 135
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "relationships" : [ {
+        "id" : "27"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "39"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "softwareSystemId" : "1",
+      "key" : "hospitalBuildingMaintananceContainerDiagram",
+      "paperSize" : "A3_Portrait",
+      "dimensions" : {
+        "width" : 3029,
+        "height" : 3216
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "13",
+        "x" : 1020,
+        "y" : 2105
+      }, {
+        "id" : "2",
+        "x" : 532,
+        "y" : 907
+      }, {
+        "id" : "14",
+        "x" : 1365,
+        "y" : 1485
+      }, {
+        "id" : "3",
+        "x" : 555,
+        "y" : 1475
+      }, {
+        "id" : "15",
+        "x" : 1390,
+        "y" : 960
+      }, {
+        "id" : "16",
+        "x" : 2245,
+        "y" : 1470
+      }, {
+        "id" : "17",
+        "x" : 2245,
+        "y" : 905
+      }, {
+        "id" : "19",
+        "x" : 1115,
+        "y" : 150
+      }, {
+        "id" : "20",
+        "x" : 445,
+        "y" : 105
+      }, {
+        "id" : "21",
+        "x" : 2050,
+        "y" : 80
+      } ],
+      "relationships" : [ {
+        "id" : "29"
+      }, {
+        "id" : "28"
+      }, {
+        "id" : "36",
+        "vertices" : [ {
+          "x" : 2051,
+          "y" : 786
+        } ]
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "31"
+      }, {
+        "id" : "30"
+      }, {
+        "id" : "38",
+        "vertices" : [ {
+          "x" : 1813,
+          "y" : 603
+        } ]
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "serverComponentDiagram",
+      "dimensions" : {
+        "width" : 3430,
+        "height" : 2345
+      },
+      "containerId" : "3",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 2735,
+        "y" : 1370
+      }, {
+        "id" : "12",
+        "x" : 2735,
+        "y" : 1015
+      }, {
+        "id" : "2",
+        "x" : 420,
+        "y" : 200
+      }, {
+        "id" : "13",
+        "x" : 2740,
+        "y" : 220
+      }, {
+        "id" : "4",
+        "x" : 400,
+        "y" : 650
+      }, {
+        "id" : "5",
+        "x" : 400,
+        "y" : 1015
+      }, {
+        "id" : "6",
+        "x" : 1155,
+        "y" : 650
+      }, {
+        "id" : "7",
+        "x" : 1155,
+        "y" : 1015
+      }, {
+        "id" : "8",
+        "x" : 1935,
+        "y" : 1370
+      }, {
+        "id" : "9",
+        "x" : 1935,
+        "y" : 650
+      }, {
+        "id" : "10",
+        "x" : 2735,
+        "y" : 650
+      } ],
+      "relationships" : [ {
+        "id" : "50",
+        "position" : 60
+      }, {
+        "id" : "51",
+        "position" : 40
+      }, {
+        "id" : "40"
+      }, {
+        "id" : "41",
+        "vertices" : [ {
+          "x" : 300,
+          "y" : 355
+        }, {
+          "x" : 295,
+          "y" : 1220
+        } ],
+        "position" : 25
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "44"
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "47",
+        "position" : 50
+      }, {
+        "id" : "48",
+        "position" : 50
+      }, {
+        "id" : "49",
+        "position" : 50
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Existing System",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Consumer",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "lastSavedView" : "hospitalBuildingMaintananceContainerDiagram"
+    }
+  }
+}
