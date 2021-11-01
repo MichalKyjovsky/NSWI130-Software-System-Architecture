@@ -17,9 +17,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 codeListAccess = component "Code List Gateway" "Provides access to code lists and their items via HTTPS dereferencing Web IRIs."
             }
             
-            recordIndex = container "Metadata Index" "Index for fast searching in metadata records" "Apache SOLR via JSON/HTTPS"
-            recordStorage = container "Metadata Storage" "Storage of metadata records" "CouchDB via JSON/HTTPS"
-
+            deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintanace." "Some black box magix Miso did not invented yet."
+            
             userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"
             deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"
 
@@ -36,6 +35,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition)." "Consumer"
 
         administrator = person "Administrator" "An actor who manages the building maintanance devices and supports." "Consumer"
+
+        device = person "Device" "A device that is subject to the HBMS" "Consumer"
         
 
         # Relationships to/from software systems (Level 1)
@@ -55,16 +56,17 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         webFrontend -> server "Uses to deliver functionality"
 
-        server -> recordIndex "Uses for fast retrieval of metadata records lists"
-        server -> recordStorage "Uses for fast retrieval of metadata records details"
-
+        server -> deviceUpdater "Uses for fast retrieval of metadata records lists"
+        
         server -> userDataManager "Uses to retrieve information about the users including their system roles and permissions."
         server -> deviceDataManager "Uses to retrieve the information about the available devices and their current state."
 
         userDataManager -> hospitalEmployeeDatabase "Accesses the employees database "
         deviceDataManager -> devicesRegistry "Accesses the devices database "
-        # dataManager -> recordStorage "Uses to persists harvested metadata records. All records are always replaced"
-        
+        deviceDataManager -> device "Retrieves device information and current status and sends requests"
+
+        device -> deviceDataManager "Retrieves device information and current status and sends requests"
+
         # relationships to/from components
         webFrontend -> listAPI "Makes API calls to" "JSON/HTTPS"
         webFrontend -> detailAPI "Makes API calls to" "JSON/HTTPS"
@@ -82,8 +84,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         datasetModel -> codeListAccess "Uses to retrieve code list items labels and descriptions"
         distributionModel -> codeListAccess "Uses to retrieve code list items labels and descriptions"
 
-        recordIndexGateway -> recordIndex "Provides access to"
-        recordDetailGateway -> recordStorage "Provides access to"
+        recordIndexGateway -> deviceUpdater "Provides access to"
+        
     }
     
     views {
