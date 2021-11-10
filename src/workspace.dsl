@@ -23,7 +23,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 updateTrigger = component "Update Installation Trigger" "Triggers the events of device update and propagates it to every issued component "
                 updateWorker = component "Update Installation Worker" "Based on the resolved versions and categories installs the requested updates to the device "
             }
-            
+                        
             userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"
             deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"
 
@@ -60,7 +60,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         administrator -> webFrontend "Configures the drivers for the cleaning devices and manages accesses"
 
         webFrontend -> server "Uses to deliver functionality"
-        
+
         server -> deviceUpdater "Uses for fast retrieval of metadata records lists"
         
         server -> userDataManager "Uses to retrieve information about the users including their system roles and permissions."

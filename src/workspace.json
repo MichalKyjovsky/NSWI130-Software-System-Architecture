@@ -354,7 +354,13 @@
           "relationships" : [ {
             "id" : "48",
             "tags" : "Relationship",
-            "sourceId" : "6",
+            "sourceId" : "7",
+            "destinationId" : "8",
+            "description" : "Uses to access metadata about distributions"
+          }, {
+            "id" : "45",
+            "tags" : "Relationship",
+            "sourceId" : "7",
             "destinationId" : "9",
             "description" : "Uses to access metadata about datasets"
           } ],
@@ -411,16 +417,16 @@
           "description" : "Internal model of distribution metadata",
           "size" : 0
         }, {
-          "id" : "4",
+          "id" : "12",
           "tags" : "Element,Component",
           "name" : "Service of the component 1",
           "description" : "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API.",
           "relationships" : [ {
             "id" : "46",
             "tags" : "Relationship",
-            "sourceId" : "4",
-            "destinationId" : "6",
-            "description" : "Uses to access search business functionality"
+            "sourceId" : "10",
+            "destinationId" : "13",
+            "description" : "Provides access to"
           } ],
           "size" : 0
         }, {
@@ -516,6 +522,8 @@
         "id" : "28"
       }, {
         "id" : "27"
+      }, {
+        "id" : "37"
       }, {
         "id" : "26"
       }, {
@@ -614,7 +622,11 @@
       }, {
         "id" : "37"
       }, {
-        "id" : "36"
+        "id" : "36",
+        "vertices" : [ {
+          "x" : 2051,
+          "y" : 786
+        } ]
       }, {
         "id" : "35",
         "vertices" : [ {
@@ -752,6 +764,10 @@
         "id" : "2",
         "x" : 420,
         "y" : 200
+      }, {
+        "id" : "13",
+        "x" : 2740,
+        "y" : 220
       }, {
         "id" : "4",
         "x" : 400,
