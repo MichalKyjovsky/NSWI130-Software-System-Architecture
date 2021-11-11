@@ -2,7 +2,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
     model {
         hospitalBuildingMaintanance = softwareSystem "Hospital Building Maintanance System (HBMS)" "Manages and schedules building maintanance devices accross the hospital sectors."  {
-            webFrontend = container "HBMS Web Front-end" "Provides all functionality for all devices schedulling, management and monitoring"  {
+            webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices schedulling, management and monitoring"  {
                 deviceManager = component "Device Manager" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
                 searchAPI = component "Search API" "Handles search queries for retrieval of information to a particular device, list of devices or employee."
                 logInAPI = component "Log In API" "Provides form for user authentication."
@@ -10,6 +10,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 driverManager = component "Driver Manager" "Enables setup of device drivers configuration."
                 addDeviceAPI = component "Add Device API" "Enables addition of a new device."
                 deleteDeviceAPI = component "Delete Device API" "Enables deletion of an existing device."
+                hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices."
             }
             server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management."    {
                 listAPI = component "Record List API" "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API."
@@ -102,6 +103,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         deviceScheduler -> searchAPI "Uses to retrieve record of a particular device or list of devices for scheduling"
         deleteDeviceAPI -> searchAPI "Uses to retrieve record of a device for further agreement of a delete operation for this device"
+        hospitalVisualizer -> searchAPI "Uses to retrive records of devices that belong to a particular section"
     }
     
     views {
