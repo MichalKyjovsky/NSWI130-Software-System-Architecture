@@ -11,7 +11,26 @@
   "configuration" : { },
   "model" : {
     "people" : [ {
-      "id" : "28",
+      "id" : "25",
+      "tags" : "Element,Person,Consumer",
+      "name" : "Device",
+      "description" : "A device that is subject to the HBMS",
+      "relationships" : [ {
+        "id" : "43",
+        "tags" : "Relationship",
+        "sourceId" : "25",
+        "destinationId" : "1",
+        "description" : "Retrieves device information and current status and sends requests"
+      }, {
+        "id" : "42",
+        "tags" : "Relationship",
+        "sourceId" : "25",
+        "destinationId" : "19",
+        "description" : "Retrieves device information and current status and sends requests"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "24",
       "tags" : "Element,Person,Consumer",
       "name" : "Regular User",
       "description" : "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition).",
@@ -177,8 +196,8 @@
         }, {
           "id" : "18",
           "tags" : "Element,Component",
-          "name" : "Metadata Index Gateway",
-          "description" : "Provides access to a metadata records index",
+          "name" : "Service of the component 4",
+          "description" : "Implements and provides business functionality related to viewing details of metadata records",
           "relationships" : [ {
             "id" : "57",
             "tags" : "Relationship",
@@ -216,7 +235,7 @@
         }, {
           "id" : "16",
           "tags" : "Element,Component",
-          "name" : "Distribution Model",
+          "name" : "Service of the component 5",
           "description" : "Internal model of distribution metadata",
           "relationships" : [ {
             "id" : "54",
@@ -425,14 +444,27 @@
     }, {
       "id" : "25",
       "tags" : "Element,Software System,Existing System",
-      "name" : "Database of the hospital employees",
-      "description" : "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System.",
+      "name" : "Index of all hospital's devices drivers",
+      "description" : "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version.",
       "location" : "Unspecified"
     }, {
       "id" : "27",
       "tags" : "Element,Software System,Existing System",
-      "name" : "Index of all hospital's devices drivers",
-      "description" : "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version.",
+      "name" : "Devices Registry",
+      "description" : "Stores and presents the records of all hospital devices.",
+      "relationships" : [ {
+        "id" : "31",
+        "tags" : "Relationship",
+        "sourceId" : "21",
+        "destinationId" : "22",
+        "description" : "Indexes"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "20",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Database of the hospital employees",
+      "description" : "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System.",
       "location" : "Unspecified"
     } ]
   },
@@ -455,16 +487,20 @@
     "systemContextViews" : [ {
       "softwareSystemId" : "1",
       "key" : "hospitalBuildingMaintananceSystemContextDiagram",
-      "paperSize" : "A5_Landscape",
+      "paperSize" : "A3_Portrait",
       "dimensions" : {
-        "width" : 2480,
-        "height" : 1748
+        "width" : 2666,
+        "height" : 2716
       },
       "enterpriseBoundaryVisible" : true,
       "elements" : [ {
+        "id" : "22",
+        "x" : 942,
+        "y" : 2207
+      }, {
         "id" : "1",
-        "x" : 140,
-        "y" : 1130
+        "x" : 533,
+        "y" : 907
       }, {
         "id" : "25",
         "x" : 140,
@@ -503,10 +539,10 @@
     "containerViews" : [ {
       "softwareSystemId" : "1",
       "key" : "hospitalBuildingMaintananceContainerDiagram",
-      "paperSize" : "A3_Portrait",
+      "paperSize" : "A3_Landscape",
       "dimensions" : {
-        "width" : 3029,
-        "height" : 3216
+        "width" : 3683,
+        "height" : 3404
       },
       "externalSoftwareSystemBoundariesVisible" : true,
       "elements" : [ {
@@ -557,8 +593,14 @@
       }, {
         "id" : "40",
         "vertices" : [ {
-          "x" : 1305,
-          "y" : 2085
+          "x" : 2937,
+          "y" : 951
+        }, {
+          "x" : 3437,
+          "y" : 1551
+        }, {
+          "x" : 3437,
+          "y" : 1951
         } ]
       }, {
         "id" : "41"

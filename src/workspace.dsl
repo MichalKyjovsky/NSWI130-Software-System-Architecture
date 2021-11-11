@@ -13,20 +13,24 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices."
             }
             server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management."    {
-                listAPI = component "Record List API" "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API."
-                detailAPI = component "Record Detail API" "Provides API for getting a detail of a given metadata record via a JSON/HTTPS API."
-                searchController = component "Records Search Controller" "Implements and provides business functionality related to searching for metadata records"
-                detailController = component "Record Detail Controller" "Implements and provides business functionality related to viewing details of metadata records"
-                distributionModel = component "Distribution Model" "Internal model of distribution metadata"
-                datasetModel = component "Dataset Model" "Internal model of dataset metadata"
-                recordIndexGateway = component "Metadata Index Gateway" "Provides access to a metadata records index"
-                recordDetailGateway = component "Metadata Detail Gateway" "Provides access to a metadata records store"
-                codeListAccess = component "Code List Gateway" "Provides access to code lists and their items via HTTPS dereferencing Web IRIs."
+                listAPI = component "Service of the component 1" "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API."
+                detailAPI = component "Service of the component 2" "Provides API for getting a detail of a given metadata record via a JSON/HTTPS API."
+                searchController = component "Service of the component 3" "Implements and provides business functionality related to searching for metadata records"
+                detailController = component "Service of the component 4" "Implements and provides business functionality related to viewing details of metadata records"
+                distributionModel = component "Service of the component 5" "Internal model of distribution metadata"
+                datasetModel = component "Service of the component 6" "Internal model of dataset metadata"
+                recordIndexGateway = component "Service of the component 7" "Provides access to a metadata records index"
+                
+            }   
+            deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintanace." "Some black box magix Miso did not invented yet." {
+                updateManager = component "Update Manager" "Expose the functionality to other component of the system, so they can be accessed via API or manually"
+                statusResolver = component "System Status Resolver" "Retrieves the category of the devices that are under the regulat check and decides if update is required."
+                updatePlanner = component "Update Planner" "Schedules the suitable update window for the particular device so the regular service is not afected."
+                versionResolver = component "Version Resolver" "Verifies the provided devices map to a current version of a drivers, firmware and software against the Hospital's devices register"
+                updateTrigger = component "Update Installation Trigger" "Triggers the events of device update and propagates it to every issued component "
+                updateWorker = component "Update Installation Worker" "Based on the resolved versions and categories installs the requested updates to the device "
             }
-            
-            recordIndex = container "Metadata Index" "Index for fast searching in metadata records" "Apache SOLR via JSON/HTTPS"
-            recordStorage = container "Metadata Storage" "Storage of metadata records" "CouchDB via JSON/HTTPS"
-
+                        
             userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"
             deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"
 
@@ -43,6 +47,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition)." "Consumer"
 
         administrator = person "Administrator" "An actor who manages the building maintanance devices and supports." "Consumer"
+
+        device = person "Device" "A device that is subject to the HBMS" "Consumer"
         
 
         # Relationships to/from software systems (Level 1)
@@ -62,16 +68,17 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         webFrontend -> server "Uses to deliver functionality"
 
-        server -> recordIndex "Uses for fast retrieval of metadata records lists"
-        server -> recordStorage "Uses for fast retrieval of metadata records details"
-
+        server -> deviceUpdater "Uses for fast retrieval of metadata records lists"
+        
         server -> userDataManager "Uses to retrieve information about the users including their system roles and permissions."
         server -> deviceDataManager "Uses to retrieve the information about the available devices and their current state."
 
         userDataManager -> hospitalEmployeeDatabase "Accesses the employees database "
         deviceDataManager -> devicesRegistry "Accesses the devices database "
-        # dataManager -> recordStorage "Uses to persists harvested metadata records. All records are always replaced"
-        
+        deviceDataManager -> device "Retrieves device information and current status and sends requests"
+
+        device -> deviceDataManager "Retrieves device information and current status and sends requests"
+
         # relationships to/from components
         webFrontend -> listAPI "Makes API calls to" "JSON/HTTPS"
         webFrontend -> detailAPI "Makes API calls to" "JSON/HTTPS"
@@ -85,10 +92,27 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         detailController -> distributionModel "Uses to access metadata about distributions"
 
         datasetModel -> recordIndexGateway "Uses to retrieve list of metadata records with given values of selected properties"
-        datasetModel -> recordDetailGateway "Uses to retrieve detailed metadata"
-        distributionModel -> recordDetailGateway "Uses to retrieve detailed metadata"
-        datasetModel -> codeListAccess "Uses to retrieve code list items labels and descriptions"
-        distributionModel -> codeListAccess "Uses to retrieve code list items labels and descriptions"
+        
+        recordIndexGateway -> deviceUpdater "Provides access to"
+
+
+        # Device Updater - Component Relations and Decompositions
+
+        updateManager -> webFrontend  "Expose the functinality to the GUI as well as to the REST-API "
+
+        versionResolver -> devicesRegistry "Gets data and updates from "
+        # We could ask data manager directly, but we need to know the current status of the devices to be posted into the planner
+        statusResolver -> server "Gets the category of the devices with relevant metadata "
+        updateManager -> server "Posts the information about the planned updated with the modified device schedule and state "
+        updateTrigger -> updateManager "Reflects the information about schedulled update to the manager, so its actual for every listenning service "
+        updatePlanner -> updateTrigger "Posts the schedule for the devices that are in the current update scope "
+        statusResolver -> versionResolver "Gets the information about the possible updates for the tracked devices "
+    
+        updateWorker -> device "Installs updates when in the device is in the appropriate state "
+        updateTrigger -> updatePlanner "Initiates the planning with the current information about issued devices "
+        updateTrigger -> statusResolver "Gets the information about the actual devices state "
+
+        updateManager -> updateWorker "Adds task "
 
         recordIndexGateway -> recordIndex "Provides access to"
         recordDetailGateway -> recordStorage "Provides access to"
@@ -121,6 +145,9 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         }
 
         component webFrontend "webFrontendComponentDiagram" {
+            include *
+        }
+        component deviceUpdater "deviceUpdater" {
             include *
         }
 
