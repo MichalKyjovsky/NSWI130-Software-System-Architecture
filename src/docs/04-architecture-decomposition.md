@@ -8,6 +8,8 @@ The following chapter provides a decomposition and description of each container
 ### HBMS Web Front-End
 The purpose of this container is to introduce the graphical user interface both for the administrator of the application and the regular user.
 
+![HBMS Web Front-End](embed:webFrontendComponentDiagram)
+
 
 ### HBMS Server
 The following container represents the core functionality and business logic of our application. Our architecture acts as a controller over the model components (Device Data Manager, User Data Manager). Among other responsibilities and the most important one of the components is the interaction with devices in the hospital.  
@@ -27,7 +29,7 @@ Firstly we must declare that the responsibility of storing and managing the driv
 
 ![Device Updater Component](embed:deviceUpdater)
 
-The utilization of the updater will be enabled using the Admin UI. That literally means that the regular user will not have an access to the maintanance of the particular device. 
+The utilization of the updater will be enabled using the Admin UI. That literally means that the regular user will not have an access to the maintenance of the particular device. 
 
 
 #### Workflow Scenario

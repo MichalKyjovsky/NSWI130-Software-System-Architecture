@@ -114,9 +114,6 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         updateManager -> updateWorker "Adds task "
 
-        recordIndexGateway -> recordIndex "Provides access to"
-        recordDetailGateway -> recordStorage "Provides access to"
-
         # webFrontend components
         logInAPI -> server "Makes API call to retrieve user record from DB"
         deviceManager -> server "Makes API calls to [JSON/HTTPS]"
