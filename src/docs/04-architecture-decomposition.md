@@ -16,10 +16,14 @@ The following container represents the core functionality and business logic of 
 
 
 ### Device Data Manager
-TBD
+The following component serves as a single endpoint to work with external Device data database. As this database is not under our control, we want to create a component just for this to separate it from server logic.
+
+![Device Data Manager](embed:DeviceDataManagerComponentDiagram)
 
 ### User Data Manager
-TBD
+The following component serves as a single endpoint to work with external User data database. As this database is not under our control, we want to create a component just for this to separate it from server logic.
+
+![User Data Manager](embed:UserDataManagerComponentDiagram)
 
 ### Device Updater
 The last container our system consists of is the ***Device Updater***. The ***Device Updater*** is responsible for the maintenance of the particular device, checking the version of its firmware and software, and the overall status. Furthermore, it provides updates and upgrades for the devices that are connected to the network and are actively deployed to the service.
