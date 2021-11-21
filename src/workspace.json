@@ -3,188 +3,131 @@
   "name" : "Public Data Space",
   "description" : "This workspace documents the architecture of the Public Data Space which enables public institutions in Czechia to share public data among each other in a guaranteed way.",
   "revision" : 0,
-  "lastModifiedDate" : "2021-11-11T13:49:27Z",
-  "lastModifiedAgent" : "structurizr-web/2544/diagram",
+  "lastModifiedDate" : "2021-11-21T19:55:48Z",
+  "lastModifiedAgent" : "structurizr-web/2553/diagram",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlICJQdWJsaWMgRGF0YSBTcGFjZSIgIlRoaXMgd29ya3NwYWNlIGRvY3VtZW50cyB0aGUgYXJjaGl0ZWN0dXJlIG9mIHRoZSBQdWJsaWMgRGF0YSBTcGFjZSB3aGljaCBlbmFibGVzIHB1YmxpYyBpbnN0aXR1dGlvbnMgaW4gQ3plY2hpYSB0byBzaGFyZSBwdWJsaWMgZGF0YSBhbW9uZyBlYWNoIG90aGVyIGluIGEgZ3VhcmFudGVlZCB3YXkuIiB7CgogICAgbW9kZWwgewogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSA9IHNvZnR3YXJlU3lzdGVtICJIb3NwaXRhbCBCdWlsZGluZyBNYWludGFuYW5jZSBTeXN0ZW0gKEhCTVMpIiAiTWFuYWdlcyBhbmQgc2NoZWR1bGVzIGJ1aWxkaW5nIG1haW50YW5hbmNlIGRldmljZXMgYWNjcm9zcyB0aGUgaG9zcGl0YWwgc2VjdG9ycy4iICB7CiAgICAgICAgICAgIHdlYkZyb250ZW5kID0gY29udGFpbmVyICIoSEJNUykgV2ViIEZyb250LWVuZCIgIlByb3ZpZGVzIGFsbCBmdW5jdGlvbmFsaXR5IGZvciBhbGwgZGV2aWNlcyBzY2hlZHVsbGluZywgbWFuYWdlbWVudCBhbmQgbW9uaXRvcmluZyIgIHsKICAgICAgICAgICAgICAgIGRldmljZU1hbmFnZXIgPSBjb21wb25lbnQgIkRldmljZSBNYW5hZ2VyIiAiUHJvdmlkZXMgYWNjZXNzIHRvIGRldmljZSByZWNvcmQgYmFzZWQgb24gdGhlIHNlYXJjaCBxdWVyeS4gU3VwcG9ydHMgb3BlcmF0aW9ucyBvbiBtdWx0aXBsZSBkZXZpY2VzIGF0IG9uY2UuIgogICAgICAgICAgICAgICAgc2VhcmNoQVBJID0gY29tcG9uZW50ICJTZWFyY2ggQVBJIiAiSGFuZGxlcyBzZWFyY2ggcXVlcmllcyBmb3IgcmV0cmlldmFsIG9mIGluZm9ybWF0aW9uIHRvIGEgcGFydGljdWxhciBkZXZpY2UsIGxpc3Qgb2YgZGV2aWNlcyBvciBlbXBsb3llZS4iCiAgICAgICAgICAgICAgICBsb2dJbkFQSSA9IGNvbXBvbmVudCAiTG9nIEluIEFQSSIgIlByb3ZpZGVzIGZvcm0gZm9yIHVzZXIgYXV0aGVudGljYXRpb24uIgogICAgICAgICAgICAgICAgZGV2aWNlU2NoZWR1bGVyID0gY29tcG9uZW50ICJEZXZpY2UgU2NoZWR1bGVyIiAiUHJvdmlkZXMgYWNjZXNzIHRvIGRldmljZSBzY2hlZHVsaW5nIGludGVyZmFjZSB0byB0cmlnZ2VyIHNwZWNpZmljIGRldmljZSBmdW5jdGlvbnMgaW4gYSBnaXZlbiB0aW1lIG9yIHBlcmlvZGljYWxseS4iCiAgICAgICAgICAgICAgICBkcml2ZXJNYW5hZ2VyID0gY29tcG9uZW50ICJEcml2ZXIgTWFuYWdlciIgIkVuYWJsZXMgc2V0dXAgb2YgZGV2aWNlIGRyaXZlcnMgY29uZmlndXJhdGlvbi4iCiAgICAgICAgICAgICAgICBhZGREZXZpY2VBUEkgPSBjb21wb25lbnQgIkFkZCBEZXZpY2UgQVBJIiAiRW5hYmxlcyBhZGRpdGlvbiBvZiBhIG5ldyBkZXZpY2UuIgogICAgICAgICAgICAgICAgZGVsZXRlRGV2aWNlQVBJID0gY29tcG9uZW50ICJEZWxldGUgRGV2aWNlIEFQSSIgIkVuYWJsZXMgZGVsZXRpb24gb2YgYW4gZXhpc3RpbmcgZGV2aWNlLiIKICAgICAgICAgICAgICAgIGhvc3BpdGFsVmlzdWFsaXplciA9IGNvbXBvbmVudCAiSG9zcGl0YWwgVmlzdWFsaXplciIgIlByb3ZpZGVzIFVJIGZvciBicm93c2luZyBpbmRpdmlkdWFsIHNlY3Rpb25zIG9mIGEgaG9zcGl0YWwgd2l0aCB0aGVpciBjb3JyZXNwb25kaW5nIGRldmljZXMuIgogICAgICAgICAgICB9CiAgICAgICAgICAgIHNlcnZlciA9IGNvbnRhaW5lciAiKEhCTVMpIFNlcnZlciIgIkltcGxlbWVudHMgbG9naWMgZm9yIGZ1bmN0aW9uYWxpdHkgb2YgdGhlIHJlZ3VsYXIgZGV2aWNlcyBtYW5hZ2VtZW50LiIgICAgewogICAgICAgICAgICAgICAgbGlzdEFQSSA9IGNvbXBvbmVudCAiU2VydmljZSBvZiB0aGUgY29tcG9uZW50IDEiICJQcm92aWRlcyBBUEkgZm9yIGdldHRpbmcgYSBsaXN0IG9mIG1ldGFkYXRhIHJlY29yZHMgYWNjb3JkaW5nIHRvIHNwZWNpZmllZCBzZWFyY2ggcGFyYW1ldGVycyB2aWEgYSBKU09OL0hUVFBTIEFQSS4iCiAgICAgICAgICAgICAgICBkZXRhaWxBUEkgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCAyIiAiUHJvdmlkZXMgQVBJIGZvciBnZXR0aW5nIGEgZGV0YWlsIG9mIGEgZ2l2ZW4gbWV0YWRhdGEgcmVjb3JkIHZpYSBhIEpTT04vSFRUUFMgQVBJLiIKICAgICAgICAgICAgICAgIHNlYXJjaENvbnRyb2xsZXIgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCAzIiAiSW1wbGVtZW50cyBhbmQgcHJvdmlkZXMgYnVzaW5lc3MgZnVuY3Rpb25hbGl0eSByZWxhdGVkIHRvIHNlYXJjaGluZyBmb3IgbWV0YWRhdGEgcmVjb3JkcyIKICAgICAgICAgICAgICAgIGRldGFpbENvbnRyb2xsZXIgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCA0IiAiSW1wbGVtZW50cyBhbmQgcHJvdmlkZXMgYnVzaW5lc3MgZnVuY3Rpb25hbGl0eSByZWxhdGVkIHRvIHZpZXdpbmcgZGV0YWlscyBvZiBtZXRhZGF0YSByZWNvcmRzIgogICAgICAgICAgICAgICAgZGlzdHJpYnV0aW9uTW9kZWwgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCA1IiAiSW50ZXJuYWwgbW9kZWwgb2YgZGlzdHJpYnV0aW9uIG1ldGFkYXRhIgogICAgICAgICAgICAgICAgZGF0YXNldE1vZGVsID0gY29tcG9uZW50ICJTZXJ2aWNlIG9mIHRoZSBjb21wb25lbnQgNiIgIkludGVybmFsIG1vZGVsIG9mIGRhdGFzZXQgbWV0YWRhdGEiCiAgICAgICAgICAgICAgICByZWNvcmRJbmRleEdhdGV3YXkgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCA3IiAiUHJvdmlkZXMgYWNjZXNzIHRvIGEgbWV0YWRhdGEgcmVjb3JkcyBpbmRleCIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICB9ICAgCiAgICAgICAgICAgIGRldmljZVVwZGF0ZXIgPSBjb250YWluZXIgIkRldmljZSBVcGRhdGVyIiAiV29ya2VyIHJlc3BvbnNpYmxlIGZvciB0aGUgZmlybXdhcmUgYW5kIGRyaXZlciBtYWludGFuYWNlLiIgIlNvbWUgYmxhY2sgYm94IG1hZ2l4IE1pc28gZGlkIG5vdCBpbnZlbnRlZCB5ZXQuIiB7CiAgICAgICAgICAgICAgICB1cGRhdGVNYW5hZ2VyID0gY29tcG9uZW50ICJVcGRhdGUgTWFuYWdlciIgIkV4cG9zZSB0aGUgZnVuY3Rpb25hbGl0eSB0byBvdGhlciBjb21wb25lbnQgb2YgdGhlIHN5c3RlbSwgc28gdGhleSBjYW4gYmUgYWNjZXNzZWQgdmlhIEFQSSBvciBtYW51YWxseSIKICAgICAgICAgICAgICAgIHN0YXR1c1Jlc29sdmVyID0gY29tcG9uZW50ICJTeXN0ZW0gU3RhdHVzIFJlc29sdmVyIiAiUmV0cmlldmVzIHRoZSBjYXRlZ29yeSBvZiB0aGUgZGV2aWNlcyB0aGF0IGFyZSB1bmRlciB0aGUgcmVndWxhdCBjaGVjayBhbmQgZGVjaWRlcyBpZiB1cGRhdGUgaXMgcmVxdWlyZWQuIgogICAgICAgICAgICAgICAgdXBkYXRlUGxhbm5lciA9IGNvbXBvbmVudCAiVXBkYXRlIFBsYW5uZXIiICJTY2hlZHVsZXMgdGhlIHN1aXRhYmxlIHVwZGF0ZSB3aW5kb3cgZm9yIHRoZSBwYXJ0aWN1bGFyIGRldmljZSBzbyB0aGUgcmVndWxhciBzZXJ2aWNlIGlzIG5vdCBhZmVjdGVkLiIKICAgICAgICAgICAgICAgIHZlcnNpb25SZXNvbHZlciA9IGNvbXBvbmVudCAiVmVyc2lvbiBSZXNvbHZlciIgIlZlcmlmaWVzIHRoZSBwcm92aWRlZCBkZXZpY2VzIG1hcCB0byBhIGN1cnJlbnQgdmVyc2lvbiBvZiBhIGRyaXZlcnMsIGZpcm13YXJlIGFuZCBzb2Z0d2FyZSBhZ2FpbnN0IHRoZSBIb3NwaXRhbCdzIGRldmljZXMgcmVnaXN0ZXIiCiAgICAgICAgICAgICAgICB1cGRhdGVUcmlnZ2VyID0gY29tcG9uZW50ICJVcGRhdGUgSW5zdGFsbGF0aW9uIFRyaWdnZXIiICJUcmlnZ2VycyB0aGUgZXZlbnRzIG9mIGRldmljZSB1cGRhdGUgYW5kIHByb3BhZ2F0ZXMgaXQgdG8gZXZlcnkgaXNzdWVkIGNvbXBvbmVudCAiCiAgICAgICAgICAgICAgICB1cGRhdGVXb3JrZXIgPSBjb21wb25lbnQgIlVwZGF0ZSBJbnN0YWxsYXRpb24gV29ya2VyIiAiQmFzZWQgb24gdGhlIHJlc29sdmVkIHZlcnNpb25zIGFuZCBjYXRlZ29yaWVzIGluc3RhbGxzIHRoZSByZXF1ZXN0ZWQgdXBkYXRlcyB0byB0aGUgZGV2aWNlICIKICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgdXNlckRhdGFNYW5hZ2VyID0gY29udGFpbmVyICJVc2VyIERhdGEgTWFuYWdlciIgIk1hbmFnZXMgZGF0YSBhYm91dCB1c2Vycy4iICJVc2VyRGF0YU1hbmFnZXIiCiAgICAgICAgICAgIGRldmljZURhdGFNYW5hZ2VyID0gY29udGFpbmVyICJEZXZpY2UgRGF0YSBNYW5hZ2VyIiAiTWFuYWdlcyBkYXRhIGFib3V0IGRldmljZXMuIiAiRGV2aWNlRGF0YU1hbmFnZXIiCgogICAgICAgICAgICAhZG9jcyBkb2NzCgogICAgICAgIH0KICAgICAgICAjIEhvc3BpdGFsIGVtcGxveWVlcyBnZW5lcmFsIGRhdGFiYXNlIHdpdGggQVBJCiAgICAgICAgaG9zcGl0YWxFbXBsb3llZURhdGFiYXNlID0gc29mdHdhcmVTeXN0ZW0gIkRhdGFiYXNlIG9mIHRoZSBob3NwaXRhbCBlbXBsb3llZXMiICJTdG9yZXMgZGF0YSByZWNvcmRzIGFib3V0IHRoZSBob3NwaXRhbCBlbXBsb3llZXMgYW5kIHByb3ZpZGVzIEFQSSBmb3IgSG9zcGl0YWwgQnVpbGRpbmcgTWFpbnRhbmFjZSBTeXN0ZW0uIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICBkZXZpY2VzUmVnaXN0cnkgPSBzb2Z0d2FyZVN5c3RlbSAiRGV2aWNlcyBSZWdpc3RyeSIgIlN0b3JlcyBhbmQgcHJlc2VudHMgdGhlIHJlY29yZHMgb2YgYWxsIGhvc3BpdGFsIGRldmljZXMuIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICBkcml2ZXJJbmRleCA9IHNvZnR3YXJlU3lzdGVtICJJbmRleCBvZiBhbGwgaG9zcGl0YWwncyBkZXZpY2VzIGRyaXZlcnMiICJBY3R1YWwgZGF0YSBzdG9yYWdlIGluZGV4IHdoZXJlIGFsbCBkcml2ZXJzIGFuZCBmaXJtd2FyZXMgb2YgaG9zcGl0YWwncyBkZXZpY2VzIGFyZSBzdG9yZWQgaW4gdGhlIG1vc3QgcmVjZW50IHZlcnNpb24uIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgIAogICAgICAgIHJlZ3VsYXJVc2VyID0gcGVyc29uICJSZWd1bGFyIFVzZXIiICJBbiBhY3RvciB3aG8gY29uZmlndXJlcyBhbmQgc2NoZWR1bGVzIHRoZSBjbGVhbmluZyBkZXZpY2VzIG9yIHRoZSBidWlsZGluZyBjb21wb25lbnRzICh3aW5kb3dzLCBsaWdodHMsIGFpcmNvbmRpdGlvbikuIiAiQ29uc3VtZXIiCgogICAgICAgIGFkbWluaXN0cmF0b3IgPSBwZXJzb24gIkFkbWluaXN0cmF0b3IiICJBbiBhY3RvciB3aG8gbWFuYWdlcyB0aGUgYnVpbGRpbmcgbWFpbnRhbmFuY2UgZGV2aWNlcyBhbmQgc3VwcG9ydHMuIiAiQ29uc3VtZXIiCgogICAgICAgIGRldmljZSA9IHBlcnNvbiAiRGV2aWNlIiAiQSBkZXZpY2UgdGhhdCBpcyBzdWJqZWN0IHRvIHRoZSBIQk1TIiAiQ29uc3VtZXIiCiAgICAgICAgCgogICAgICAgICMgUmVsYXRpb25zaGlwcyB0by9mcm9tIHNvZnR3YXJlIHN5c3RlbXMgKExldmVsIDEpCiAgICAgICAgcmVndWxhclVzZXIgLT4gaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlICJDb25maWd1cmVzIHRoZSBjbGVhaW5pbmcgZGV2aWNlcyBhbmQgYnVpbGRpbmcgc3lzdGVtcyIKICAgICAgICBhZG1pbmlzdHJhdG9yIC0+IGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAiQ29uZmlndXJlcyB0aGUgZHJpdmVycyBmb3IgdGhlIGNsZWFuaW5nIGRldmljZXMgYW5kIG1hbmFnZXMgYWNjZXNzZXMiCgogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAtPiBob3NwaXRhbEVtcGxveWVlRGF0YWJhc2UgIlVzZXMgaG9zcGl0YWwgZW1wbG95ZWUgcmVjb3JkcyBmcm9tIgogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAtPiBkZXZpY2VzUmVnaXN0cnkgIkhhcnZlc3RzIG1ldGFkYXRhIHJlY29yZHMgZnJvbSIKCiAgICAgICAgaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlIC0+IGRyaXZlckluZGV4ICJGZXRjaGVzIGEgbmV3ZXIgdmVyc2lvbiBvZiB0aGUgZmlybWF3YXJlcyBhbmQgZHJpdmVycyBmcm9tIgogICAgICAgIGRldmljZXNSZWdpc3RyeSAtPiBkcml2ZXJJbmRleCAiSW5kZXhlcyIKICAgICAgICAKICAgICAgICAKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgdG8vZnJvbSBjb250YWluZXJzIChMZXZlbCAyKQogICAgICAgIHJlZ3VsYXJVc2VyIC0+IHdlYkZyb250ZW5kICJDb25maWd1cmVzIHRoZSBjbGVhaW5pbmcgZGV2aWNlcyBhbmQgYnVpbGRpbmcgc3lzdGVtcyIKICAgICAgICBhZG1pbmlzdHJhdG9yIC0+IHdlYkZyb250ZW5kICJDb25maWd1cmVzIHRoZSBkcml2ZXJzIGZvciB0aGUgY2xlYW5pbmcgZGV2aWNlcyBhbmQgbWFuYWdlcyBhY2Nlc3NlcyIKCiAgICAgICAgd2ViRnJvbnRlbmQgLT4gc2VydmVyICJVc2VzIHRvIGRlbGl2ZXIgZnVuY3Rpb25hbGl0eSIKCiAgICAgICAgc2VydmVyIC0+IGRldmljZVVwZGF0ZXIgIlVzZXMgZm9yIGZhc3QgcmV0cmlldmFsIG9mIG1ldGFkYXRhIHJlY29yZHMgbGlzdHMiCiAgICAgICAgCiAgICAgICAgc2VydmVyIC0+IHVzZXJEYXRhTWFuYWdlciAiVXNlcyB0byByZXRyaWV2ZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgdXNlcnMgaW5jbHVkaW5nIHRoZWlyIHN5c3RlbSByb2xlcyBhbmQgcGVybWlzc2lvbnMuIgogICAgICAgIHNlcnZlciAtPiBkZXZpY2VEYXRhTWFuYWdlciAiVXNlcyB0byByZXRyaWV2ZSB0aGUgaW5mb3JtYXRpb24gYWJvdXQgdGhlIGF2YWlsYWJsZSBkZXZpY2VzIGFuZCB0aGVpciBjdXJyZW50IHN0YXRlLiIKCiAgICAgICAgdXNlckRhdGFNYW5hZ2VyIC0+IGhvc3BpdGFsRW1wbG95ZWVEYXRhYmFzZSAiQWNjZXNzZXMgdGhlIGVtcGxveWVlcyBkYXRhYmFzZSAiCiAgICAgICAgZGV2aWNlRGF0YU1hbmFnZXIgLT4gZGV2aWNlc1JlZ2lzdHJ5ICJBY2Nlc3NlcyB0aGUgZGV2aWNlcyBkYXRhYmFzZSAiCiAgICAgICAgZGV2aWNlRGF0YU1hbmFnZXIgLT4gZGV2aWNlICJSZXRyaWV2ZXMgZGV2aWNlIGluZm9ybWF0aW9uIGFuZCBjdXJyZW50IHN0YXR1cyBhbmQgc2VuZHMgcmVxdWVzdHMiCgogICAgICAgIGRldmljZSAtPiBkZXZpY2VEYXRhTWFuYWdlciAiUmV0cmlldmVzIGRldmljZSBpbmZvcm1hdGlvbiBhbmQgY3VycmVudCBzdGF0dXMgYW5kIHNlbmRzIHJlcXVlc3RzIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBjb21wb25lbnRzCiAgICAgICAgd2ViRnJvbnRlbmQgLT4gbGlzdEFQSSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyIKICAgICAgICB3ZWJGcm9udGVuZCAtPiBkZXRhaWxBUEkgIk1ha2VzIEFQSSBjYWxscyB0byIgIkpTT04vSFRUUFMiCgogICAgICAgICMgc2VydmVyIGNvbXBvbmVudHMKICAgICAgICBsaXN0QVBJIC0+IHNlYXJjaENvbnRyb2xsZXIgIlVzZXMgdG8gYWNjZXNzIHNlYXJjaCBidXNpbmVzcyBmdW5jdGlvbmFsaXR5IgogICAgICAgIGRldGFpbEFQSSAtPiBkZXRhaWxDb250cm9sbGVyICJVc2VzIHRvIGFjY2VzcyBkZXRhaWwgYnVzaW5lc3MgZnVuY3Rpb25hbGl0eSIKCiAgICAgICAgc2VhcmNoQ29udHJvbGxlciAtPiBkYXRhc2V0TW9kZWwgIlVzZXMgdG8gYWNjZXNzIG1ldGFkYXRhIGFib3V0IGRhdGFzZXRzIgogICAgICAgIGRldGFpbENvbnRyb2xsZXIgLT4gZGF0YXNldE1vZGVsICJVc2VzIHRvIGFjY2VzcyBtZXRhZGF0YSBhYm91dCBkYXRhc2V0cyIKICAgICAgICBkZXRhaWxDb250cm9sbGVyIC0+IGRpc3RyaWJ1dGlvbk1vZGVsICJVc2VzIHRvIGFjY2VzcyBtZXRhZGF0YSBhYm91dCBkaXN0cmlidXRpb25zIgoKICAgICAgICBkYXRhc2V0TW9kZWwgLT4gcmVjb3JkSW5kZXhHYXRld2F5ICJVc2VzIHRvIHJldHJpZXZlIGxpc3Qgb2YgbWV0YWRhdGEgcmVjb3JkcyB3aXRoIGdpdmVuIHZhbHVlcyBvZiBzZWxlY3RlZCBwcm9wZXJ0aWVzIgogICAgICAgIAogICAgICAgIHJlY29yZEluZGV4R2F0ZXdheSAtPiBkZXZpY2VVcGRhdGVyICJQcm92aWRlcyBhY2Nlc3MgdG8iCgoKICAgICAgICAjIERldmljZSBVcGRhdGVyIC0gQ29tcG9uZW50IFJlbGF0aW9ucyBhbmQgRGVjb21wb3NpdGlvbnMKCiAgICAgICAgdXBkYXRlTWFuYWdlciAtPiB3ZWJGcm9udGVuZCAgIkV4cG9zZSB0aGUgZnVuY3RpbmFsaXR5IHRvIHRoZSBHVUkgYXMgd2VsbCBhcyB0byB0aGUgUkVTVC1BUEkgIgoKICAgICAgICB2ZXJzaW9uUmVzb2x2ZXIgLT4gZGV2aWNlc1JlZ2lzdHJ5ICJHZXRzIGRhdGEgYW5kIHVwZGF0ZXMgZnJvbSAiCiAgICAgICAgIyBXZSBjb3VsZCBhc2sgZGF0YSBtYW5hZ2VyIGRpcmVjdGx5LCBidXQgd2UgbmVlZCB0byBrbm93IHRoZSBjdXJyZW50IHN0YXR1cyBvZiB0aGUgZGV2aWNlcyB0byBiZSBwb3N0ZWQgaW50byB0aGUgcGxhbm5lcgogICAgICAgIHN0YXR1c1Jlc29sdmVyIC0+IHNlcnZlciAiR2V0cyB0aGUgY2F0ZWdvcnkgb2YgdGhlIGRldmljZXMgd2l0aCByZWxldmFudCBtZXRhZGF0YSAiCiAgICAgICAgdXBkYXRlTWFuYWdlciAtPiBzZXJ2ZXIgIlBvc3RzIHRoZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgcGxhbm5lZCB1cGRhdGVkIHdpdGggdGhlIG1vZGlmaWVkIGRldmljZSBzY2hlZHVsZSBhbmQgc3RhdGUgIgogICAgICAgIHVwZGF0ZVRyaWdnZXIgLT4gdXBkYXRlTWFuYWdlciAiUmVmbGVjdHMgdGhlIGluZm9ybWF0aW9uIGFib3V0IHNjaGVkdWxsZWQgdXBkYXRlIHRvIHRoZSBtYW5hZ2VyLCBzbyBpdHMgYWN0dWFsIGZvciBldmVyeSBsaXN0ZW5uaW5nIHNlcnZpY2UgIgogICAgICAgIHVwZGF0ZVBsYW5uZXIgLT4gdXBkYXRlVHJpZ2dlciAiUG9zdHMgdGhlIHNjaGVkdWxlIGZvciB0aGUgZGV2aWNlcyB0aGF0IGFyZSBpbiB0aGUgY3VycmVudCB1cGRhdGUgc2NvcGUgIgogICAgICAgIHN0YXR1c1Jlc29sdmVyIC0+IHZlcnNpb25SZXNvbHZlciAiR2V0cyB0aGUgaW5mb3JtYXRpb24gYWJvdXQgdGhlIHBvc3NpYmxlIHVwZGF0ZXMgZm9yIHRoZSB0cmFja2VkIGRldmljZXMgIgogICAgCiAgICAgICAgdXBkYXRlV29ya2VyIC0+IGRldmljZSAiSW5zdGFsbHMgdXBkYXRlcyB3aGVuIGluIHRoZSBkZXZpY2UgaXMgaW4gdGhlIGFwcHJvcHJpYXRlIHN0YXRlICIKICAgICAgICB1cGRhdGVUcmlnZ2VyIC0+IHVwZGF0ZVBsYW5uZXIgIkluaXRpYXRlcyB0aGUgcGxhbm5pbmcgd2l0aCB0aGUgY3VycmVudCBpbmZvcm1hdGlvbiBhYm91dCBpc3N1ZWQgZGV2aWNlcyAiCiAgICAgICAgdXBkYXRlVHJpZ2dlciAtPiBzdGF0dXNSZXNvbHZlciAiR2V0cyB0aGUgaW5mb3JtYXRpb24gYWJvdXQgdGhlIGFjdHVhbCBkZXZpY2VzIHN0YXRlICIKCiAgICAgICAgdXBkYXRlTWFuYWdlciAtPiB1cGRhdGVXb3JrZXIgIkFkZHMgdGFzayAiCgogICAgICAgICMgd2ViRnJvbnRlbmQgY29tcG9uZW50cwogICAgICAgIGxvZ0luQVBJIC0+IHNlcnZlciAiTWFrZXMgQVBJIGNhbGwgdG8gcmV0cmlldmUgdXNlciByZWNvcmQgZnJvbSBEQiIKICAgICAgICBkZXZpY2VNYW5hZ2VyIC0+IHNlcnZlciAiTWFrZXMgQVBJIGNhbGxzIHRvIFtKU09OL0hUVFBTXSIKCiAgICAgICAgc2VhcmNoQVBJIC0+IGRldmljZU1hbmFnZXIgIlVzZXMgdG8gcmV0cmlldmUgcmVjb3JkIG9mIGEgcGFydGljdWxhciBkZXZpY2Ugb3IgbGlzdCBvZiBkZXZpY2VzIGJhc2VkIG9uIHRoZSBzZWFyY2ggcXVlcnkiCiAgICAgICAgZHJpdmVyTWFuYWdlciAtPiBkZXZpY2VNYW5hZ2VyICJVc2VzIHRvIHJldHJpZXZlIHJlY29yZCBvZiBhIHBhcnRpY3VsYXIgZGV2aWNlIG9yIGdyb3VwIG9mIGRldmljZXMgdG8gYXR0YWNoIHRoZWlyIGRyaXZlciBzZXR0aW5ncyIKICAgICAgICBhZGREZXZpY2VBUEkgLT4gZGV2aWNlTWFuYWdlciAiVXNlcyB0byB1cGRhdGUgdGhlIGNvbGxlY3Rpb24gb2YgZGV2aWNlcyBieSBhZGRpbmcgYSBuZXcgZGV2aWNlIgoKICAgICAgICBkZXZpY2VTY2hlZHVsZXIgLT4gc2VhcmNoQVBJICJVc2VzIHRvIHJldHJpZXZlIHJlY29yZCBvZiBhIHBhcnRpY3VsYXIgZGV2aWNlIG9yIGxpc3Qgb2YgZGV2aWNlcyBmb3Igc2NoZWR1bGluZyIKICAgICAgICBkZWxldGVEZXZpY2VBUEkgLT4gc2VhcmNoQVBJICJVc2VzIHRvIHJldHJpZXZlIHJlY29yZCBvZiBhIGRldmljZSBmb3IgZnVydGhlciBhZ3JlZW1lbnQgb2YgYSBkZWxldGUgb3BlcmF0aW9uIGZvciB0aGlzIGRldmljZSIKICAgICAgICBob3NwaXRhbFZpc3VhbGl6ZXIgLT4gc2VhcmNoQVBJICJVc2VzIHRvIHJldHJpdmUgcmVjb3JkcyBvZiBkZXZpY2VzIHRoYXQgYmVsb25nIHRvIGEgcGFydGljdWxhciBzZWN0aW9uIgogICAgfQogICAgCiAgICB2aWV3cyB7CiAgICAgICAgCiAgICAgICAgc3lzdGVtQ29udGV4dCBob3NwaXRhbEJ1aWxkaW5nTWFpbnRhbmFuY2UgImhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZVN5c3RlbUNvbnRleHREaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAiaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlQ29udGFpbmVyRGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBzZXJ2ZXIgInNlcnZlckNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgd2ViRnJvbnRlbmQgIndlYkZyb250ZW5kQ29tcG9uZW50RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CiAgICAgICAgY29tcG9uZW50IGRldmljZVVwZGF0ZXIgImRldmljZVVwZGF0ZXIiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICB0aGVtZSBkZWZhdWx0CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIkV4aXN0aW5nIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVsZW1lbnQgIkNvbnN1bWVyIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgIH0KCn0K"
+    "structurizr.dsl" : "d29ya3NwYWNlICJQdWJsaWMgRGF0YSBTcGFjZSIgIlRoaXMgd29ya3NwYWNlIGRvY3VtZW50cyB0aGUgYXJjaGl0ZWN0dXJlIG9mIHRoZSBQdWJsaWMgRGF0YSBTcGFjZSB3aGljaCBlbmFibGVzIHB1YmxpYyBpbnN0aXR1dGlvbnMgaW4gQ3plY2hpYSB0byBzaGFyZSBwdWJsaWMgZGF0YSBhbW9uZyBlYWNoIG90aGVyIGluIGEgZ3VhcmFudGVlZCB3YXkuIiB7CgogICAgbW9kZWwgewogICAgICAgIGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSA9IHNvZnR3YXJlU3lzdGVtICJIb3NwaXRhbCBCdWlsZGluZyBNYWludGFuYW5jZSBTeXN0ZW0gKEhCTVMpIiAiTWFuYWdlcyBhbmQgc2NoZWR1bGVzIGJ1aWxkaW5nIG1haW50YW5hbmNlIGRldmljZXMgYWNjcm9zcyB0aGUgaG9zcGl0YWwgc2VjdG9ycy4iICB7CiAgICAgICAgICAgIHdlYkZyb250ZW5kID0gY29udGFpbmVyICIoSEJNUykgV2ViIEZyb250LWVuZCIgIlByb3ZpZGVzIGFsbCBmdW5jdGlvbmFsaXR5IGZvciBhbGwgZGV2aWNlcyBzY2hlZHVsbGluZywgbWFuYWdlbWVudCBhbmQgbW9uaXRvcmluZyIgIHsKICAgICAgICAgICAgICAgIGRldmljZU1hbmFnZXIgPSBjb21wb25lbnQgIkRldmljZSBNYW5hZ2VyIiAiUHJvdmlkZXMgYWNjZXNzIHRvIGRldmljZSByZWNvcmQgYmFzZWQgb24gdGhlIHNlYXJjaCBxdWVyeS4gU3VwcG9ydHMgb3BlcmF0aW9ucyBvbiBtdWx0aXBsZSBkZXZpY2VzIGF0IG9uY2UuIgogICAgICAgICAgICAgICAgc2VhcmNoQVBJID0gY29tcG9uZW50ICJTZWFyY2ggQVBJIiAiSGFuZGxlcyBzZWFyY2ggcXVlcmllcyBmb3IgcmV0cmlldmFsIG9mIGluZm9ybWF0aW9uIHRvIGEgcGFydGljdWxhciBkZXZpY2UsIGxpc3Qgb2YgZGV2aWNlcyBvciBlbXBsb3llZS4iCiAgICAgICAgICAgICAgICBsb2dJbkFQSSA9IGNvbXBvbmVudCAiTG9nIEluIEFQSSIgIlByb3ZpZGVzIGZvcm0gZm9yIHVzZXIgYXV0aGVudGljYXRpb24uIgogICAgICAgICAgICAgICAgZGV2aWNlU2NoZWR1bGVyID0gY29tcG9uZW50ICJEZXZpY2UgU2NoZWR1bGVyIiAiUHJvdmlkZXMgYWNjZXNzIHRvIGRldmljZSBzY2hlZHVsaW5nIGludGVyZmFjZSB0byB0cmlnZ2VyIHNwZWNpZmljIGRldmljZSBmdW5jdGlvbnMgaW4gYSBnaXZlbiB0aW1lIG9yIHBlcmlvZGljYWxseS4iCiAgICAgICAgICAgICAgICBkcml2ZXJNYW5hZ2VyID0gY29tcG9uZW50ICJEcml2ZXIgTWFuYWdlciIgIkVuYWJsZXMgc2V0dXAgb2YgZGV2aWNlIGRyaXZlcnMgY29uZmlndXJhdGlvbi4iCiAgICAgICAgICAgICAgICBhZGREZXZpY2VBUEkgPSBjb21wb25lbnQgIkFkZCBEZXZpY2UgQVBJIiAiRW5hYmxlcyBhZGRpdGlvbiBvZiBhIG5ldyBkZXZpY2UuIgogICAgICAgICAgICAgICAgZGVsZXRlRGV2aWNlQVBJID0gY29tcG9uZW50ICJEZWxldGUgRGV2aWNlIEFQSSIgIkVuYWJsZXMgZGVsZXRpb24gb2YgYW4gZXhpc3RpbmcgZGV2aWNlLiIKICAgICAgICAgICAgICAgIGhvc3BpdGFsVmlzdWFsaXplciA9IGNvbXBvbmVudCAiSG9zcGl0YWwgVmlzdWFsaXplciIgIlByb3ZpZGVzIFVJIGZvciBicm93c2luZyBpbmRpdmlkdWFsIHNlY3Rpb25zIG9mIGEgaG9zcGl0YWwgd2l0aCB0aGVpciBjb3JyZXNwb25kaW5nIGRldmljZXMuIgogICAgICAgICAgICB9CiAgICAgICAgICAgIHNlcnZlciA9IGNvbnRhaW5lciAiKEhCTVMpIFNlcnZlciIgIkltcGxlbWVudHMgbG9naWMgZm9yIGZ1bmN0aW9uYWxpdHkgb2YgdGhlIHJlZ3VsYXIgZGV2aWNlcyBtYW5hZ2VtZW50LiIgICAgewogICAgICAgICAgICAgICAgbGlzdEFQSSA9IGNvbXBvbmVudCAiU2VydmljZSBvZiB0aGUgY29tcG9uZW50IDEiICJQcm92aWRlcyBBUEkgZm9yIGdldHRpbmcgYSBsaXN0IG9mIG1ldGFkYXRhIHJlY29yZHMgYWNjb3JkaW5nIHRvIHNwZWNpZmllZCBzZWFyY2ggcGFyYW1ldGVycyB2aWEgYSBKU09OL0hUVFBTIEFQSS4iCiAgICAgICAgICAgICAgICBkZXRhaWxBUEkgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCAyIiAiUHJvdmlkZXMgQVBJIGZvciBnZXR0aW5nIGEgZGV0YWlsIG9mIGEgZ2l2ZW4gbWV0YWRhdGEgcmVjb3JkIHZpYSBhIEpTT04vSFRUUFMgQVBJLiIKICAgICAgICAgICAgICAgIHNlYXJjaENvbnRyb2xsZXIgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCAzIiAiSW1wbGVtZW50cyBhbmQgcHJvdmlkZXMgYnVzaW5lc3MgZnVuY3Rpb25hbGl0eSByZWxhdGVkIHRvIHNlYXJjaGluZyBmb3IgbWV0YWRhdGEgcmVjb3JkcyIKICAgICAgICAgICAgICAgIGRldGFpbENvbnRyb2xsZXIgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCA0IiAiSW1wbGVtZW50cyBhbmQgcHJvdmlkZXMgYnVzaW5lc3MgZnVuY3Rpb25hbGl0eSByZWxhdGVkIHRvIHZpZXdpbmcgZGV0YWlscyBvZiBtZXRhZGF0YSByZWNvcmRzIgogICAgICAgICAgICAgICAgZGlzdHJpYnV0aW9uTW9kZWwgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCA1IiAiSW50ZXJuYWwgbW9kZWwgb2YgZGlzdHJpYnV0aW9uIG1ldGFkYXRhIgogICAgICAgICAgICAgICAgZGF0YXNldE1vZGVsID0gY29tcG9uZW50ICJTZXJ2aWNlIG9mIHRoZSBjb21wb25lbnQgNiIgIkludGVybmFsIG1vZGVsIG9mIGRhdGFzZXQgbWV0YWRhdGEiCiAgICAgICAgICAgICAgICByZWNvcmRJbmRleEdhdGV3YXkgPSBjb21wb25lbnQgIlNlcnZpY2Ugb2YgdGhlIGNvbXBvbmVudCA3IiAiUHJvdmlkZXMgYWNjZXNzIHRvIGEgbWV0YWRhdGEgcmVjb3JkcyBpbmRleCIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICB9ICAgCiAgICAgICAgICAgIGRldmljZVVwZGF0ZXIgPSBjb250YWluZXIgIkRldmljZSBVcGRhdGVyIiAiV29ya2VyIHJlc3BvbnNpYmxlIGZvciB0aGUgZmlybXdhcmUgYW5kIGRyaXZlciBtYWludGFuYWNlLiIgIlNvbWUgYmxhY2sgYm94IG1hZ2l4IE1pc28gZGlkIG5vdCBpbnZlbnRlZCB5ZXQuIiB7CiAgICAgICAgICAgICAgICB1cGRhdGVNYW5hZ2VyID0gY29tcG9uZW50ICJVcGRhdGUgTWFuYWdlciIgIkV4cG9zZSB0aGUgZnVuY3Rpb25hbGl0eSB0byBvdGhlciBjb21wb25lbnQgb2YgdGhlIHN5c3RlbSwgc28gdGhleSBjYW4gYmUgYWNjZXNzZWQgdmlhIEFQSSBvciBtYW51YWxseSIKICAgICAgICAgICAgICAgIHN0YXR1c1Jlc29sdmVyID0gY29tcG9uZW50ICJTeXN0ZW0gU3RhdHVzIFJlc29sdmVyIiAiUmV0cmlldmVzIHRoZSBjYXRlZ29yeSBvZiB0aGUgZGV2aWNlcyB0aGF0IGFyZSB1bmRlciB0aGUgcmVndWxhdCBjaGVjayBhbmQgZGVjaWRlcyBpZiB1cGRhdGUgaXMgcmVxdWlyZWQuIgogICAgICAgICAgICAgICAgdXBkYXRlUGxhbm5lciA9IGNvbXBvbmVudCAiVXBkYXRlIFBsYW5uZXIiICJTY2hlZHVsZXMgdGhlIHN1aXRhYmxlIHVwZGF0ZSB3aW5kb3cgZm9yIHRoZSBwYXJ0aWN1bGFyIGRldmljZSBzbyB0aGUgcmVndWxhciBzZXJ2aWNlIGlzIG5vdCBhZmVjdGVkLiIKICAgICAgICAgICAgICAgIHZlcnNpb25SZXNvbHZlciA9IGNvbXBvbmVudCAiVmVyc2lvbiBSZXNvbHZlciIgIlZlcmlmaWVzIHRoZSBwcm92aWRlZCBkZXZpY2VzIG1hcCB0byBhIGN1cnJlbnQgdmVyc2lvbiBvZiBhIGRyaXZlcnMsIGZpcm13YXJlIGFuZCBzb2Z0d2FyZSBhZ2FpbnN0IHRoZSBIb3NwaXRhbCdzIGRldmljZXMgcmVnaXN0ZXIiCiAgICAgICAgICAgICAgICB1cGRhdGVUcmlnZ2VyID0gY29tcG9uZW50ICJVcGRhdGUgSW5zdGFsbGF0aW9uIFRyaWdnZXIiICJUcmlnZ2VycyB0aGUgZXZlbnRzIG9mIGRldmljZSB1cGRhdGUgYW5kIHByb3BhZ2F0ZXMgaXQgdG8gZXZlcnkgaXNzdWVkIGNvbXBvbmVudCAiCiAgICAgICAgICAgICAgICB1cGRhdGVXb3JrZXIgPSBjb21wb25lbnQgIlVwZGF0ZSBJbnN0YWxsYXRpb24gV29ya2VyIiAiQmFzZWQgb24gdGhlIHJlc29sdmVkIHZlcnNpb25zIGFuZCBjYXRlZ29yaWVzIGluc3RhbGxzIHRoZSByZXF1ZXN0ZWQgdXBkYXRlcyB0byB0aGUgZGV2aWNlICIKICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgdXNlckRhdGFNYW5hZ2VyID0gY29udGFpbmVyICJVc2VyIERhdGEgTWFuYWdlciIgIk1hbmFnZXMgZGF0YSBhYm91dCB1c2Vycy4iICJVc2VyRGF0YU1hbmFnZXIiewogICAgICAgICAgICAgICAgdXNlckRhdGFNYW5hZ2VyR2F0ZXdheSA9IGNvbXBvbmVudCAiVXNlciBEYXRhIE1hbmFnZXIgR2F0ZXdheSIgInByb3ZpZGVzIGFjY2VzcyB0byBleHRlcm5hbCB1c2VyIGRhdGEgZGF0YWJhc2UiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIGRldmljZURhdGFNYW5hZ2VyID0gY29udGFpbmVyICJEZXZpY2UgRGF0YSBNYW5hZ2VyIiAiTWFuYWdlcyBkYXRhIGFib3V0IGRldmljZXMuIiAiRGV2aWNlRGF0YU1hbmFnZXIiewogICAgICAgICAgICAgICAgZGV2aWNlRGF0YU1hbmFnZXJHYXRld2F5ID0gY29tcG9uZW50ICJEZXZpY2UgRGF0YSBNYW5hZ2VyIEdhdGV3YXkiICJwcm92aWRlcyBhY2Nlc3MgdG8gZXh0ZXJuYWwgZGV2aWNlIGRhdGEgZGF0YWJhc2UiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgICFkb2NzIGRvY3MKCiAgICAgICAgfQogICAgICAgICMgSG9zcGl0YWwgZW1wbG95ZWVzIGdlbmVyYWwgZGF0YWJhc2Ugd2l0aCBBUEkKICAgICAgICBob3NwaXRhbEVtcGxveWVlRGF0YWJhc2UgPSBzb2Z0d2FyZVN5c3RlbSAiRGF0YWJhc2Ugb2YgdGhlIGhvc3BpdGFsIGVtcGxveWVlcyIgIlN0b3JlcyBkYXRhIHJlY29yZHMgYWJvdXQgdGhlIGhvc3BpdGFsIGVtcGxveWVlcyBhbmQgcHJvdmlkZXMgQVBJIGZvciBIb3NwaXRhbCBCdWlsZGluZyBNYWludGFuYWNlIFN5c3RlbS4iICJFeGlzdGluZyBTeXN0ZW0iCgogICAgICAgIGRldmljZXNSZWdpc3RyeSA9IHNvZnR3YXJlU3lzdGVtICJEZXZpY2VzIFJlZ2lzdHJ5IiAiU3RvcmVzIGFuZCBwcmVzZW50cyB0aGUgcmVjb3JkcyBvZiBhbGwgaG9zcGl0YWwgZGV2aWNlcy4iICJFeGlzdGluZyBTeXN0ZW0iCgogICAgICAgIGRyaXZlckluZGV4ID0gc29mdHdhcmVTeXN0ZW0gIkluZGV4IG9mIGFsbCBob3NwaXRhbCdzIGRldmljZXMgZHJpdmVycyIgIkFjdHVhbCBkYXRhIHN0b3JhZ2UgaW5kZXggd2hlcmUgYWxsIGRyaXZlcnMgYW5kIGZpcm13YXJlcyBvZiBob3NwaXRhbCdzIGRldmljZXMgYXJlIHN0b3JlZCBpbiB0aGUgbW9zdCByZWNlbnQgdmVyc2lvbi4iICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgCiAgICAgICAgcmVndWxhclVzZXIgPSBwZXJzb24gIlJlZ3VsYXIgVXNlciIgIkFuIGFjdG9yIHdobyBjb25maWd1cmVzIGFuZCBzY2hlZHVsZXMgdGhlIGNsZWFuaW5nIGRldmljZXMgb3IgdGhlIGJ1aWxkaW5nIGNvbXBvbmVudHMgKHdpbmRvd3MsIGxpZ2h0cywgYWlyY29uZGl0aW9uKS4iICJDb25zdW1lciIKCiAgICAgICAgYWRtaW5pc3RyYXRvciA9IHBlcnNvbiAiQWRtaW5pc3RyYXRvciIgIkFuIGFjdG9yIHdobyBtYW5hZ2VzIHRoZSBidWlsZGluZyBtYWludGFuYW5jZSBkZXZpY2VzIGFuZCBzdXBwb3J0cy4iICJDb25zdW1lciIKCiAgICAgICAgZGV2aWNlID0gcGVyc29uICJEZXZpY2UiICJBIGRldmljZSB0aGF0IGlzIHN1YmplY3QgdG8gdGhlIEhCTVMiICJDb25zdW1lciIKICAgICAgICAKCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIHRvL2Zyb20gc29mdHdhcmUgc3lzdGVtcyAoTGV2ZWwgMSkKICAgICAgICByZWd1bGFyVXNlciAtPiBob3NwaXRhbEJ1aWxkaW5nTWFpbnRhbmFuY2UgIkNvbmZpZ3VyZXMgdGhlIGNsZWFpbmluZyBkZXZpY2VzIGFuZCBidWlsZGluZyBzeXN0ZW1zIgogICAgICAgIGFkbWluaXN0cmF0b3IgLT4gaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlICJDb25maWd1cmVzIHRoZSBkcml2ZXJzIGZvciB0aGUgY2xlYW5pbmcgZGV2aWNlcyBhbmQgbWFuYWdlcyBhY2Nlc3NlcyIKCiAgICAgICAgaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlIC0+IGhvc3BpdGFsRW1wbG95ZWVEYXRhYmFzZSAiVXNlcyBob3NwaXRhbCBlbXBsb3llZSByZWNvcmRzIGZyb20iCiAgICAgICAgaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlIC0+IGRldmljZXNSZWdpc3RyeSAiSGFydmVzdHMgbWV0YWRhdGEgcmVjb3JkcyBmcm9tIgoKICAgICAgICBob3NwaXRhbEJ1aWxkaW5nTWFpbnRhbmFuY2UgLT4gZHJpdmVySW5kZXggIkZldGNoZXMgYSBuZXdlciB2ZXJzaW9uIG9mIHRoZSBmaXJtYXdhcmVzIGFuZCBkcml2ZXJzIGZyb20iCiAgICAgICAgZGV2aWNlc1JlZ2lzdHJ5IC0+IGRyaXZlckluZGV4ICJJbmRleGVzIgogICAgICAgIAogICAgICAgIAogICAgICAgICMgUmVsYXRpb25zaGlwcyB0by9mcm9tIGNvbnRhaW5lcnMgKExldmVsIDIpCiAgICAgICAgcmVndWxhclVzZXIgLT4gd2ViRnJvbnRlbmQgIkNvbmZpZ3VyZXMgdGhlIGNsZWFpbmluZyBkZXZpY2VzIGFuZCBidWlsZGluZyBzeXN0ZW1zIgogICAgICAgIGFkbWluaXN0cmF0b3IgLT4gd2ViRnJvbnRlbmQgIkNvbmZpZ3VyZXMgdGhlIGRyaXZlcnMgZm9yIHRoZSBjbGVhbmluZyBkZXZpY2VzIGFuZCBtYW5hZ2VzIGFjY2Vzc2VzIgoKICAgICAgICB3ZWJGcm9udGVuZCAtPiBzZXJ2ZXIgIlVzZXMgdG8gZGVsaXZlciBmdW5jdGlvbmFsaXR5IgoKICAgICAgICBzZXJ2ZXIgLT4gZGV2aWNlVXBkYXRlciAiVXNlcyBmb3IgZmFzdCByZXRyaWV2YWwgb2YgbWV0YWRhdGEgcmVjb3JkcyBsaXN0cyIKICAgICAgICAKICAgICAgICBzZXJ2ZXIgLT4gdXNlckRhdGFNYW5hZ2VyICJVc2VzIHRvIHJldHJpZXZlIGluZm9ybWF0aW9uIGFib3V0IHRoZSB1c2VycyBpbmNsdWRpbmcgdGhlaXIgc3lzdGVtIHJvbGVzIGFuZCBwZXJtaXNzaW9ucy4iCiAgICAgICAgc2VydmVyIC0+IGRldmljZURhdGFNYW5hZ2VyICJVc2VzIHRvIHJldHJpZXZlIHRoZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgYXZhaWxhYmxlIGRldmljZXMgYW5kIHRoZWlyIGN1cnJlbnQgc3RhdGUuIgoKICAgICAgICB1c2VyRGF0YU1hbmFnZXIgLT4gaG9zcGl0YWxFbXBsb3llZURhdGFiYXNlICJBY2Nlc3NlcyB0aGUgZW1wbG95ZWVzIGRhdGFiYXNlICIKICAgICAgICBkZXZpY2VEYXRhTWFuYWdlciAtPiBkZXZpY2VzUmVnaXN0cnkgIkFjY2Vzc2VzIHRoZSBkZXZpY2VzIGRhdGFiYXNlICIKICAgICAgICBkZXZpY2VEYXRhTWFuYWdlciAtPiBkZXZpY2UgIlJldHJpZXZlcyBkZXZpY2UgaW5mb3JtYXRpb24gYW5kIGN1cnJlbnQgc3RhdHVzIGFuZCBzZW5kcyByZXF1ZXN0cyIKCiAgICAgICAgZGV2aWNlIC0+IGRldmljZURhdGFNYW5hZ2VyICJSZXRyaWV2ZXMgZGV2aWNlIGluZm9ybWF0aW9uIGFuZCBjdXJyZW50IHN0YXR1cyBhbmQgc2VuZHMgcmVxdWVzdHMiCgogICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIGNvbXBvbmVudHMKICAgICAgICB3ZWJGcm9udGVuZCAtPiBsaXN0QVBJICJNYWtlcyBBUEkgY2FsbHMgdG8iICJKU09OL0hUVFBTIgogICAgICAgIHdlYkZyb250ZW5kIC0+IGRldGFpbEFQSSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyIKCiAgICAgICAgIyBzZXJ2ZXIgY29tcG9uZW50cwogICAgICAgIGxpc3RBUEkgLT4gc2VhcmNoQ29udHJvbGxlciAiVXNlcyB0byBhY2Nlc3Mgc2VhcmNoIGJ1c2luZXNzIGZ1bmN0aW9uYWxpdHkiCiAgICAgICAgZGV0YWlsQVBJIC0+IGRldGFpbENvbnRyb2xsZXIgIlVzZXMgdG8gYWNjZXNzIGRldGFpbCBidXNpbmVzcyBmdW5jdGlvbmFsaXR5IgoKICAgICAgICBzZWFyY2hDb250cm9sbGVyIC0+IGRhdGFzZXRNb2RlbCAiVXNlcyB0byBhY2Nlc3MgbWV0YWRhdGEgYWJvdXQgZGF0YXNldHMiCiAgICAgICAgZGV0YWlsQ29udHJvbGxlciAtPiBkYXRhc2V0TW9kZWwgIlVzZXMgdG8gYWNjZXNzIG1ldGFkYXRhIGFib3V0IGRhdGFzZXRzIgogICAgICAgIGRldGFpbENvbnRyb2xsZXIgLT4gZGlzdHJpYnV0aW9uTW9kZWwgIlVzZXMgdG8gYWNjZXNzIG1ldGFkYXRhIGFib3V0IGRpc3RyaWJ1dGlvbnMiCgogICAgICAgIGRhdGFzZXRNb2RlbCAtPiByZWNvcmRJbmRleEdhdGV3YXkgIlVzZXMgdG8gcmV0cmlldmUgbGlzdCBvZiBtZXRhZGF0YSByZWNvcmRzIHdpdGggZ2l2ZW4gdmFsdWVzIG9mIHNlbGVjdGVkIHByb3BlcnRpZXMiCiAgICAgICAgCiAgICAgICAgcmVjb3JkSW5kZXhHYXRld2F5IC0+IGRldmljZVVwZGF0ZXIgIlByb3ZpZGVzIGFjY2VzcyB0byIKCgogICAgICAgICMgRGV2aWNlIFVwZGF0ZXIgLSBDb21wb25lbnQgUmVsYXRpb25zIGFuZCBEZWNvbXBvc2l0aW9ucwoKICAgICAgICB1cGRhdGVNYW5hZ2VyIC0+IHdlYkZyb250ZW5kICAiRXhwb3NlIHRoZSBmdW5jdGluYWxpdHkgdG8gdGhlIEdVSSBhcyB3ZWxsIGFzIHRvIHRoZSBSRVNULUFQSSAiCgogICAgICAgIHZlcnNpb25SZXNvbHZlciAtPiBkZXZpY2VzUmVnaXN0cnkgIkdldHMgZGF0YSBhbmQgdXBkYXRlcyBmcm9tICIKICAgICAgICAjIFdlIGNvdWxkIGFzayBkYXRhIG1hbmFnZXIgZGlyZWN0bHksIGJ1dCB3ZSBuZWVkIHRvIGtub3cgdGhlIGN1cnJlbnQgc3RhdHVzIG9mIHRoZSBkZXZpY2VzIHRvIGJlIHBvc3RlZCBpbnRvIHRoZSBwbGFubmVyCiAgICAgICAgc3RhdHVzUmVzb2x2ZXIgLT4gc2VydmVyICJHZXRzIHRoZSBjYXRlZ29yeSBvZiB0aGUgZGV2aWNlcyB3aXRoIHJlbGV2YW50IG1ldGFkYXRhICIKICAgICAgICB1cGRhdGVNYW5hZ2VyIC0+IHNlcnZlciAiUG9zdHMgdGhlIGluZm9ybWF0aW9uIGFib3V0IHRoZSBwbGFubmVkIHVwZGF0ZWQgd2l0aCB0aGUgbW9kaWZpZWQgZGV2aWNlIHNjaGVkdWxlIGFuZCBzdGF0ZSAiCiAgICAgICAgdXBkYXRlVHJpZ2dlciAtPiB1cGRhdGVNYW5hZ2VyICJSZWZsZWN0cyB0aGUgaW5mb3JtYXRpb24gYWJvdXQgc2NoZWR1bGxlZCB1cGRhdGUgdG8gdGhlIG1hbmFnZXIsIHNvIGl0cyBhY3R1YWwgZm9yIGV2ZXJ5IGxpc3Rlbm5pbmcgc2VydmljZSAiCiAgICAgICAgdXBkYXRlUGxhbm5lciAtPiB1cGRhdGVUcmlnZ2VyICJQb3N0cyB0aGUgc2NoZWR1bGUgZm9yIHRoZSBkZXZpY2VzIHRoYXQgYXJlIGluIHRoZSBjdXJyZW50IHVwZGF0ZSBzY29wZSAiCiAgICAgICAgc3RhdHVzUmVzb2x2ZXIgLT4gdmVyc2lvblJlc29sdmVyICJHZXRzIHRoZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgcG9zc2libGUgdXBkYXRlcyBmb3IgdGhlIHRyYWNrZWQgZGV2aWNlcyAiCiAgICAKICAgICAgICB1cGRhdGVXb3JrZXIgLT4gZGV2aWNlICJJbnN0YWxscyB1cGRhdGVzIHdoZW4gaW4gdGhlIGRldmljZSBpcyBpbiB0aGUgYXBwcm9wcmlhdGUgc3RhdGUgIgogICAgICAgIHVwZGF0ZVRyaWdnZXIgLT4gdXBkYXRlUGxhbm5lciAiSW5pdGlhdGVzIHRoZSBwbGFubmluZyB3aXRoIHRoZSBjdXJyZW50IGluZm9ybWF0aW9uIGFib3V0IGlzc3VlZCBkZXZpY2VzICIKICAgICAgICB1cGRhdGVUcmlnZ2VyIC0+IHN0YXR1c1Jlc29sdmVyICJHZXRzIHRoZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgYWN0dWFsIGRldmljZXMgc3RhdGUgIgoKICAgICAgICB1cGRhdGVNYW5hZ2VyIC0+IHVwZGF0ZVdvcmtlciAiQWRkcyB0YXNrICIKCiAgICAgICAgIyB3ZWJGcm9udGVuZCBjb21wb25lbnRzCiAgICAgICAgbG9nSW5BUEkgLT4gc2VydmVyICJNYWtlcyBBUEkgY2FsbCB0byByZXRyaWV2ZSB1c2VyIHJlY29yZCBmcm9tIERCIgogICAgICAgIGRldmljZU1hbmFnZXIgLT4gc2VydmVyICJNYWtlcyBBUEkgY2FsbHMgdG8gW0pTT04vSFRUUFNdIgoKICAgICAgICBzZWFyY2hBUEkgLT4gZGV2aWNlTWFuYWdlciAiVXNlcyB0byByZXRyaWV2ZSByZWNvcmQgb2YgYSBwYXJ0aWN1bGFyIGRldmljZSBvciBsaXN0IG9mIGRldmljZXMgYmFzZWQgb24gdGhlIHNlYXJjaCBxdWVyeSIKICAgICAgICBkcml2ZXJNYW5hZ2VyIC0+IGRldmljZU1hbmFnZXIgIlVzZXMgdG8gcmV0cmlldmUgcmVjb3JkIG9mIGEgcGFydGljdWxhciBkZXZpY2Ugb3IgZ3JvdXAgb2YgZGV2aWNlcyB0byBhdHRhY2ggdGhlaXIgZHJpdmVyIHNldHRpbmdzIgogICAgICAgIGFkZERldmljZUFQSSAtPiBkZXZpY2VNYW5hZ2VyICJVc2VzIHRvIHVwZGF0ZSB0aGUgY29sbGVjdGlvbiBvZiBkZXZpY2VzIGJ5IGFkZGluZyBhIG5ldyBkZXZpY2UiCgogICAgICAgIGRldmljZVNjaGVkdWxlciAtPiBzZWFyY2hBUEkgIlVzZXMgdG8gcmV0cmlldmUgcmVjb3JkIG9mIGEgcGFydGljdWxhciBkZXZpY2Ugb3IgbGlzdCBvZiBkZXZpY2VzIGZvciBzY2hlZHVsaW5nIgogICAgICAgIGRlbGV0ZURldmljZUFQSSAtPiBzZWFyY2hBUEkgIlVzZXMgdG8gcmV0cmlldmUgcmVjb3JkIG9mIGEgZGV2aWNlIGZvciBmdXJ0aGVyIGFncmVlbWVudCBvZiBhIGRlbGV0ZSBvcGVyYXRpb24gZm9yIHRoaXMgZGV2aWNlIgogICAgICAgIGhvc3BpdGFsVmlzdWFsaXplciAtPiBzZWFyY2hBUEkgIlVzZXMgdG8gcmV0cml2ZSByZWNvcmRzIG9mIGRldmljZXMgdGhhdCBiZWxvbmcgdG8gYSBwYXJ0aWN1bGFyIHNlY3Rpb24iCiAgICAgICAgCiAgICAgICAgIyBEZXZpY2VEYXRhTWFuYWdlciBjb21wb25lbnRzCiAgICAgICAgc2VydmVyIC0+IERldmljZURhdGFNYW5hZ2VyR2F0ZXdheSAiVXNlcyB0byBnZXQgaGlnaCBsZXZlbCBmdW5jdGlvbmFsaXR5IG92ZXIgcmF3IGRldmljZSBkYXRhIgogICAgICAgIERldmljZURhdGFNYW5hZ2VyR2F0ZXdheSAtPiBkZXZpY2VzUmVnaXN0cnkgIlVzZXMgdG8gZ2V0IGFsbCBkYXRhIHJlZ2FyZGluZyBkZXZpY2VzIgogICAgICAgIAogICAgICAgICMgVXNlckRhdGFNYW5hZ2VyIGNvbXBvbmVudHMKICAgICAgICBzZXJ2ZXIgLT4gdXNlckRhdGFNYW5hZ2VyR2F0ZXdheSAiVXNlcyB0byBnZXQgaGlnaCBsZXZlbCBmdW5jdGlvbmFsaXR5IG92ZXIgcmF3IGVtcGxveWVlIGRhdGEiCiAgICAgICAgdXNlckRhdGFNYW5hZ2VyR2F0ZXdheSAtPiBkZXZpY2VzUmVnaXN0cnkgIlVzZXMgdG8gZ2V0IGFsbCBkYXRhIHJlZ2FyZGluZyBlbXBsb3llZXMiCiAgICB9CiAgICAKICAgIHZpZXdzIHsKICAgICAgICAKICAgICAgICBzeXN0ZW1Db250ZXh0IGhvc3BpdGFsQnVpbGRpbmdNYWludGFuYW5jZSAiaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlU3lzdGVtQ29udGV4dERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgaG9zcGl0YWxCdWlsZGluZ01haW50YW5hbmNlICJob3NwaXRhbEJ1aWxkaW5nTWFpbnRhbmFuY2VDb250YWluZXJEaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IHNlcnZlciAic2VydmVyQ29tcG9uZW50RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCB3ZWJGcm9udGVuZCAid2ViRnJvbnRlbmRDb21wb25lbnREaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KICAgICAgICAKICAgICAgICBjb21wb25lbnQgZGV2aWNlVXBkYXRlciAiZGV2aWNlVXBkYXRlciIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgY29tcG9uZW50IERldmljZURhdGFNYW5hZ2VyICJEZXZpY2VEYXRhTWFuYWdlckNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQogICAgICAgIAogICAgICAgIGNvbXBvbmVudCBVc2VyRGF0YU1hbmFnZXIgIlVzZXJEYXRhTWFuYWdlckNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfSAgICAgICAgCgogICAgICAgIHRoZW1lIGRlZmF1bHQKCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiQ29uc3VtZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgfQoKfQo="
   },
   "configuration" : { },
   "model" : {
     "people" : [ {
-      "id" : "31",
+      "id" : "33",
       "tags" : "Element,Person,Consumer",
       "name" : "Regular User",
       "description" : "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition).",
       "relationships" : [ {
-        "id" : "34",
+        "id" : "42",
         "tags" : "Relationship",
-        "sourceId" : "31",
-        "destinationId" : "1",
+        "sourceId" : "33",
+        "destinationId" : "2",
         "description" : "Configures the cleaining devices and building systems"
       }, {
-        "id" : "40",
+        "id" : "36",
         "tags" : "Relationship",
-        "sourceId" : "31",
-        "destinationId" : "2",
+        "sourceId" : "33",
+        "destinationId" : "1",
         "description" : "Configures the cleaining devices and building systems"
       } ],
       "location" : "Unspecified"
     }, {
-      "id" : "32",
-      "tags" : "Element,Person,Consumer",
-      "name" : "Administrator",
-      "description" : "An actor who manages the building maintanance devices and supports.",
-      "relationships" : [ {
-        "id" : "41",
-        "tags" : "Relationship",
-        "sourceId" : "32",
-        "destinationId" : "2",
-        "description" : "Configures the drivers for the cleaning devices and manages accesses"
-      }, {
-        "id" : "35",
-        "tags" : "Relationship",
-        "sourceId" : "32",
-        "destinationId" : "1",
-        "description" : "Configures the drivers for the cleaning devices and manages accesses"
-      } ],
-      "location" : "Unspecified"
-    }, {
-      "id" : "33",
+      "id" : "35",
       "tags" : "Element,Person,Consumer",
       "name" : "Device",
       "description" : "A device that is subject to the HBMS",
       "relationships" : [ {
-        "id" : "51",
+        "id" : "53",
         "tags" : "Relationship",
-        "sourceId" : "33",
+        "sourceId" : "35",
         "destinationId" : "1",
         "description" : "Retrieves device information and current status and sends requests"
       }, {
-        "id" : "50",
+        "id" : "52",
         "tags" : "Relationship",
-        "sourceId" : "33",
-        "destinationId" : "27",
+        "sourceId" : "35",
+        "destinationId" : "28",
         "description" : "Retrieves device information and current status and sends requests"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "34",
+      "tags" : "Element,Person,Consumer",
+      "name" : "Administrator",
+      "description" : "An actor who manages the building maintanance devices and supports.",
+      "relationships" : [ {
+        "id" : "43",
+        "tags" : "Relationship",
+        "sourceId" : "34",
+        "destinationId" : "2",
+        "description" : "Configures the drivers for the cleaning devices and manages accesses"
+      }, {
+        "id" : "37",
+        "tags" : "Relationship",
+        "sourceId" : "34",
+        "destinationId" : "1",
+        "description" : "Configures the drivers for the cleaning devices and manages accesses"
       } ],
       "location" : "Unspecified"
     } ],
     "softwareSystems" : [ {
-      "id" : "30",
-      "tags" : "Element,Software System,Existing System",
-      "name" : "Index of all hospital's devices drivers",
-      "description" : "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version.",
-      "location" : "Unspecified"
-    }, {
-      "id" : "29",
-      "tags" : "Element,Software System,Existing System",
-      "name" : "Devices Registry",
-      "description" : "Stores and presents the records of all hospital devices.",
-      "relationships" : [ {
-        "id" : "39",
-        "tags" : "Relationship",
-        "sourceId" : "29",
-        "destinationId" : "30",
-        "description" : "Indexes"
-      } ],
-      "location" : "Unspecified"
-    }, {
-      "id" : "28",
-      "tags" : "Element,Software System,Existing System",
-      "name" : "Database of the hospital employees",
-      "description" : "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System.",
-      "location" : "Unspecified"
-    }, {
       "id" : "1",
       "tags" : "Element,Software System",
       "name" : "Hospital Building Maintanance System (HBMS)",
       "description" : "Manages and schedules building maintanance devices accross the hospital sectors.",
       "relationships" : [ {
-        "id" : "36",
-        "tags" : "Relationship",
-        "sourceId" : "1",
-        "destinationId" : "28",
-        "description" : "Uses hospital employee records from"
-      }, {
-        "id" : "37",
-        "tags" : "Relationship",
-        "sourceId" : "1",
-        "destinationId" : "29",
-        "description" : "Harvests metadata records from"
-      }, {
-        "id" : "49",
-        "tags" : "Relationship",
-        "sourceId" : "1",
-        "destinationId" : "33",
-        "description" : "Retrieves device information and current status and sends requests"
-      }, {
         "id" : "38",
         "tags" : "Relationship",
         "sourceId" : "1",
         "destinationId" : "30",
+        "description" : "Uses hospital employee records from"
+      }, {
+        "id" : "51",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "35",
+        "description" : "Retrieves device information and current status and sends requests"
+      }, {
+        "id" : "39",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "31",
+        "description" : "Harvests metadata records from"
+      }, {
+        "id" : "40",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "32",
         "description" : "Fetches a newer version of the firmawares and drivers from"
       } ],
       "location" : "Unspecified",
       "containers" : [ {
-        "id" : "26",
-        "tags" : "Element,Container",
-        "name" : "User Data Manager",
-        "description" : "Manages data about users.",
-        "relationships" : [ {
-          "id" : "46",
-          "tags" : "Relationship",
-          "sourceId" : "26",
-          "destinationId" : "28",
-          "description" : "Accesses the employees database"
-        } ],
-        "technology" : "UserDataManager"
-      }, {
-        "id" : "27",
-        "tags" : "Element,Container",
-        "name" : "Device Data Manager",
-        "description" : "Manages data about devices.",
-        "relationships" : [ {
-          "id" : "48",
-          "tags" : "Relationship",
-          "sourceId" : "27",
-          "destinationId" : "33",
-          "description" : "Retrieves device information and current status and sends requests"
-        }, {
-          "id" : "47",
-          "tags" : "Relationship",
-          "sourceId" : "27",
-          "destinationId" : "29",
-          "description" : "Accesses the devices database"
-        } ],
-        "technology" : "DeviceDataManager"
-      }, {
         "id" : "19",
         "tags" : "Element,Container",
         "name" : "Device Updater",
         "description" : "Worker responsible for the firmware and driver maintanace.",
         "relationships" : [ {
-          "id" : "72",
-          "tags" : "Relationship",
-          "sourceId" : "19",
-          "destinationId" : "33",
-          "description" : "Installs updates when in the device is in the appropriate state"
-        }, {
           "id" : "64",
-          "tags" : "Relationship",
-          "sourceId" : "19",
-          "destinationId" : "29",
-          "description" : "Gets data and updates from"
-        }, {
-          "id" : "62",
           "tags" : "Relationship",
           "sourceId" : "19",
           "destinationId" : "2",
           "description" : "Expose the functinality to the GUI as well as to the REST-API"
         }, {
-          "id" : "66",
+          "id" : "74",
+          "tags" : "Relationship",
+          "sourceId" : "19",
+          "destinationId" : "35",
+          "description" : "Installs updates when in the device is in the appropriate state"
+        }, {
+          "id" : "68",
           "tags" : "Relationship",
           "sourceId" : "19",
           "destinationId" : "11",
           "description" : "Gets the category of the devices with relevant metadata"
+        }, {
+          "id" : "66",
+          "tags" : "Relationship",
+          "sourceId" : "19",
+          "destinationId" : "31",
+          "description" : "Gets data and updates from"
         } ],
         "technology" : "Some black box magix Miso did not invented yet.",
         "components" : [ {
@@ -193,36 +136,23 @@
           "name" : "Update Installation Trigger",
           "description" : "Triggers the events of device update and propagates it to every issued component",
           "relationships" : [ {
-            "id" : "73",
-            "tags" : "Relationship",
-            "sourceId" : "24",
-            "destinationId" : "22",
-            "description" : "Initiates the planning with the current information about issued devices"
-          }, {
-            "id" : "68",
+            "id" : "70",
             "tags" : "Relationship",
             "sourceId" : "24",
             "destinationId" : "20",
             "description" : "Reflects the information about schedulled update to the manager, so its actual for every listenning service"
           }, {
-            "id" : "74",
+            "id" : "76",
             "tags" : "Relationship",
             "sourceId" : "24",
             "destinationId" : "21",
             "description" : "Gets the information about the actual devices state"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "23",
-          "tags" : "Element,Component",
-          "name" : "Version Resolver",
-          "description" : "Verifies the provided devices map to a current version of a drivers, firmware and software against the Hospital's devices register",
-          "relationships" : [ {
-            "id" : "63",
+          }, {
+            "id" : "75",
             "tags" : "Relationship",
-            "sourceId" : "23",
-            "destinationId" : "29",
-            "description" : "Gets data and updates from"
+            "sourceId" : "24",
+            "destinationId" : "22",
+            "description" : "Initiates the planning with the current information about issued devices"
           } ],
           "size" : 0
         }, {
@@ -231,23 +161,23 @@
           "name" : "Update Manager",
           "description" : "Expose the functionality to other component of the system, so they can be accessed via API or manually",
           "relationships" : [ {
-            "id" : "67",
+            "id" : "69",
             "tags" : "Relationship",
             "sourceId" : "20",
             "destinationId" : "11",
             "description" : "Posts the information about the planned updated with the modified device schedule and state"
           }, {
-            "id" : "61",
-            "tags" : "Relationship",
-            "sourceId" : "20",
-            "destinationId" : "2",
-            "description" : "Expose the functinality to the GUI as well as to the REST-API"
-          }, {
-            "id" : "75",
+            "id" : "77",
             "tags" : "Relationship",
             "sourceId" : "20",
             "destinationId" : "25",
             "description" : "Adds task"
+          }, {
+            "id" : "63",
+            "tags" : "Relationship",
+            "sourceId" : "20",
+            "destinationId" : "2",
+            "description" : "Expose the functinality to the GUI as well as to the REST-API"
           } ],
           "size" : 0
         }, {
@@ -256,7 +186,7 @@
           "name" : "Update Planner",
           "description" : "Schedules the suitable update window for the particular device so the regular service is not afected.",
           "relationships" : [ {
-            "id" : "69",
+            "id" : "71",
             "tags" : "Relationship",
             "sourceId" : "22",
             "destinationId" : "24",
@@ -269,17 +199,30 @@
           "name" : "System Status Resolver",
           "description" : "Retrieves the category of the devices that are under the regulat check and decides if update is required.",
           "relationships" : [ {
-            "id" : "70",
+            "id" : "72",
             "tags" : "Relationship",
             "sourceId" : "21",
             "destinationId" : "23",
             "description" : "Gets the information about the possible updates for the tracked devices"
           }, {
-            "id" : "65",
+            "id" : "67",
             "tags" : "Relationship",
             "sourceId" : "21",
             "destinationId" : "11",
             "description" : "Gets the category of the devices with relevant metadata"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "23",
+          "tags" : "Element,Component",
+          "name" : "Version Resolver",
+          "description" : "Verifies the provided devices map to a current version of a drivers, firmware and software against the Hospital's devices register",
+          "relationships" : [ {
+            "id" : "65",
+            "tags" : "Relationship",
+            "sourceId" : "23",
+            "destinationId" : "31",
+            "description" : "Gets data and updates from"
           } ],
           "size" : 0
         }, {
@@ -288,142 +231,11 @@
           "name" : "Update Installation Worker",
           "description" : "Based on the resolved versions and categories installs the requested updates to the device",
           "relationships" : [ {
-            "id" : "71",
+            "id" : "73",
             "tags" : "Relationship",
             "sourceId" : "25",
-            "destinationId" : "33",
+            "destinationId" : "35",
             "description" : "Installs updates when in the device is in the appropriate state"
-          } ],
-          "size" : 0
-        } ]
-      }, {
-        "id" : "2",
-        "tags" : "Element,Container",
-        "name" : "(HBMS) Web Front-end",
-        "description" : "Provides all functionality for all devices schedulling, management and monitoring",
-        "relationships" : [ {
-          "id" : "52",
-          "tags" : "Relationship",
-          "sourceId" : "2",
-          "destinationId" : "12",
-          "description" : "Makes API calls to",
-          "technology" : "JSON/HTTPS"
-        }, {
-          "id" : "53",
-          "tags" : "Relationship",
-          "sourceId" : "2",
-          "destinationId" : "13",
-          "description" : "Makes API calls to",
-          "technology" : "JSON/HTTPS"
-        }, {
-          "id" : "42",
-          "tags" : "Relationship",
-          "sourceId" : "2",
-          "destinationId" : "11",
-          "description" : "Uses to deliver functionality"
-        } ],
-        "components" : [ {
-          "id" : "3",
-          "tags" : "Element,Component",
-          "name" : "Device Manager",
-          "description" : "Provides access to device record based on the search query. Supports operations on multiple devices at once.",
-          "relationships" : [ {
-            "id" : "77",
-            "tags" : "Relationship",
-            "sourceId" : "3",
-            "destinationId" : "11",
-            "description" : "Makes API calls to [JSON/HTTPS]"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "5",
-          "tags" : "Element,Component",
-          "name" : "Log In API",
-          "description" : "Provides form for user authentication.",
-          "relationships" : [ {
-            "id" : "76",
-            "tags" : "Relationship",
-            "sourceId" : "5",
-            "destinationId" : "11",
-            "description" : "Makes API call to retrieve user record from DB"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "4",
-          "tags" : "Element,Component",
-          "name" : "Search API",
-          "description" : "Handles search queries for retrieval of information to a particular device, list of devices or employee.",
-          "relationships" : [ {
-            "id" : "78",
-            "tags" : "Relationship",
-            "sourceId" : "4",
-            "destinationId" : "3",
-            "description" : "Uses to retrieve record of a particular device or list of devices based on the search query"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "6",
-          "tags" : "Element,Component",
-          "name" : "Device Scheduler",
-          "description" : "Provides access to device scheduling interface to trigger specific device functions in a given time or periodically.",
-          "relationships" : [ {
-            "id" : "81",
-            "tags" : "Relationship",
-            "sourceId" : "6",
-            "destinationId" : "4",
-            "description" : "Uses to retrieve record of a particular device or list of devices for scheduling"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "8",
-          "tags" : "Element,Component",
-          "name" : "Add Device API",
-          "description" : "Enables addition of a new device.",
-          "relationships" : [ {
-            "id" : "80",
-            "tags" : "Relationship",
-            "sourceId" : "8",
-            "destinationId" : "3",
-            "description" : "Uses to update the collection of devices by adding a new device"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "10",
-          "tags" : "Element,Component",
-          "name" : "Hospital Visualizer",
-          "description" : "Provides UI for browsing individual sections of a hospital with their corresponding devices.",
-          "relationships" : [ {
-            "id" : "83",
-            "tags" : "Relationship",
-            "sourceId" : "10",
-            "destinationId" : "4",
-            "description" : "Uses to retrive records of devices that belong to a particular section"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "9",
-          "tags" : "Element,Component",
-          "name" : "Delete Device API",
-          "description" : "Enables deletion of an existing device.",
-          "relationships" : [ {
-            "id" : "82",
-            "tags" : "Relationship",
-            "sourceId" : "9",
-            "destinationId" : "4",
-            "description" : "Uses to retrieve record of a device for further agreement of a delete operation for this device"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "7",
-          "tags" : "Element,Component",
-          "name" : "Driver Manager",
-          "description" : "Enables setup of device drivers configuration.",
-          "relationships" : [ {
-            "id" : "79",
-            "tags" : "Relationship",
-            "sourceId" : "7",
-            "destinationId" : "3",
-            "description" : "Uses to retrieve record of a particular device or group of devices to attach their driver settings"
           } ],
           "size" : 0
         } ]
@@ -433,67 +245,53 @@
         "name" : "(HBMS) Server",
         "description" : "Implements logic for functionality of the regular devices management.",
         "relationships" : [ {
-          "id" : "43",
+          "id" : "45",
           "tags" : "Relationship",
           "sourceId" : "11",
           "destinationId" : "19",
           "description" : "Uses for fast retrieval of metadata records lists"
         }, {
-          "id" : "44",
+          "id" : "46",
           "tags" : "Relationship",
           "sourceId" : "11",
           "destinationId" : "26",
           "description" : "Uses to retrieve information about the users including their system roles and permissions."
         }, {
-          "id" : "45",
+          "id" : "47",
+          "tags" : "Relationship",
+          "sourceId" : "11",
+          "destinationId" : "28",
+          "description" : "Uses to retrieve the information about the available devices and their current state."
+        }, {
+          "id" : "88",
           "tags" : "Relationship",
           "sourceId" : "11",
           "destinationId" : "27",
-          "description" : "Uses to retrieve the information about the available devices and their current state."
+          "description" : "Uses to get high level functionality over raw employee data"
+        }, {
+          "id" : "86",
+          "tags" : "Relationship",
+          "sourceId" : "11",
+          "destinationId" : "29",
+          "description" : "Uses to get high level functionality over raw device data"
         } ],
         "components" : [ {
-          "id" : "17",
-          "tags" : "Element,Component",
-          "name" : "Service of the component 6",
-          "description" : "Internal model of dataset metadata",
-          "relationships" : [ {
-            "id" : "59",
-            "tags" : "Relationship",
-            "sourceId" : "17",
-            "destinationId" : "18",
-            "description" : "Uses to retrieve list of metadata records with given values of selected properties"
-          } ],
-          "size" : 0
-        }, {
           "id" : "15",
           "tags" : "Element,Component",
           "name" : "Service of the component 4",
           "description" : "Implements and provides business functionality related to viewing details of metadata records",
           "relationships" : [ {
-            "id" : "58",
-            "tags" : "Relationship",
-            "sourceId" : "15",
-            "destinationId" : "16",
-            "description" : "Uses to access metadata about distributions"
-          }, {
-            "id" : "57",
+            "id" : "59",
             "tags" : "Relationship",
             "sourceId" : "15",
             "destinationId" : "17",
             "description" : "Uses to access metadata about datasets"
-          } ],
-          "size" : 0
-        }, {
-          "id" : "12",
-          "tags" : "Element,Component",
-          "name" : "Service of the component 1",
-          "description" : "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API.",
-          "relationships" : [ {
-            "id" : "54",
+          }, {
+            "id" : "60",
             "tags" : "Relationship",
-            "sourceId" : "12",
-            "destinationId" : "14",
-            "description" : "Uses to access search business functionality"
+            "sourceId" : "15",
+            "destinationId" : "16",
+            "description" : "Uses to access metadata about distributions"
           } ],
           "size" : 0
         }, {
@@ -502,7 +300,7 @@
           "name" : "Service of the component 7",
           "description" : "Provides access to a metadata records index",
           "relationships" : [ {
-            "id" : "60",
+            "id" : "62",
             "tags" : "Relationship",
             "sourceId" : "18",
             "destinationId" : "19",
@@ -515,7 +313,7 @@
           "name" : "Service of the component 2",
           "description" : "Provides API for getting a detail of a given metadata record via a JSON/HTTPS API.",
           "relationships" : [ {
-            "id" : "55",
+            "id" : "57",
             "tags" : "Relationship",
             "sourceId" : "13",
             "destinationId" : "15",
@@ -523,16 +321,16 @@
           } ],
           "size" : 0
         }, {
-          "id" : "14",
+          "id" : "12",
           "tags" : "Element,Component",
-          "name" : "Service of the component 3",
-          "description" : "Implements and provides business functionality related to searching for metadata records",
+          "name" : "Service of the component 1",
+          "description" : "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API.",
           "relationships" : [ {
             "id" : "56",
             "tags" : "Relationship",
-            "sourceId" : "14",
-            "destinationId" : "17",
-            "description" : "Uses to access metadata about datasets"
+            "sourceId" : "12",
+            "destinationId" : "14",
+            "description" : "Uses to access search business functionality"
           } ],
           "size" : 0
         }, {
@@ -541,8 +339,256 @@
           "name" : "Service of the component 5",
           "description" : "Internal model of distribution metadata",
           "size" : 0
+        }, {
+          "id" : "14",
+          "tags" : "Element,Component",
+          "name" : "Service of the component 3",
+          "description" : "Implements and provides business functionality related to searching for metadata records",
+          "relationships" : [ {
+            "id" : "58",
+            "tags" : "Relationship",
+            "sourceId" : "14",
+            "destinationId" : "17",
+            "description" : "Uses to access metadata about datasets"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "17",
+          "tags" : "Element,Component",
+          "name" : "Service of the component 6",
+          "description" : "Internal model of dataset metadata",
+          "relationships" : [ {
+            "id" : "61",
+            "tags" : "Relationship",
+            "sourceId" : "17",
+            "destinationId" : "18",
+            "description" : "Uses to retrieve list of metadata records with given values of selected properties"
+          } ],
+          "size" : 0
+        } ]
+      }, {
+        "id" : "2",
+        "tags" : "Element,Container",
+        "name" : "(HBMS) Web Front-end",
+        "description" : "Provides all functionality for all devices schedulling, management and monitoring",
+        "relationships" : [ {
+          "id" : "44",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "11",
+          "description" : "Uses to deliver functionality"
+        }, {
+          "id" : "54",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "12",
+          "description" : "Makes API calls to",
+          "technology" : "JSON/HTTPS"
+        }, {
+          "id" : "55",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "13",
+          "description" : "Makes API calls to",
+          "technology" : "JSON/HTTPS"
+        } ],
+        "components" : [ {
+          "id" : "8",
+          "tags" : "Element,Component",
+          "name" : "Add Device API",
+          "description" : "Enables addition of a new device.",
+          "relationships" : [ {
+            "id" : "82",
+            "tags" : "Relationship",
+            "sourceId" : "8",
+            "destinationId" : "3",
+            "description" : "Uses to update the collection of devices by adding a new device"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "5",
+          "tags" : "Element,Component",
+          "name" : "Log In API",
+          "description" : "Provides form for user authentication.",
+          "relationships" : [ {
+            "id" : "78",
+            "tags" : "Relationship",
+            "sourceId" : "5",
+            "destinationId" : "11",
+            "description" : "Makes API call to retrieve user record from DB"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "7",
+          "tags" : "Element,Component",
+          "name" : "Driver Manager",
+          "description" : "Enables setup of device drivers configuration.",
+          "relationships" : [ {
+            "id" : "81",
+            "tags" : "Relationship",
+            "sourceId" : "7",
+            "destinationId" : "3",
+            "description" : "Uses to retrieve record of a particular device or group of devices to attach their driver settings"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "10",
+          "tags" : "Element,Component",
+          "name" : "Hospital Visualizer",
+          "description" : "Provides UI for browsing individual sections of a hospital with their corresponding devices.",
+          "relationships" : [ {
+            "id" : "85",
+            "tags" : "Relationship",
+            "sourceId" : "10",
+            "destinationId" : "4",
+            "description" : "Uses to retrive records of devices that belong to a particular section"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "4",
+          "tags" : "Element,Component",
+          "name" : "Search API",
+          "description" : "Handles search queries for retrieval of information to a particular device, list of devices or employee.",
+          "relationships" : [ {
+            "id" : "80",
+            "tags" : "Relationship",
+            "sourceId" : "4",
+            "destinationId" : "3",
+            "description" : "Uses to retrieve record of a particular device or list of devices based on the search query"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "9",
+          "tags" : "Element,Component",
+          "name" : "Delete Device API",
+          "description" : "Enables deletion of an existing device.",
+          "relationships" : [ {
+            "id" : "84",
+            "tags" : "Relationship",
+            "sourceId" : "9",
+            "destinationId" : "4",
+            "description" : "Uses to retrieve record of a device for further agreement of a delete operation for this device"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "3",
+          "tags" : "Element,Component",
+          "name" : "Device Manager",
+          "description" : "Provides access to device record based on the search query. Supports operations on multiple devices at once.",
+          "relationships" : [ {
+            "id" : "79",
+            "tags" : "Relationship",
+            "sourceId" : "3",
+            "destinationId" : "11",
+            "description" : "Makes API calls to [JSON/HTTPS]"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "6",
+          "tags" : "Element,Component",
+          "name" : "Device Scheduler",
+          "description" : "Provides access to device scheduling interface to trigger specific device functions in a given time or periodically.",
+          "relationships" : [ {
+            "id" : "83",
+            "tags" : "Relationship",
+            "sourceId" : "6",
+            "destinationId" : "4",
+            "description" : "Uses to retrieve record of a particular device or list of devices for scheduling"
+          } ],
+          "size" : 0
+        } ]
+      }, {
+        "id" : "26",
+        "tags" : "Element,Container",
+        "name" : "User Data Manager",
+        "description" : "Manages data about users.",
+        "relationships" : [ {
+          "id" : "90",
+          "tags" : "Relationship",
+          "sourceId" : "26",
+          "destinationId" : "31",
+          "description" : "Uses to get all data regarding employees"
+        }, {
+          "id" : "48",
+          "tags" : "Relationship",
+          "sourceId" : "26",
+          "destinationId" : "30",
+          "description" : "Accesses the employees database"
+        } ],
+        "technology" : "UserDataManager",
+        "components" : [ {
+          "id" : "27",
+          "tags" : "Element,Component",
+          "name" : "User Data Manager Gateway",
+          "description" : "provides access to external user data database",
+          "relationships" : [ {
+            "id" : "89",
+            "tags" : "Relationship",
+            "sourceId" : "27",
+            "destinationId" : "31",
+            "description" : "Uses to get all data regarding employees"
+          } ],
+          "size" : 0
+        } ]
+      }, {
+        "id" : "28",
+        "tags" : "Element,Container",
+        "name" : "Device Data Manager",
+        "description" : "Manages data about devices.",
+        "relationships" : [ {
+          "id" : "50",
+          "tags" : "Relationship",
+          "sourceId" : "28",
+          "destinationId" : "35",
+          "description" : "Retrieves device information and current status and sends requests"
+        }, {
+          "id" : "49",
+          "tags" : "Relationship",
+          "sourceId" : "28",
+          "destinationId" : "31",
+          "description" : "Accesses the devices database"
+        } ],
+        "technology" : "DeviceDataManager",
+        "components" : [ {
+          "id" : "29",
+          "tags" : "Element,Component",
+          "name" : "Device Data Manager Gateway",
+          "description" : "provides access to external device data database",
+          "relationships" : [ {
+            "id" : "87",
+            "tags" : "Relationship",
+            "sourceId" : "29",
+            "destinationId" : "31",
+            "description" : "Uses to get all data regarding devices"
+          } ],
+          "size" : 0
         } ]
       } ]
+    }, {
+      "id" : "31",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Devices Registry",
+      "description" : "Stores and presents the records of all hospital devices.",
+      "relationships" : [ {
+        "id" : "41",
+        "tags" : "Relationship",
+        "sourceId" : "31",
+        "destinationId" : "32",
+        "description" : "Indexes"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "32",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Index of all hospital's devices drivers",
+      "description" : "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version.",
+      "location" : "Unspecified"
+    }, {
+      "id" : "30",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Database of the hospital employees",
+      "description" : "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System.",
+      "location" : "Unspecified"
     } ]
   },
   "documentation" : {
@@ -551,25 +597,25 @@
       "title" : "Context",
       "order" : 2,
       "format" : "Markdown",
-      "content" : "## Context\n\nWe are developing the Building Maintenance for the Hospital. The Hospital is organized into floors and sections (rooms). These rooms are categorized onto:\n- **Rooms for patients** (*out of scope of these requirements*)\n- **Other rooms** - shared rooms, operating rooms, halls, etc. \n\nThe application will be used by the qualified employees which have appropriate rights to use our software. We will be using already implemented database of the Hospital's employees, therefore; all information about the particular employee is already known.\n\n#### Functional Requirements:\n\nThe following section summarizes the *Functional Requirements* of the project in a non-formatted way. Please feel free to extend any additional remarks or observations. \n\n- User-friendly (intuitive) visualization of the hospital, so the employee can easily orientate. (We are not required to develop mockups or wireframes but consider how possible choices of visualization affects the SW Architecture)\nEach room/section has an associated collection of **states** of each of the devices that our application can handle, i.e., *window - opened/closed*, *air-condition - on/off*, etc.\n-  Each floor has associated the cleaning devices that can be scheduled and triggered automatically by our system\n   -  We can expect that there are no barriers on the floor that our application should consider, i.e., stairs \n   -  We can expect that the device is connected to the PAN, has a unique ID, variable API (depends on the constructor of the particular device), and its firmware is somehow intelligent\n   -  We should consider that the APIs of the devices vary and can be changed, replaced or if the new device is acquired, then it is not yet supported\n   -  The cleaning devices can be scheduled to perform tasks and the proper time - even periodically\n   -  Consider the behavior of the devices at the risk situations - battery low/ lack of the internet, etc.\n   -  Addition of new devices or removal of the obsolete ones\n   -  Track the history of the particular devices, i.e., who configured it last time, etc.\n   -  We do not have to consider user-rights system (either consider that this is taken care of out of the box or prepare your system for the right access check)\n   -  Authentication and authorization process (can be dependent on outer services)\n   -  We can expect outer services that could help our purposes yet are out of the scope of this project\n   -  The architecture should be moreover universal for Web/Mobile platforms (This could be tricky since web-servers, reverse-proxies, or monitoring won't be present on the mobile device - depends - to be discussed)\n   -  Consider the physical/manual interaction with the devices simultaneously with the automated one - prepare precedence behavior/fallback strategies\n\n\n#### Non-Functional Requirements\n\nThe following section summarizes our system's *Non-Functional Requirements* that should be considered and reflected in the architecture. Those requirements are mainly targeted to reduce the overall costs, duration of the development, and the entire system's final complexity.\n\n- The system should consider the security constraints\n- The system should be designed efficiently considering the performance\n- The system should be scalable and extensible\n- The system should be designed in a way to support newly acquired devices easily\n- The system should be robust\n\nAll architectonical decisions that consider the points listed above must be documented within the output diagrams.\n\n![](embed:hospitalBuildingMaintananceSystemContextDiagram)"
+      "content" : "## Context\r\n\r\nWe are developing the Building Maintenance for the Hospital. The Hospital is organized into floors and sections (rooms). These rooms are categorized onto:\r\n- **Rooms for patients** (*out of scope of these requirements*)\r\n- **Other rooms** - shared rooms, operating rooms, halls, etc. \r\n\r\nThe application will be used by the qualified employees which have appropriate rights to use our software. We will be using already implemented database of the Hospital's employees, therefore; all information about the particular employee is already known.\r\n\r\n#### Functional Requirements:\r\n\r\nThe following section summarizes the *Functional Requirements* of the project in a non-formatted way. Please feel free to extend any additional remarks or observations. \r\n\r\n- User-friendly (intuitive) visualization of the hospital, so the employee can easily orientate. (We are not required to develop mockups or wireframes but consider how possible choices of visualization affects the SW Architecture)\r\nEach room/section has an associated collection of **states** of each of the devices that our application can handle, i.e., *window - opened/closed*, *air-condition - on/off*, etc.\r\n-  Each floor has associated the cleaning devices that can be scheduled and triggered automatically by our system\r\n   -  We can expect that there are no barriers on the floor that our application should consider, i.e., stairs \r\n   -  We can expect that the device is connected to the PAN, has a unique ID, variable API (depends on the constructor of the particular device), and its firmware is somehow intelligent\r\n   -  We should consider that the APIs of the devices vary and can be changed, replaced or if the new device is acquired, then it is not yet supported\r\n   -  The cleaning devices can be scheduled to perform tasks and the proper time - even periodically\r\n   -  Consider the behavior of the devices at the risk situations - battery low/ lack of the internet, etc.\r\n   -  Addition of new devices or removal of the obsolete ones\r\n   -  Track the history of the particular devices, i.e., who configured it last time, etc.\r\n   -  We do not have to consider user-rights system (either consider that this is taken care of out of the box or prepare your system for the right access check)\r\n   -  Authentication and authorization process (can be dependent on outer services)\r\n   -  We can expect outer services that could help our purposes yet are out of the scope of this project\r\n   -  The architecture should be moreover universal for Web/Mobile platforms (This could be tricky since web-servers, reverse-proxies, or monitoring won't be present on the mobile device - depends - to be discussed)\r\n   -  Consider the physical/manual interaction with the devices simultaneously with the automated one - prepare precedence behavior/fallback strategies\r\n\r\n\r\n#### Non-Functional Requirements\r\n\r\nThe following section summarizes our system's *Non-Functional Requirements* that should be considered and reflected in the architecture. Those requirements are mainly targeted to reduce the overall costs, duration of the development, and the entire system's final complexity.\r\n\r\n- The system should consider the security constraints\r\n- The system should be designed efficiently considering the performance\r\n- The system should be scalable and extensible\r\n- The system should be designed in a way to support newly acquired devices easily\r\n- The system should be robust\r\n\r\nAll architectonical decisions that consider the points listed above must be documented within the output diagrams.\r\n\r\n![](embed:hospitalBuildingMaintananceSystemContextDiagram)"
     }, {
       "elementId" : "1",
       "title" : "Roadmap",
       "order" : 1,
       "format" : "Markdown",
-      "content" : "## Roadmap\n\nThis document describes the architecture of the Building Maintenance System for the Hospital.\n\n\n| Team member | Responsibilty scope |\n|-------------|-------------------- |\n| **Michal Kyjovsky** | Device Updater | \n| **Marian Kazimir** | Device/User Data Manager |\n| **Kristina Lhotanova** | HBMS Front-End |\n| **Robert Badronov** | HBMS Server |\n\n\n\n### Release 1.0\n\nGoal of this release period is to provide high-level static decomposition of the Building Maintance System. Provide the scheme on the level 1 and 2 of the C4 Model. Optionally decompose the particular container that are subject to the individual team member.\n\n\n### Release 1.1\n\nThis release aim to finalize the architecture of the system considering the feedback from the supervisor. Based on the finalized architecture prepare the presentation and handover for another team. "
+      "content" : "## Roadmap\r\n\r\nThis document describes the architecture of the Building Maintenance System for the Hospital.\r\n\r\n\r\n| Team member | Responsibilty scope |\r\n|-------------|-------------------- |\r\n| **Michal Kyjovsky** | Device Updater | \r\n| **Marian Kazimir** | Device/User Data Manager |\r\n| **Kristina Lhotanova** | HBMS Front-End |\r\n| **Robert Badronov** | HBMS Server |\r\n\r\n\r\n\r\n### Release 1.0\r\n\r\nGoal of this release period is to provide high-level static decomposition of the Building Maintance System. Provide the scheme on the level 1 and 2 of the C4 Model. Optionally decompose the particular container that are subject to the individual team member.\r\n\r\n\r\n### Release 1.1\r\n\r\nThis release aim to finalize the architecture of the system considering the feedback from the supervisor. Based on the finalized architecture prepare the presentation and handover for another team. "
     }, {
       "elementId" : "1",
       "title" : "Decomposition of the Architecture",
       "order" : 4,
       "format" : "Markdown",
-      "content" : "## Decomposition of the Architecture\n\nThe following chapter provides a decomposition and description of each container that is subject to our system.\n\n\n![Hospital Building Maintanance Container Diagram](embed:hospitalBuildingMaintananceContainerDiagram)\n\n### HBMS Web Front-End\nThe purpose of this container is to introduce the graphical user interface both for the administrator of the application and the regular user.\n\n![HBMS Web Front-End](embed:webFrontendComponentDiagram)\n\n\n### HBMS Server\nThe following container represents the core functionality and business logic of our application. Our architecture acts as a controller over the model components (Device Data Manager, User Data Manager). Among other responsibilities and the most important one of the components is the interaction with devices in the hospital.  \n\n\n### Device Data Manager\nTBD\n\n### User Data Manager\nTBD\n\n### Device Updater\nThe last container our system consists of is the ***Device Updater***. The ***Device Updater*** is responsible for the maintenance of the particular device, checking the version of its firmware and software, and the overall status. Furthermore, it provides updates and upgrades for the devices that are connected to the network and are actively deployed to the service.\n\nFirstly we must declare that the responsibility of storing and managing the drivers was let upon to a standalone service which is not part of our system. Assuming that such a component will exist in the hospital's ecosystem was taken because other devices must be registered within a hospital and require regular drivers, firmware, or system maintenance. Therefore, having this assumption, we will be only querying the issued component and reducing our system's overall complexity and data redundancy. \n\n\n![Device Updater Component](embed:deviceUpdater)\n\nThe utilization of the updater will be enabled using the Admin UI. That literally means that the regular user will not have an access to the maintenance of the particular device. \n\n\n#### Workflow Scenario\n\nThe component will periodically scan the devices that will be grouped based on the common metric (modifiable - sector, producer, area of usage). **Update Intallation Trigger** will based on the **Update Manager** invocation starts the devices scan. First, the confirmation that the version index were updated and varies from the current devices version is performed. Based on the outcome of this subprocess either the updates end or continues to the **Update Planner**. The **Update Planner** will construct the most suitable schedule for update of the particular device so its regular or planned service is not affected anyhow. The constructed schedulle is then propagated to the ***Trigger*** component so it can be via ***Manager*** propagated to the particular device. This process must be synchronized and strongly relies on the schedulle status flag so the planning cannot be dead-locked by another system interaction. Finally the ***Manager*** posts the tasks to the ***Update Installation Worker***, which will handle the installation and update process for each device individually without any limitation to the system.\n <!-- TODO: Consider the limitation of the container interaction with the external entities. This could be moved to the HBMS Server, so the comunication with the devices is kept under one container. However, this could cause the performance issues considering all other functionalities that the server contaiener must span. Discuss this!  -->\n\n#### Automatic update & upgrade resolution\n\nFirst of all the system must be able to track the current version of the drivers, firmawares and software on each device. This can be done by the decomposition and categorization of the devices. Then in the scheduled intervals can be devices validated against the version of its system dependencies against the **Devices Registry** which stores the information about the most recent drivers, firmware and software required. The component then verifies that the device can be updated based on the versions resolution. When the device is about to be updated, the component then post request to a planner component which plans the regular update window for a device, so it won't affect the service. \n\n#### Update Manager\n\nThe container must communicate with others container. Firstly we need to provide the REST-API to Fron-End service, so the ***admin panel*** can visualize real-time data and statuses.\n <!-- TODO: Consider decomposing this component so the REST-API remains standalone service and some kind of publisher will post/get the data to/from the server  -->\nAnother responsibilty of the manager is to exchange the metadata information with the server, so the appropriate operaions can be performed. For an instance to set the valid state to a device that is under update check - so the schedulle modification are locked."
+      "content" : "## Decomposition of the Architecture\r\n\r\nThe following chapter provides a decomposition and description of each container that is subject to our system.\r\n\r\n\r\n![Hospital Building Maintanance Container Diagram](embed:hospitalBuildingMaintananceContainerDiagram)\r\n\r\n### HBMS Web Front-End\r\nThe purpose of this container is to introduce the graphical user interface both for the administrator of the application and the regular user.\r\n\r\n![HBMS Web Front-End](embed:webFrontendComponentDiagram)\r\n\r\n\r\n### HBMS Server\r\nThe following container represents the core functionality and business logic of our application. Our architecture acts as a controller over the model components (Device Data Manager, User Data Manager). Among other responsibilities and the most important one of the components is the interaction with devices in the hospital.  \r\n\r\n\r\n### Device Data Manager\r\nTBD\r\n\r\n### User Data Manager\r\nTBD\r\n\r\n### Device Updater\r\nThe last container our system consists of is the ***Device Updater***. The ***Device Updater*** is responsible for the maintenance of the particular device, checking the version of its firmware and software, and the overall status. Furthermore, it provides updates and upgrades for the devices that are connected to the network and are actively deployed to the service.\r\n\r\nFirstly we must declare that the responsibility of storing and managing the drivers was let upon to a standalone service which is not part of our system. Assuming that such a component will exist in the hospital's ecosystem was taken because other devices must be registered within a hospital and require regular drivers, firmware, or system maintenance. Therefore, having this assumption, we will be only querying the issued component and reducing our system's overall complexity and data redundancy. \r\n\r\n\r\n![Device Updater Component](embed:deviceUpdater)\r\n\r\nThe utilization of the updater will be enabled using the Admin UI. That literally means that the regular user will not have an access to the maintenance of the particular device. \r\n\r\n\r\n#### Workflow Scenario\r\n\r\nThe component will periodically scan the devices that will be grouped based on the common metric (modifiable - sector, producer, area of usage). **Update Intallation Trigger** will based on the **Update Manager** invocation starts the devices scan. First, the confirmation that the version index were updated and varies from the current devices version is performed. Based on the outcome of this subprocess either the updates end or continues to the **Update Planner**. The **Update Planner** will construct the most suitable schedule for update of the particular device so its regular or planned service is not affected anyhow. The constructed schedulle is then propagated to the ***Trigger*** component so it can be via ***Manager*** propagated to the particular device. This process must be synchronized and strongly relies on the schedulle status flag so the planning cannot be dead-locked by another system interaction. Finally the ***Manager*** posts the tasks to the ***Update Installation Worker***, which will handle the installation and update process for each device individually without any limitation to the system.\r\n <!-- TODO: Consider the limitation of the container interaction with the external entities. This could be moved to the HBMS Server, so the comunication with the devices is kept under one container. However, this could cause the performance issues considering all other functionalities that the server contaiener must span. Discuss this!  -->\r\n\r\n#### Automatic update & upgrade resolution\r\n\r\nFirst of all the system must be able to track the current version of the drivers, firmawares and software on each device. This can be done by the decomposition and categorization of the devices. Then in the scheduled intervals can be devices validated against the version of its system dependencies against the **Devices Registry** which stores the information about the most recent drivers, firmware and software required. The component then verifies that the device can be updated based on the versions resolution. When the device is about to be updated, the component then post request to a planner component which plans the regular update window for a device, so it won't affect the service. \r\n\r\n#### Update Manager\r\n\r\nThe container must communicate with others container. Firstly we need to provide the REST-API to Fron-End service, so the ***admin panel*** can visualize real-time data and statuses.\r\n <!-- TODO: Consider decomposing this component so the REST-API remains standalone service and some kind of publisher will post/get the data to/from the server  -->\r\nAnother responsibilty of the manager is to exchange the metadata information with the server, so the appropriate operaions can be performed. For an instance to set the valid state to a device that is under update check - so the schedulle modification are locked."
     }, {
       "elementId" : "1",
       "title" : "Stakeholders",
       "order" : 3,
       "format" : "Markdown",
-      "content" : "## Stakeholders\n\n\n### Initial analysis\n\n- hospital employees working with the devices connected to the system\n  - doctors, maintenance workers, ...\n- hospital owner\n- hospital CEO (head of the hospital)\n- investors (relevant especially for private hospitals)\n- developers\n\n#### Concerns\n\n##### Employees\n\n- intuitive user interface\n- accessibility (the system shouldn't crash in case of a power outage, it should have a backup server)\n- scalability, multi-platform usage (delivered as both web and mobile application, compatible with all widely used operating systems - Windows, Linux, Mac, Android, iOS)\n- safety (regarding user data protection)\n- support service (technical, quick response if an error occurs)\n- backlog (information storage for monitoring of performed operations, including names of the operators, for easier issue tracking)\n- safety handling (the manual control should be preferred over the remote control, system's security policy should prevent unauthorized users from manipulating with the devices)\n\n##### Owner\n\n- reliability, safety\n- reasonable price (for both system's setup and its maintenance, especially the maintenance as it's the long-term cost)\n- scalability (possibility to add new features in the future)\n- external security service\n- modern and well-documented (the employees might not be willing to work with a system that is too complex or obsolete)\n\n##### Developers\n\n- convenient maintenance (the system should be built on modern technologies with solid documentation, support and community)\n\n- well-documented API, code examples for different use cases\n- continuous integration, automatization, tests (unit tests, integration tests)\n- best code practices (readable code, suitable design patterns)\n- code reviews (from other developers, testers)\n- clear specification of new features\n- precisely maintained issue tracker\n\n\n### Actual Reflection\n\n\n#### Regular User\n\nRegular User is meant as an user which directly interacts with the application on the daily bases. Literally, it can be janitor, cleaner, nurse. The use-cases of such user is to interact with the devices that have direct relation to the sector they are placed (lights, window, aircondition) and with devices intended for cleaning (hovers, window-cleaners). In addition user must be able to see the history of the particular device - hence last queries/commads and their invoker. Finally, the user must have an option to contact the support if they face any technical difficulties. \n\n\n#### Administrator\n\nAdministrator is responsible for maintaining access to the particular sectors and to the particular user. If the automatic resolving of the devices upgrades and updates fails, they must be provided with the graphical user interface enabling the manual configuration of the update/upgrade procedures. \n\n#### Device\n\nThe device represents the entity that is contolled with our application. Device interacts with our application to obtain the new drivers, firmware and software. Among other use-cases belongs the continuos state reporting, so the user are acknowledged about the state of the particular device. \n\n##### TODO: Define device states (unify on some level of abstraction)"
+      "content" : "## Stakeholders\r\n\r\n\r\n### Initial analysis\r\n\r\n- hospital employees working with the devices connected to the system\r\n  - doctors, maintenance workers, ...\r\n- hospital owner\r\n- hospital CEO (head of the hospital)\r\n- investors (relevant especially for private hospitals)\r\n- developers\r\n\r\n#### Concerns\r\n\r\n##### Employees\r\n\r\n- intuitive user interface\r\n- accessibility (the system shouldn't crash in case of a power outage, it should have a backup server)\r\n- scalability, multi-platform usage (delivered as both web and mobile application, compatible with all widely used operating systems - Windows, Linux, Mac, Android, iOS)\r\n- safety (regarding user data protection)\r\n- support service (technical, quick response if an error occurs)\r\n- backlog (information storage for monitoring of performed operations, including names of the operators, for easier issue tracking)\r\n- safety handling (the manual control should be preferred over the remote control, system's security policy should prevent unauthorized users from manipulating with the devices)\r\n\r\n##### Owner\r\n\r\n- reliability, safety\r\n- reasonable price (for both system's setup and its maintenance, especially the maintenance as it's the long-term cost)\r\n- scalability (possibility to add new features in the future)\r\n- external security service\r\n- modern and well-documented (the employees might not be willing to work with a system that is too complex or obsolete)\r\n\r\n##### Developers\r\n\r\n- convenient maintenance (the system should be built on modern technologies with solid documentation, support and community)\r\n\r\n- well-documented API, code examples for different use cases\r\n- continuous integration, automatization, tests (unit tests, integration tests)\r\n- best code practices (readable code, suitable design patterns)\r\n- code reviews (from other developers, testers)\r\n- clear specification of new features\r\n- precisely maintained issue tracker\r\n\r\n\r\n### Actual Reflection\r\n\r\n\r\n#### Regular User\r\n\r\nRegular User is meant as an user which directly interacts with the application on the daily bases. Literally, it can be janitor, cleaner, nurse. The use-cases of such user is to interact with the devices that have direct relation to the sector they are placed (lights, window, aircondition) and with devices intended for cleaning (hovers, window-cleaners). In addition user must be able to see the history of the particular device - hence last queries/commads and their invoker. Finally, the user must have an option to contact the support if they face any technical difficulties. \r\n\r\n\r\n#### Administrator\r\n\r\nAdministrator is responsible for maintaining access to the particular sectors and to the particular user. If the automatic resolving of the devices upgrades and updates fails, they must be provided with the graphical user interface enabling the manual configuration of the update/upgrade procedures. \r\n\r\n#### Device\r\n\r\nThe device represents the entity that is contolled with our application. Device interacts with our application to obtain the new drivers, firmware and software. Among other use-cases belongs the continuos state reporting, so the user are acknowledged about the state of the particular device. \r\n\r\n##### TODO: Define device states (unify on some level of abstraction)"
     } ]
   },
   "views" : {
@@ -584,55 +630,45 @@
       "enterpriseBoundaryVisible" : true,
       "elements" : [ {
         "id" : "33",
-        "x" : 632,
+        "x" : 1332,
         "y" : 208
       }, {
         "id" : "1",
         "x" : 957,
         "y" : 908
       }, {
-        "id" : "28",
+        "id" : "34",
+        "x" : 2032,
+        "y" : 208
+      }, {
+        "id" : "35",
+        "x" : 632,
+        "y" : 208
+      }, {
+        "id" : "30",
         "x" : 207,
         "y" : 1508
       }, {
-        "id" : "29",
+        "id" : "31",
         "x" : 957,
         "y" : 1508
       }, {
-        "id" : "30",
+        "id" : "32",
         "x" : 1295,
         "y" : 2108
-      }, {
-        "id" : "31",
-        "x" : 1332,
-        "y" : 208
-      }, {
-        "id" : "32",
-        "x" : 2032,
-        "y" : 208
       } ],
       "relationships" : [ {
         "id" : "37"
       }, {
         "id" : "51",
         "vertices" : [ {
-          "x" : 874,
-          "y" : 804
-        } ]
-      }, {
-        "id" : "36"
-      }, {
-        "id" : "35"
-      }, {
-        "id" : "34"
-      }, {
-        "id" : "49",
-        "vertices" : [ {
           "x" : 1139,
           "y" : 661
         } ]
       }, {
-        "id" : "38",
+        "id" : "36"
+      }, {
+        "id" : "40",
         "vertices" : [ {
           "x" : 1557,
           "y" : 1508
@@ -640,6 +676,16 @@
           "x" : 1557,
           "y" : 1808
         } ]
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "53",
+        "vertices" : [ {
+          "x" : 874,
+          "y" : 804
+        } ]
+      }, {
+        "id" : "38"
       }, {
         "id" : "39"
       } ]
@@ -655,47 +701,56 @@
       "externalSoftwareSystemBoundariesVisible" : true,
       "elements" : [ {
         "id" : "33",
-        "x" : 4825,
-        "y" : 1592
+        "x" : 208,
+        "y" : 892
       }, {
         "id" : "11",
         "x" : 1917,
         "y" : 292
       }, {
+        "id" : "34",
+        "x" : 908,
+        "y" : 892
+      }, {
         "id" : "2",
         "x" : 1608,
         "y" : 1642
+      }, {
+        "id" : "35",
+        "x" : 4825,
+        "y" : 1592
       }, {
         "id" : "26",
         "x" : 3417,
         "y" : 942
       }, {
-        "id" : "27",
+        "id" : "28",
         "x" : 2667,
         "y" : 942
-      }, {
-        "id" : "28",
-        "x" : 5525,
-        "y" : 1642
-      }, {
-        "id" : "29",
-        "x" : 4075,
-        "y" : 1642
       }, {
         "id" : "19",
         "x" : 1917,
         "y" : 942
       }, {
-        "id" : "31",
-        "x" : 208,
-        "y" : 892
+        "id" : "30",
+        "x" : 5525,
+        "y" : 1642
       }, {
-        "id" : "32",
-        "x" : 908,
-        "y" : 892
+        "id" : "31",
+        "x" : 4075,
+        "y" : 1642
       } ],
       "relationships" : [ {
-        "id" : "72",
+        "id" : "50",
+        "vertices" : [ {
+          "x" : 3117,
+          "y" : 1292
+        }, {
+          "x" : 4525,
+          "y" : 1592
+        } ]
+      }, {
+        "id" : "74",
         "vertices" : [ {
           "x" : 2517,
           "y" : 1292
@@ -704,23 +759,25 @@
           "y" : 1592
         } ]
       }, {
-        "id" : "50",
+        "id" : "52",
         "vertices" : [ {
           "x" : 3417,
           "y" : 1292
         } ]
       }, {
-        "id" : "40",
+        "id" : "42",
         "vertices" : [ {
           "x" : 758,
           "y" : 1292
         } ]
       }, {
-        "id" : "41"
+        "id" : "43"
       }, {
-        "id" : "62"
+        "id" : "64"
       }, {
-        "id" : "42",
+        "id" : "90"
+      }, {
+        "id" : "44",
         "vertices" : [ {
           "x" : 1767,
           "y" : 1292
@@ -729,7 +786,7 @@
           "y" : 892
         } ]
       }, {
-        "id" : "64",
+        "id" : "66",
         "vertices" : [ {
           "x" : 2517,
           "y" : 1292
@@ -738,48 +795,40 @@
           "y" : 1592
         } ]
       }, {
-        "id" : "43",
+        "id" : "45",
         "vertices" : [ {
           "x" : 1992,
           "y" : 767
         } ]
       }, {
-        "id" : "44",
+        "id" : "46",
         "vertices" : [ {
           "x" : 3267,
           "y" : 892
         } ]
       }, {
-        "id" : "45"
+        "id" : "47",
+        "vertices" : [ {
+          "x" : 2615,
+          "y" : 653
+        } ]
       }, {
-        "id" : "66",
+        "id" : "68",
         "vertices" : [ {
           "x" : 2292,
           "y" : 767
         } ]
       }, {
-        "id" : "46",
+        "id" : "48",
         "vertices" : [ {
           "x" : 5375,
           "y" : 1592
         } ]
       }, {
-        "id" : "47",
+        "id" : "49",
         "vertices" : [ {
-          "x" : 3267,
-          "y" : 1292
-        }, {
-          "x" : 4046,
-          "y" : 1592
-        } ]
-      }, {
-        "id" : "48",
-        "vertices" : [ {
-          "x" : 3117,
-          "y" : 1292
-        }, {
-          "x" : 4525,
-          "y" : 1592
+          "x" : 3529,
+          "y" : 1576
         } ]
       } ]
     } ],
@@ -830,7 +879,11 @@
         "y" : 213
       } ],
       "relationships" : [ {
-        "id" : "60",
+        "id" : "61"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "62",
         "vertices" : [ {
           "x" : 1592,
           "y" : 2913
@@ -842,11 +895,7 @@
           "y" : 1563
         } ]
       }, {
-        "id" : "62"
-      }, {
-        "id" : "52"
-      }, {
-        "id" : "53"
+        "id" : "64"
       }, {
         "id" : "54"
       }, {
@@ -859,100 +908,6 @@
         "id" : "58"
       }, {
         "id" : "59"
-      } ]
-    }, {
-      "key" : "deviceUpdater",
-      "paperSize" : "A3_Portrait",
-      "dimensions" : {
-        "width" : 3262,
-        "height" : 3354
-      },
-      "containerId" : "19",
-      "externalContainerBoundariesVisible" : true,
-      "elements" : [ {
-        "id" : "33",
-        "x" : 1044,
-        "y" : 2686
-      }, {
-        "id" : "11",
-        "x" : 2377,
-        "y" : 2736
-      }, {
-        "id" : "22",
-        "x" : 644,
-        "y" : 286
-      }, {
-        "id" : "23",
-        "x" : 269,
-        "y" : 2086
-      }, {
-        "id" : "2",
-        "x" : 2377,
-        "y" : 2086
-      }, {
-        "id" : "24",
-        "x" : 644,
-        "y" : 886
-      }, {
-        "id" : "25",
-        "x" : 1019,
-        "y" : 2086
-      }, {
-        "id" : "29",
-        "x" : 269,
-        "y" : 2736
-      }, {
-        "id" : "20",
-        "x" : 1019,
-        "y" : 1486
-      }, {
-        "id" : "21",
-        "x" : 269,
-        "y" : 1486
-      } ],
-      "relationships" : [ {
-        "id" : "70"
-      }, {
-        "id" : "61"
-      }, {
-        "id" : "71"
-      }, {
-        "id" : "63"
-      }, {
-        "id" : "74"
-      }, {
-        "id" : "73",
-        "vertices" : [ {
-          "x" : 1019,
-          "y" : 736
-        } ]
-      }, {
-        "id" : "42"
-      }, {
-        "id" : "65",
-        "vertices" : [ {
-          "x" : 1619,
-          "y" : 2086
-        } ]
-      }, {
-        "id" : "75"
-      }, {
-        "id" : "67",
-        "vertices" : [ {
-          "x" : 2977,
-          "y" : 2086
-        }, {
-          "x" : 2977,
-          "y" : 2490
-        } ]
-      }, {
-        "id" : "69",
-        "vertices" : [ {
-          "x" : 719,
-          "y" : 736
-        } ]
-      }, {
-        "id" : "68"
       } ]
     }, {
       "key" : "webFrontendComponentDiagram",
@@ -1009,7 +964,11 @@
       }, {
         "id" : "81"
       }, {
-        "id" : "76",
+        "id" : "84"
+      }, {
+        "id" : "85"
+      }, {
+        "id" : "78",
         "vertices" : [ {
           "x" : 2836,
           "y" : 887
@@ -1018,11 +977,155 @@
           "y" : 1187
         } ]
       }, {
-        "id" : "78"
+        "id" : "79"
+      } ]
+    }, {
+      "key" : "deviceUpdater",
+      "paperSize" : "A3_Portrait",
+      "dimensions" : {
+        "width" : 3262,
+        "height" : 3354
+      },
+      "containerId" : "19",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 2377,
+        "y" : 2736
+      }, {
+        "id" : "22",
+        "x" : 644,
+        "y" : 286
+      }, {
+        "id" : "23",
+        "x" : 269,
+        "y" : 2086
+      }, {
+        "id" : "24",
+        "x" : 644,
+        "y" : 886
+      }, {
+        "id" : "35",
+        "x" : 1044,
+        "y" : 2686
+      }, {
+        "id" : "2",
+        "x" : 2377,
+        "y" : 2086
+      }, {
+        "id" : "25",
+        "x" : 1019,
+        "y" : 2086
+      }, {
+        "id" : "20",
+        "x" : 1019,
+        "y" : 1486
+      }, {
+        "id" : "31",
+        "x" : 269,
+        "y" : 2736
+      }, {
+        "id" : "21",
+        "x" : 269,
+        "y" : 1486
+      } ],
+      "relationships" : [ {
+        "id" : "70"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "71",
+        "vertices" : [ {
+          "x" : 719,
+          "y" : 736
+        } ]
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "73"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "75",
+        "vertices" : [ {
+          "x" : 1019,
+          "y" : 736
+        } ]
+      }, {
+        "id" : "67",
+        "vertices" : [ {
+          "x" : 1619,
+          "y" : 2086
+        } ]
+      }, {
+        "id" : "44"
       }, {
         "id" : "77"
       }, {
-        "id" : "79"
+        "id" : "69",
+        "vertices" : [ {
+          "x" : 2977,
+          "y" : 2086
+        }, {
+          "x" : 2977,
+          "y" : 2490
+        } ]
+      } ]
+    }, {
+      "key" : "UserDataManagerComponentDiagram",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 2480,
+        "height" : 1748
+      },
+      "containerId" : "26",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 1015,
+        "y" : 30
+      }, {
+        "id" : "27",
+        "x" : 1015,
+        "y" : 640
+      }, {
+        "id" : "31",
+        "x" : 1015,
+        "y" : 1315
+      } ],
+      "relationships" : [ {
+        "id" : "88"
+      }, {
+        "id" : "89"
+      } ]
+    }, {
+      "key" : "DeviceDataManagerComponentDiagram",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 2480,
+        "height" : 1748
+      },
+      "containerId" : "28",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 1060,
+        "y" : 25
+      }, {
+        "id" : "29",
+        "x" : 1065,
+        "y" : 690
+      }, {
+        "id" : "31",
+        "x" : 1070,
+        "y" : 1300
+      } ],
+      "relationships" : [ {
+        "id" : "86"
+      }, {
+        "id" : "87"
       } ]
     } ],
     "configuration" : {
@@ -1040,7 +1143,7 @@
       },
       "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
       "terminology" : { },
-      "lastSavedView" : "hospitalBuildingMaintananceSystemContextDiagram"
+      "lastSavedView" : "DeviceDataManagerComponentDiagram"
     }
   }
 }
