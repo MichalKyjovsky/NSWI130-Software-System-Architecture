@@ -35,8 +35,13 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 updateWorker = component "Update Installation Worker" "Based on the resolved versions and categories installs the requested updates to the device "
             }
                         
-            userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"
-            deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"
+            userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"{
+                userDataManagerGateway = component "User Data Manager Gateway" "provides access to external user data database"
+            }
+            
+            deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"{
+                deviceDataManagerGateway = component "Device Data Manager Gateway" "provides access to external device data database"
+            }
 
             !docs docs
 
@@ -135,6 +140,14 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         deviceScheduler -> searchAPI "Uses to retrieve record of a particular device or list of devices for scheduling"
         deleteDeviceAPI -> searchAPI "Uses to retrieve record of a device for further agreement of a delete operation for this device"
         hospitalVisualizer -> searchAPI "Uses to retrive records of devices that belong to a particular section"
+        
+        # DeviceDataManager components
+        server -> DeviceDataManagerGateway "Uses to get high level functionality over raw device data"
+        DeviceDataManagerGateway -> devicesRegistry "Uses to get all data regarding devices"
+        
+        # UserDataManager components
+        server -> userDataManagerGateway "Uses to get high level functionality over raw employee data"
+        userDataManagerGateway -> hospitalEmployeeDatabase "Uses to get all data regarding employees"
     }
     
     views {
@@ -154,9 +167,18 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         component webFrontend "webFrontendComponentDiagram" {
             include *
         }
+        
         component deviceUpdater "deviceUpdater" {
             include *
         }
+        
+        component DeviceDataManager "DeviceDataManagerComponentDiagram" {
+            include *
+        }
+        
+        component UserDataManager "UserDataManagerComponentDiagram" {
+            include *
+        }        
 
         theme default
 
