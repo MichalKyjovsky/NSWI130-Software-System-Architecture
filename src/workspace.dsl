@@ -12,7 +12,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 deleteDeviceManager = component "Delete Device Manager" "Enables deletion of an existing device."
                 hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices and employees."
             }
-            server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management."    {
+            server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management." {
                 requestHandler = component "Request handler" "Retrieves and handles HTTP requests using JSON"
 
                 authController = component "Auth controller" "Provides API for user authentication."
@@ -26,54 +26,60 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 driverService = component "Driver service" "Implements and provides functionality related to manipulation with devices drivers"
                 
             }   
-            deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintanace." "Some black box magix Miso did not invented yet." {
+
+            deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintenance." {
                 updateManager = component "Update Manager" "Expose the functionality to other component of the system, so they can be accessed via API or manually"
-                statusResolver = component "System Status Resolver" "Retrieves the category of the devices that are under the regulat check and decides if update is required."
-                updatePlanner = component "Update Planner" "Schedules the suitable update window for the particular device so the regular service is not afected."
+                statusResolver = component "System Status Resolver" "Retrieves the category of the devices that are under the regular check and decides if update is required."
+                updatePlanner = component "Update Planner" "Schedules the suitable update window for the particular device so the regular service is not affected."
                 versionResolver = component "Version Resolver" "Verifies the provided devices map to a current version of a drivers, firmware and software against the Hospital's devices register"
                 updateTrigger = component "Update Installation Trigger" "Triggers the events of device update and propagates it to every issued component "
                 updateWorker = component "Update Installation Worker" "Based on the resolved versions and categories installs the requested updates to the device "
             }
                         
-            userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"{
+            userDataManager = container "User Data Manager" "Manages data about users." "Relational Database With API" {
                 userDataManagerGateway = component "User Data Manager Gateway" "provides access to external user data database"
             }
             
-            deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"{
+            deviceDataManager = container "Device Data Manager" "Manages data about devices." "Relational Database With API" {
                 deviceDataManagerGateway = component "Device Data Manager Gateway" "provides access to external device data database"
             }
 
-            !docs docs
 
+            singlePageApplication = container "Single-Page Application" "Provides all of the HBMS functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"   
+            
+            !docs docs
         }
+
+        singlePageApplication -> webFrontend "Makes API calls to" "JSON/HTTPS"
+
         # Hospital employees general database with API
-        hospitalEmployeeDatabase = softwareSystem "Database of the hospital employees" "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System." "Existing System"
+        hospitalEmployeeDatabase = softwareSystem "Database of the hospital employees" "Stores data records about the hospital employees and provides API for Hospital Building Maintenance System." "Database"
 
         devicesRegistry = softwareSystem "Devices Registry" "Stores and presents the records of all hospital devices." "Existing System"
 
         driverIndex = softwareSystem "Index of all hospital's devices drivers" "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version." "Existing System"
         
-        regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition)." "Consumer"
+        regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, air condition)." "Consumer"
 
-        administrator = person "Administrator" "An actor who manages the building maintanance devices and supports." "Consumer"
+        administrator = person "Administrator" "An actor who manages the building maintenance devices and supports." "Consumer"
 
-        device = person "Device" "A device that is subject to the HBMS" "Consumer"
+        device = softwareSystem "Device" "A device that is subject to the HBMS" "Existing System"
         
 
-        # Relationships to/from software systems (Level 1)
-        regularUser -> hospitalBuildingMaintanance "Configures the cleaining devices and building systems"
-        administrator -> hospitalBuildingMaintanance "Configures the drivers for the cleaning devices and manages accesses"
+        # Relationships to/from software systems (Level 1)  
+        regularUser -> hospitalBuildingMaintenance "Configures the cleaning devices and building systems"
+        administrator -> hospitalBuildingMaintenance "Configures the drivers for the cleaning devices and manages accesses"
 
-        hospitalBuildingMaintanance -> hospitalEmployeeDatabase "Uses hospital employee records from"
-        hospitalBuildingMaintanance -> devicesRegistry "Harvests metadata records from"
+        hospitalBuildingMaintenance -> hospitalEmployeeDatabase "Uses hospital employee records from"
+        hospitalBuildingMaintenance -> devicesRegistry "Harvests metadata records from"
 
-        hospitalBuildingMaintanance -> driverIndex "Fetches a newer version of the firmawares and drivers from"
+        hospitalBuildingMaintenance -> driverIndex "Fetches a newer version of the firmwares and drivers from"
         devicesRegistry -> driverIndex "Indexes"
         
         
         # Relationships to/from containers (Level 2)
-        regularUser -> webFrontend "Configures the cleaining devices and building systems"
-        administrator -> webFrontend "Configures the drivers for the cleaning devices and manages accesses"
+        regularUser -> singlePageApplication "Configures the cleaning devices and building systems"
+        administrator -> singlePageApplication "Configures the drivers for the cleaning devices and manages accesses"
 
         webFrontend -> server "Uses to deliver functionality"
 
@@ -111,13 +117,13 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         # Device Updater - Component Relations and Decompositions
 
-        updateManager -> webFrontend  "Expose the functinality to the GUI as well as to the REST-API "
+        updateManager -> webFrontend  "Expose the functionality to the GUI as well as to the REST-API "
 
         versionResolver -> devicesRegistry "Gets data and updates from "
         # We could ask data manager directly, but we need to know the current status of the devices to be posted into the planner
         statusResolver -> server "Gets the category of the devices with relevant metadata "
         updateManager -> server "Posts the information about the planned updated with the modified device schedule and state "
-        updateTrigger -> updateManager "Reflects the information about schedulled update to the manager, so its actual for every listenning service "
+        updateTrigger -> updateManager "Reflects the information about scheduled update to the manager, so its actual for every listening service "
         updatePlanner -> updateTrigger "Posts the schedule for the devices that are in the current update scope "
         statusResolver -> versionResolver "Gets the information about the possible updates for the tracked devices "
     
@@ -127,7 +133,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         server -> updateManager "Maintain drivers firmware using"
 
-        updateManager -> updateWorker "Adds task "
+        updateManager -> updateWorker "Adds task"
 
         # webFrontend components
         logInManager -> server "Makes API call to retrieve user record from DB"
@@ -148,15 +154,42 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         # UserDataManager components
         server -> userDataManagerGateway "Uses to get high level functionality over raw employee data"
         userDataManagerGateway -> hospitalEmployeeDatabase "Uses to get all data regarding employees"
+
+        deploymentEnvironment "Development" {
+                deploymentNode "Developer Laptop" "" "Microsoft Windows 11 or Linux" {
+                    deploymentNode "Web Browser" "" "Chrome, Firefox, Safari, or MS Edge" {
+                        developerSinglePageApplicationInstance = containerInstance singlePageApplication
+                    }
+                    deploymentNode "Docker Container - Web Server" "" "Docker" {
+                        deploymentNode "Apache Tomcat" "" "Apache Tomcat 8.x" {
+                            developerWebApplicationInstance = containerInstance webFrontend
+                            developerApiApplicationInstance = containerInstance server
+                        }
+                    }
+                    deploymentNode "Docker Container - Database Server" "" "Docker" {
+                        deploymentNode "Database Server" "" "Oracle 12c" {
+                            developerDeviceDatabaseInstance = containerInstance deviceDataManager
+                            developerUserDatabaseInstance = containerInstance userDataManager
+                        }
+                    }
+                }
+                deploymentNode "Existing Hospital" "" "Existing Hospital deployed environment" "" {
+                    deploymentNode "hospital-dev001" "" "" "" {
+                        softwareSystemInstance hospitalEmployeeDatabase
+                        softwareSystemInstance devicesRegistry
+                        softwareSystemInstance driverIndex
+                    }
+                }
+            }
     }
     
     views {
         
-        systemContext hospitalBuildingMaintanance "hospitalBuildingMaintananceSystemContextDiagram" {
+        systemContext hospitalBuildingMaintenance "hospitalBuildingMaintenanceSystemContextDiagram" {
             include *
         }
 
-        container hospitalBuildingMaintanance "hospitalBuildingMaintananceContainerDiagram" {
+        container hospitalBuildingMaintenance "hospitalBuildingMaintenanceContainerDiagram" {
             include *
         }
 
@@ -178,7 +211,27 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         
         component UserDataManager "UserDataManagerComponentDiagram" {
             include *
+        }
+        
+        deployment hospitalBuildingMaintenance "Development" "DevelopmentDeployment" {
+            include *
+            animation {
+                developerSinglePageApplicationInstance
+                developerWebApplicationInstance developerApiApplicationInstance
+                developerDeviceDatabaseInstance developerUserDatabaseInstance
+            }
+            autoLayout
         }        
+        
+        dynamic webFrontend "searchAPI" "Summarises how the Device search function works." {
+                searchAPI -> server "Submits search request to Server"
+                server -> deviceDataManager "Getting the needed data from"
+                deviceDataManager -> devicesRegistry "Fetches data from"
+                devicesRegistry -> deviceDataManager "Returns device data to"
+                deviceDataManager -> server "Returns requested information"
+                server -> searchAPI "Returns request result"
+                autoLayout
+        }                 
 
         theme default
 
@@ -191,6 +244,18 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             element "Consumer" {
                 background #999999
                 color #ffffff
+            }
+
+            element "Web Browser" {
+                shape WebBrowser
+            }
+
+            element "Mobile App" {
+                shape MobileDeviceLandscape
+            }
+
+            element "Database" {
+                shape Cylinder
             }
         }
 
