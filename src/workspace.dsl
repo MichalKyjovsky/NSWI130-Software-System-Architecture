@@ -1,7 +1,7 @@
 workspace "Public Data Space" "This workspace documents the architecture of the Public Data Space which enables public institutions in Czechia to share public data among each other in a guaranteed way." {
 
     model {
-        hospitalBuildingMaintanance = softwareSystem "Hospital Building Maintanance System (HBMS)" "Manages and schedules building maintanance devices accross the hospital sectors."  {
+        hospitalBuildingMaintenance = softwareSystem "Hospital Building Maintanance System (HBMS)" "Manages and schedules building maintanance devices accross the hospital sectors."  {
             webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices schedulling, management and monitoring"  {
                 deviceCollectionProvider = component "Device Collection Provider" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
                 searchManager = component "Search Manager" "Accepts search queries for retrieval of information to a particular hospital section, device, list of devices or employee."
@@ -223,15 +223,25 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             autoLayout
         }        
         
-        dynamic webFrontend "searchAPI" "Summarises how the Device search function works." {
-                searchAPI -> server "Submits search request to Server"
+        dynamic webFrontend "searchManager" "Summarises how the Device search function works." {
+                searchManager -> server "Submits search request to Server"
                 server -> deviceDataManager "Getting the needed data from"
                 deviceDataManager -> devicesRegistry "Fetches data from"
                 devicesRegistry -> deviceDataManager "Returns device data to"
                 deviceDataManager -> server "Returns requested information"
-                server -> searchAPI "Returns request result"
+                server -> searchManager "Returns request result"
                 autoLayout
-        }                 
+        }
+
+        dynamic webFrontend "addDeviceManager" "Summarises how the Add Device function works." {
+                addDeviceManager -> server "Sends add device request to"
+                server -> deviceDataManager "Requests device collection update from"
+                deviceDataManager -> devicesRegistry "Stores data of new device into"
+                devicesRegistry -> deviceDataManager "Returns result of device data storage to"
+                deviceDataManager -> server "Returns result of device addition operation with potentially discovered errors to"
+                server -> addDeviceManager "Returns if new device was added successfully or not to"
+                autoLayout
+        }                    
 
         theme default
 
