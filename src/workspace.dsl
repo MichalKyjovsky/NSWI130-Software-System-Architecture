@@ -61,7 +61,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         
         regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, air condition)." "Consumer"
 
-        administrator = person "Administrator" "An actor who manages the building maintanance devices and supports." "Consumer"
+        administrator = person "Administrator" "An actor who manages the building maintenance devices and supports." "Consumer"
 
         device = softwareSystem "Device" "A device that is subject to the HBMS" "Existing System"
         
