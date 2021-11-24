@@ -26,6 +26,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 driverService = component "Driver service" "Implements and provides functionality related to manipulation with devices drivers"
                 
             }   
+
             deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintanace." "Some black box magix Miso did not invented yet." {
                 updateManager = component "Update Manager" "Expose the functionality to other component of the system, so they can be accessed via API or manually"
                 statusResolver = component "System Status Resolver" "Retrieves the category of the devices that are under the regulat check and decides if update is required."
@@ -35,19 +36,24 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 updateWorker = component "Update Installation Worker" "Based on the resolved versions and categories installs the requested updates to the device "
             }
                         
-            userDataManager = container "User Data Manager" "Manages data about users." "UserDataManager"{
+            userDataManager = container "User Data Manager" "Manages data about users." "Relational Database With API" {
                 userDataManagerGateway = component "User Data Manager Gateway" "provides access to external user data database"
             }
             
-            deviceDataManager = container "Device Data Manager" "Manages data about devices." "DeviceDataManager"{
+            deviceDataManager = container "Device Data Manager" "Manages data about devices." "Relational Database With API" {
                 deviceDataManagerGateway = component "Device Data Manager Gateway" "provides access to external device data database"
             }
 
-            !docs docs
 
+            singlePageApplication = container "Single-Page Application" "Provides all of the HBMS functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"
+
+            !docs docs
         }
+
+        singlePageApplication -> webFrontend "Makes API calls to" "JSON/HTTPS"
+
         # Hospital employees general database with API
-        hospitalEmployeeDatabase = softwareSystem "Database of the hospital employees" "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System." "Existing System"
+        hospitalEmployeeDatabase = softwareSystem "Database of the hospital employees" "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System." "Database"
 
         devicesRegistry = softwareSystem "Devices Registry" "Stores and presents the records of all hospital devices." "Existing System"
 
@@ -57,10 +63,10 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         administrator = person "Administrator" "An actor who manages the building maintanance devices and supports." "Consumer"
 
-        device = person "Device" "A device that is subject to the HBMS" "Consumer"
+        device = softwareSystem "Device" "A device that is subject to the HBMS" "Existing System"
         
 
-        # Relationships to/from software systems (Level 1)
+        # Relationships to/from software systems (Level 1)  
         regularUser -> hospitalBuildingMaintanance "Configures the cleaining devices and building systems"
         administrator -> hospitalBuildingMaintanance "Configures the drivers for the cleaning devices and manages accesses"
 
@@ -72,8 +78,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         
         
         # Relationships to/from containers (Level 2)
-        regularUser -> webFrontend "Configures the cleaining devices and building systems"
-        administrator -> webFrontend "Configures the drivers for the cleaning devices and manages accesses"
+        regularUser -> singlePageApplication "Configures the cleaining devices and building systems"
+        administrator -> singlePageApplication "Configures the drivers for the cleaning devices and manages accesses"
 
         webFrontend -> server "Uses to deliver functionality"
 
@@ -148,6 +154,33 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         # UserDataManager components
         server -> userDataManagerGateway "Uses to get high level functionality over raw employee data"
         userDataManagerGateway -> hospitalEmployeeDatabase "Uses to get all data regarding employees"
+
+        deploymentEnvironment "Development" {
+                deploymentNode "Developer Laptop" "" "Microsoft Windows 11 or Linux" {
+                    deploymentNode "Web Browser" "" "Chrome, Firefox, Safari, or MS Edge" {
+                        developerSinglePageApplicationInstance = containerInstance singlePageApplication
+                    }
+                    deploymentNode "Docker Container - Web Server" "" "Docker" {
+                        deploymentNode "Apache Tomcat" "" "Apache Tomcat 8.x" {
+                            developerWebApplicationInstance = containerInstance webFrontend
+                            developerApiApplicationInstance = containerInstance server
+                        }
+                    }
+                    deploymentNode "Docker Container - Database Server" "" "Docker" {
+                        deploymentNode "Database Server" "" "Oracle 12c" {
+                            developerDeviceDatabaseInstance = containerInstance deviceDataManager
+                            developerUserDatabaseInstance = containerInstance userDataManager
+                        }
+                    }
+                }
+                deploymentNode "Existing Hospital" "" "Existing Hospital deployed environment" "" {
+                    deploymentNode "hospital-dev001" "" "" "" {
+                        softwareSystemInstance hospitalEmployeeDatabase
+                        softwareSystemInstance devicesRegistry
+                        softwareSystemInstance driverIndex
+                    }
+                }
+            }
     }
     
     views {
@@ -178,6 +211,16 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         
         component UserDataManager "UserDataManagerComponentDiagram" {
             include *
+        }
+        
+        deployment hospitalBuildingMaintanance "Development" "DevelopmentDeployment" {
+            include *
+            animation {
+                developerSinglePageApplicationInstance
+                developerWebApplicationInstance developerApiApplicationInstance
+                developerDeviceDatabaseInstance developerUserDatabaseInstance
+            }
+            autoLayout
         }        
 
         theme default
@@ -191,6 +234,18 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             element "Consumer" {
                 background #999999
                 color #ffffff
+            }
+
+            element "Web Browser" {
+                shape WebBrowser
+            }
+
+            element "Mobile App" {
+                shape MobileDeviceLandscape
+            }
+
+            element "Database" {
+                shape Cylinder
             }
         }
 

@@ -39,7 +39,6 @@ The utilization of the updater will be enabled using the Admin UI. That literall
 #### Workflow Scenario
 
 The component will periodically scan the devices that will be grouped based on the common metric (modifiable - sector, producer, area of usage). **Update Intallation Trigger** will based on the **Update Manager** invocation starts the devices scan. First, the confirmation that the version index were updated and varies from the current devices version is performed. Based on the outcome of this subprocess either the updates end or continues to the **Update Planner**. The **Update Planner** will construct the most suitable schedule for update of the particular device so its regular or planned service is not affected anyhow. The constructed schedulle is then propagated to the ***Trigger*** component so it can be via ***Manager*** propagated to the particular device. This process must be synchronized and strongly relies on the schedulle status flag so the planning cannot be dead-locked by another system interaction. Finally the ***Manager*** posts the tasks to the ***Update Installation Worker***, which will handle the installation and update process for each device individually without any limitation to the system.
- <!-- TODO: Consider the limitation of the container interaction with the external entities. This could be moved to the HBMS Server, so the comunication with the devices is kept under one container. However, this could cause the performance issues considering all other functionalities that the server contaiener must span. Discuss this!  -->
 
 #### Automatic update & upgrade resolution
 
@@ -47,6 +46,4 @@ First of all the system must be able to track the current version of the drivers
 
 #### Update Manager
 
-The container must communicate with others container. Firstly we need to provide the REST-API to Fron-End service, so the ***admin panel*** can visualize real-time data and statuses.
- <!-- TODO: Consider decomposing this component so the REST-API remains standalone service and some kind of publisher will post/get the data to/from the server  -->
-Another responsibilty of the manager is to exchange the metadata information with the server, so the appropriate operaions can be performed. For an instance to set the valid state to a device that is under update check - so the schedulle modification are locked.
+The container must communicate with others container. Firstly we need to provide the REST-API to Fron-End service, so the ***admin panel*** can visualize real-time data and statuses. Another responsibilty of the manager is to exchange the metadata information with the server, so the appropriate operaions can be performed. For an instance to set the valid state to a device that is under update check - so the schedulle modification are locked.
