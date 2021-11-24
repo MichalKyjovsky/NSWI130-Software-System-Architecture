@@ -1,8 +1,8 @@
 workspace "Public Data Space" "This workspace documents the architecture of the Public Data Space which enables public institutions in Czechia to share public data among each other in a guaranteed way." {
 
     model {
-        hospitalBuildingMaintanance = softwareSystem "Hospital Building Maintanance System (HBMS)" "Manages and schedules building maintanance devices accross the hospital sectors."  {
-            webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices schedulling, management and monitoring"  {
+        hospitalBuildingMaintenance = softwareSystem "Hospital Building Maintenance System (HBMS)" "Manages and schedules building maintenance devices across the hospital sectors."  {
+            webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices scheduling, management and monitoring"  {
                 deviceManager = component "Device Manager" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
                 searchAPI = component "Search API" "Handles search queries for retrieval of information to a particular device, list of devices or employee."
                 logInAPI = component "Log In API" "Provides form for user authentication."
@@ -12,7 +12,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 deleteDeviceAPI = component "Delete Device API" "Enables deletion of an existing device."
                 hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices."
             }
-            server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management."    {
+            server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management." {
                 requestHandler = component "Request handler" "Retrieves and handles HTTP requests using JSON"
 
                 authController = component "Auth controller" "Provides API for user authentication."
@@ -27,10 +27,10 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 
             }   
 
-            deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintanace." "Some black box magix Miso did not invented yet." {
+            deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintenance." {
                 updateManager = component "Update Manager" "Expose the functionality to other component of the system, so they can be accessed via API or manually"
-                statusResolver = component "System Status Resolver" "Retrieves the category of the devices that are under the regulat check and decides if update is required."
-                updatePlanner = component "Update Planner" "Schedules the suitable update window for the particular device so the regular service is not afected."
+                statusResolver = component "System Status Resolver" "Retrieves the category of the devices that are under the regular check and decides if update is required."
+                updatePlanner = component "Update Planner" "Schedules the suitable update window for the particular device so the regular service is not affected."
                 versionResolver = component "Version Resolver" "Verifies the provided devices map to a current version of a drivers, firmware and software against the Hospital's devices register"
                 updateTrigger = component "Update Installation Trigger" "Triggers the events of device update and propagates it to every issued component "
                 updateWorker = component "Update Installation Worker" "Based on the resolved versions and categories installs the requested updates to the device "
@@ -45,40 +45,40 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             }
 
 
-            singlePageApplication = container "Single-Page Application" "Provides all of the HBMS functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"
-
+            singlePageApplication = container "Single-Page Application" "Provides all of the HBMS functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"   
+            
             !docs docs
         }
 
         singlePageApplication -> webFrontend "Makes API calls to" "JSON/HTTPS"
 
         # Hospital employees general database with API
-        hospitalEmployeeDatabase = softwareSystem "Database of the hospital employees" "Stores data records about the hospital employees and provides API for Hospital Building Maintanace System." "Database"
+        hospitalEmployeeDatabase = softwareSystem "Database of the hospital employees" "Stores data records about the hospital employees and provides API for Hospital Building Maintenance System." "Database"
 
         devicesRegistry = softwareSystem "Devices Registry" "Stores and presents the records of all hospital devices." "Existing System"
 
         driverIndex = softwareSystem "Index of all hospital's devices drivers" "Actual data storage index where all drivers and firmwares of hospital's devices are stored in the most recent version." "Existing System"
         
-        regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, aircondition)." "Consumer"
+        regularUser = person "Regular User" "An actor who configures and schedules the cleaning devices or the building components (windows, lights, air condition)." "Consumer"
 
-        administrator = person "Administrator" "An actor who manages the building maintanance devices and supports." "Consumer"
+        administrator = person "Administrator" "An actor who manages the building maintenance devices and supports." "Consumer"
 
         device = softwareSystem "Device" "A device that is subject to the HBMS" "Existing System"
         
 
         # Relationships to/from software systems (Level 1)  
-        regularUser -> hospitalBuildingMaintanance "Configures the cleaining devices and building systems"
-        administrator -> hospitalBuildingMaintanance "Configures the drivers for the cleaning devices and manages accesses"
+        regularUser -> hospitalBuildingMaintenance "Configures the cleaning devices and building systems"
+        administrator -> hospitalBuildingMaintenance "Configures the drivers for the cleaning devices and manages accesses"
 
-        hospitalBuildingMaintanance -> hospitalEmployeeDatabase "Uses hospital employee records from"
-        hospitalBuildingMaintanance -> devicesRegistry "Harvests metadata records from"
+        hospitalBuildingMaintenance -> hospitalEmployeeDatabase "Uses hospital employee records from"
+        hospitalBuildingMaintenance -> devicesRegistry "Harvests metadata records from"
 
-        hospitalBuildingMaintanance -> driverIndex "Fetches a newer version of the firmawares and drivers from"
+        hospitalBuildingMaintenance -> driverIndex "Fetches a newer version of the firmwares and drivers from"
         devicesRegistry -> driverIndex "Indexes"
         
         
         # Relationships to/from containers (Level 2)
-        regularUser -> singlePageApplication "Configures the cleaining devices and building systems"
+        regularUser -> singlePageApplication "Configures the cleaning devices and building systems"
         administrator -> singlePageApplication "Configures the drivers for the cleaning devices and manages accesses"
 
         webFrontend -> server "Uses to deliver functionality"
@@ -117,13 +117,13 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         # Device Updater - Component Relations and Decompositions
 
-        updateManager -> webFrontend  "Expose the functinality to the GUI as well as to the REST-API "
+        updateManager -> webFrontend  "Expose the functionality to the GUI as well as to the REST-API "
 
         versionResolver -> devicesRegistry "Gets data and updates from "
         # We could ask data manager directly, but we need to know the current status of the devices to be posted into the planner
         statusResolver -> server "Gets the category of the devices with relevant metadata "
         updateManager -> server "Posts the information about the planned updated with the modified device schedule and state "
-        updateTrigger -> updateManager "Reflects the information about schedulled update to the manager, so its actual for every listenning service "
+        updateTrigger -> updateManager "Reflects the information about scheduled update to the manager, so its actual for every listening service "
         updatePlanner -> updateTrigger "Posts the schedule for the devices that are in the current update scope "
         statusResolver -> versionResolver "Gets the information about the possible updates for the tracked devices "
     
@@ -133,7 +133,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         server -> updateManager "Maintain drivers firmware using"
 
-        updateManager -> updateWorker "Adds task "
+        updateManager -> updateWorker "Adds task"
 
         # webFrontend components
         logInAPI -> server "Makes API call to retrieve user record from DB"
@@ -145,7 +145,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         deviceScheduler -> searchAPI "Uses to retrieve record of a particular device or list of devices for scheduling"
         deleteDeviceAPI -> searchAPI "Uses to retrieve record of a device for further agreement of a delete operation for this device"
-        hospitalVisualizer -> searchAPI "Uses to retrive records of devices that belong to a particular section"
+        hospitalVisualizer -> searchAPI "Uses to retrieve records of devices that belong to a particular section"
         
         # DeviceDataManager components
         server -> DeviceDataManagerGateway "Uses to get high level functionality over raw device data"
@@ -185,11 +185,11 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
     
     views {
         
-        systemContext hospitalBuildingMaintanance "hospitalBuildingMaintananceSystemContextDiagram" {
+        systemContext hospitalBuildingMaintenance "hospitalBuildingMaintenanceSystemContextDiagram" {
             include *
         }
 
-        container hospitalBuildingMaintanance "hospitalBuildingMaintananceContainerDiagram" {
+        container hospitalBuildingMaintenance "hospitalBuildingMaintenanceContainerDiagram" {
             include *
         }
 
@@ -213,7 +213,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             include *
         }
         
-        deployment hospitalBuildingMaintanance "Development" "DevelopmentDeployment" {
+        deployment hospitalBuildingMaintenance "Development" "DevelopmentDeployment" {
             include *
             animation {
                 developerSinglePageApplicationInstance
@@ -222,6 +222,16 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             }
             autoLayout
         }        
+        
+        dynamic webFrontend "searchAPI" "Summarises how the Device search function works." {
+                searchAPI -> server "Submits search request to Server"
+                server -> deviceDataManager "Getting the needed data from"
+                deviceDataManager -> devicesRegistry "Fetches data from"
+                devicesRegistry -> deviceDataManager "Returns device data to"
+                deviceDataManager -> server "Returns requested information"
+                server -> searchAPI "Returns request result"
+                autoLayout
+        }                 
 
         theme default
 
