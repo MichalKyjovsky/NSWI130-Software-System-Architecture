@@ -3,7 +3,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
     model {
         hospitalBuildingMaintanance = softwareSystem "Hospital Building Maintanance System (HBMS)" "Manages and schedules building maintanance devices accross the hospital sectors."  {
             webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices schedulling, management and monitoring"  {
-                deviceManager = component "Device Manager" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
+                deviceCollectionProvider = component "Device Collection Provider" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
                 searchManager = component "Search Manager" "Accepts search queries for retrieval of information to a particular hospital section, device, list of devices or employee."
                 logInManager = component "Log In Manager" "Provides form for user authentication."
                 deviceScheduler = component "Device Scheduler" "Provides access to device scheduling interface to trigger specific device functions in a given time or periodically."
@@ -131,11 +131,11 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         # webFrontend components
         logInManager -> server "Makes API call to retrieve user record from DB"
-        deviceManager -> server "Makes API calls to [JSON/HTTPS]"
+        deviceCollectionProvider -> server "Makes API calls to [JSON/HTTPS]"
 
-        searchManager -> deviceManager "Uses to retrieve record of a particular device or list of devices based on the search query"
-        driverManager -> deviceManager "Uses to retrieve record of a particular device or group of devices to attach their driver settings"
-        addDeviceManager -> deviceManager "Uses to update the collection of devices by adding a new device"
+        searchManager -> deviceCollectionProvider "Uses to retrieve record of a particular device or list of devices based on the search query"
+        driverManager -> deviceCollectionProvider "Uses to retrieve record of a particular device or group of devices to attach their driver settings"
+        addDeviceManager -> deviceCollectionProvider "Uses to update the collection of devices by adding a new device"
 
         deviceScheduler -> searchManager "Uses to retrieve record of a particular device or list of devices for scheduling"
         deleteDeviceManager -> searchManager "Uses to retrieve record of a device for further agreement of a delete operation for this device"
