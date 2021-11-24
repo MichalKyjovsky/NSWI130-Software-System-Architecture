@@ -45,8 +45,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             }
 
 
-            singlePageApplication = container "Single-Page Application" "Provides all of the HBMS functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"
-
+            singlePageApplication = container "Single-Page Application" "Provides all of the HBMS functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"   
+            
             !docs docs
         }
 
@@ -67,13 +67,13 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         
 
         # Relationships to/from software systems (Level 1)  
-        regularUser -> hospitalBuildingMaintanance "Configures the cleaining devices and building systems"
+        regularUser -> hospitalBuildingMaintanance "Configures the cleaning devices and building systems"
         administrator -> hospitalBuildingMaintanance "Configures the drivers for the cleaning devices and manages accesses"
 
         hospitalBuildingMaintanance -> hospitalEmployeeDatabase "Uses hospital employee records from"
         hospitalBuildingMaintanance -> devicesRegistry "Harvests metadata records from"
 
-        hospitalBuildingMaintanance -> driverIndex "Fetches a newer version of the firmawares and drivers from"
+        hospitalBuildingMaintanance -> driverIndex "Fetches a newer version of the firmwares and drivers from"
         devicesRegistry -> driverIndex "Indexes"
         
         
@@ -117,13 +117,13 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         # Device Updater - Component Relations and Decompositions
 
-        updateManager -> webFrontend  "Expose the functinality to the GUI as well as to the REST-API "
+        updateManager -> webFrontend  "Expose the functionality to the GUI as well as to the REST-API "
 
         versionResolver -> devicesRegistry "Gets data and updates from "
         # We could ask data manager directly, but we need to know the current status of the devices to be posted into the planner
         statusResolver -> server "Gets the category of the devices with relevant metadata "
         updateManager -> server "Posts the information about the planned updated with the modified device schedule and state "
-        updateTrigger -> updateManager "Reflects the information about schedulled update to the manager, so its actual for every listenning service "
+        updateTrigger -> updateManager "Reflects the information about scheduled update to the manager, so its actual for every listening service "
         updatePlanner -> updateTrigger "Posts the schedule for the devices that are in the current update scope "
         statusResolver -> versionResolver "Gets the information about the possible updates for the tracked devices "
     
@@ -133,7 +133,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         server -> updateManager "Maintain drivers firmware using"
 
-        updateManager -> updateWorker "Adds task "
+        updateManager -> updateWorker "Adds task"
 
         # webFrontend components
         logInAPI -> server "Makes API call to retrieve user record from DB"
@@ -222,6 +222,16 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             }
             autoLayout
         }        
+        
+        dynamic webFrontend "searchAPI" "Summarises how the Device search function works." {
+                searchAPI -> server "Submits search request to Server"
+                server -> deviceDataManager "Getting the needed data from"
+                deviceDataManager -> devicesRegistry "Fetches data from"
+                devicesRegistry -> deviceDataManager "Returns device data to"
+                deviceDataManager -> server "Returns requested information"
+                server -> searchAPI "Returns request result"
+                autoLayout
+        }                 
 
         theme default
 
