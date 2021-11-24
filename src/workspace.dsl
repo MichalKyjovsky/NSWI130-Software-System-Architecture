@@ -13,13 +13,17 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
                 hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices."
             }
             server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management."    {
-                listAPI = component "Service of the component 1" "Provides API for getting a list of metadata records according to specified search parameters via a JSON/HTTPS API."
-                detailAPI = component "Service of the component 2" "Provides API for getting a detail of a given metadata record via a JSON/HTTPS API."
-                searchController = component "Service of the component 3" "Implements and provides business functionality related to searching for metadata records"
-                detailController = component "Service of the component 4" "Implements and provides business functionality related to viewing details of metadata records"
-                distributionModel = component "Service of the component 5" "Internal model of distribution metadata"
-                datasetModel = component "Service of the component 6" "Internal model of dataset metadata"
-                recordIndexGateway = component "Service of the component 7" "Provides access to a metadata records index"
+                requestHandler = component "Request handler" "Retrieves and handles HTTP requests using JSON"
+
+                authController = component "Auth controller" "Provides API for user authentication."
+                deviceController = component "Device Controller" "Provides API for devices manipulations."
+                driverController = component "Driver controller" "Provides API for devices drivers manipulations."
+
+                authService = component "Auth Service" "Implements and provides functionality related to users authentication"
+                logService = component "Log service" "Logs all operations made by users"
+                # deviceService will use device data manager to manipulate with devices
+                deviceService = component "Device service" "Implements and provides functionality related to manipulation with devices"
+                driverService = component "Driver service" "Implements and provides functionality related to manipulation with devices drivers"
                 
             }   
             deviceUpdater = container "Device Updater" "Worker responsible for the firmware and driver maintanace." "Some black box magix Miso did not invented yet." {
@@ -73,7 +77,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
 
         webFrontend -> server "Uses to deliver functionality"
 
-        server -> deviceUpdater "Uses for fast retrieval of metadata records lists"
+        server -> deviceUpdater "Uses to maintain drivers firmware"
         
         server -> userDataManager "Uses to retrieve information about the users including their system roles and permissions."
         server -> deviceDataManager "Uses to retrieve the information about the available devices and their current state."
@@ -85,21 +89,25 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         device -> deviceDataManager "Retrieves device information and current status and sends requests"
 
         # relationships to/from components
-        webFrontend -> listAPI "Makes API calls to" "JSON/HTTPS"
-        webFrontend -> detailAPI "Makes API calls to" "JSON/HTTPS"
+
+        webFrontend -> requestHandler "Makes API calls to" "JSON/HTTPS"
 
         # server components
-        listAPI -> searchController "Uses to access search business functionality"
-        detailAPI -> detailController "Uses to access detail business functionality"
+        requestHandler -> authController "Makes auth API call to authenticate user."
+        requestHandler -> logService "Logs request"
+        requestHandler -> deviceController "Makes device API call to search/add/delete devices"
+        requestHandler -> driverController "Makes driver API call to manipulate with devices drivers"
 
-        searchController -> datasetModel "Uses to access metadata about datasets"
-        detailController -> datasetModel "Uses to access metadata about datasets"
-        detailController -> distributionModel "Uses to access metadata about distributions"
+        authController -> authService "Calls logic to authenticate users"
+        deviceController -> deviceService "Calls logic to search/add/delete devices"
+        driverController -> driverService "Calls logic to manipulate with drivers"
 
-        datasetModel -> recordIndexGateway "Uses to retrieve list of metadata records with given values of selected properties"
+        authService -> userDataManager "Uses to retrieve information about the users including their system roles and permissions."
+
+        deviceService -> deviceDataManager "Uses to retrieve the information about the available devices and their current state."
         
-        recordIndexGateway -> deviceUpdater "Provides access to"
-
+        driverService -> deviceUpdater "Maintain drivers firmware using"
+        deviceUpdater -> driverService "Gets the category of the devices with relevant metadata." 
 
         # Device Updater - Component Relations and Decompositions
 
@@ -116,6 +124,8 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         updateWorker -> device "Installs updates when in the device is in the appropriate state "
         updateTrigger -> updatePlanner "Initiates the planning with the current information about issued devices "
         updateTrigger -> statusResolver "Gets the information about the actual devices state "
+
+        server -> updateManager "Maintain drivers firmware using"
 
         updateManager -> updateWorker "Adds task "
 
@@ -137,7 +147,7 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         
         # UserDataManager components
         server -> userDataManagerGateway "Uses to get high level functionality over raw employee data"
-        userDataManagerGateway -> devicesRegistry "Uses to get all data regarding employees"
+        userDataManagerGateway -> hospitalEmployeeDatabase "Uses to get all data regarding employees"
     }
     
     views {
