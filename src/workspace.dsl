@@ -1,16 +1,16 @@
 workspace "Public Data Space" "This workspace documents the architecture of the Public Data Space which enables public institutions in Czechia to share public data among each other in a guaranteed way." {
 
     model {
-        hospitalBuildingMaintenance = softwareSystem "Hospital Building Maintenance System (HBMS)" "Manages and schedules building maintenance devices across the hospital sectors."  {
-            webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices scheduling, management and monitoring"  {
-                deviceManager = component "Device Manager" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
-                searchAPI = component "Search API" "Handles search queries for retrieval of information to a particular device, list of devices or employee."
-                logInAPI = component "Log In API" "Provides form for user authentication."
+        hospitalBuildingMaintenance = softwareSystem "Hospital Building Maintanance System (HBMS)" "Manages and schedules building maintanance devices accross the hospital sectors."  {
+            webFrontend = container "(HBMS) Web Front-end" "Provides all functionality for all devices schedulling, management and monitoring"  {
+                deviceCollectionProvider = component "Device Collection Provider" "Provides access to device record based on the search query. Supports operations on multiple devices at once."
+                searchManager = component "Search Manager" "Accepts search queries for retrieval of information to a particular hospital section, device, list of devices or employee."
+                logInManager = component "Log In Manager" "Provides form for user authentication."
                 deviceScheduler = component "Device Scheduler" "Provides access to device scheduling interface to trigger specific device functions in a given time or periodically."
                 driverManager = component "Driver Manager" "Enables setup of device drivers configuration."
-                addDeviceAPI = component "Add Device API" "Enables addition of a new device."
-                deleteDeviceAPI = component "Delete Device API" "Enables deletion of an existing device."
-                hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices."
+                addDeviceManager = component "Add Device Manager" "Enables addition of a new device."
+                deleteDeviceManager = component "Delete Device Manager" "Enables deletion of an existing device."
+                hospitalVisualizer = component "Hospital Visualizer" "Provides UI for browsing individual sections of a hospital with their corresponding devices and employees."
             }
             server = container "(HBMS) Server" "Implements logic for functionality of the regular devices management." {
                 requestHandler = component "Request handler" "Retrieves and handles HTTP requests using JSON"
@@ -136,16 +136,16 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
         updateManager -> updateWorker "Adds task"
 
         # webFrontend components
-        logInAPI -> server "Makes API call to retrieve user record from DB"
-        deviceManager -> server "Makes API calls to [JSON/HTTPS]"
+        logInManager -> server "Makes API call to retrieve user record from DB"
+        deviceCollectionProvider -> server "Makes API calls to [JSON/HTTPS]"
 
-        searchAPI -> deviceManager "Uses to retrieve record of a particular device or list of devices based on the search query"
-        driverManager -> deviceManager "Uses to retrieve record of a particular device or group of devices to attach their driver settings"
-        addDeviceAPI -> deviceManager "Uses to update the collection of devices by adding a new device"
+        searchManager -> deviceCollectionProvider "Uses to retrieve record of a particular device or list of devices based on the search query"
+        driverManager -> deviceCollectionProvider "Uses to retrieve record of a particular device or group of devices to attach their driver settings"
+        addDeviceManager -> deviceCollectionProvider "Uses to update the collection of devices by adding a new device"
 
-        deviceScheduler -> searchAPI "Uses to retrieve record of a particular device or list of devices for scheduling"
-        deleteDeviceAPI -> searchAPI "Uses to retrieve record of a device for further agreement of a delete operation for this device"
-        hospitalVisualizer -> searchAPI "Uses to retrieve records of devices that belong to a particular section"
+        deviceScheduler -> searchManager "Uses to retrieve record of a particular device or list of devices for scheduling"
+        deleteDeviceManager -> searchManager "Uses to retrieve record of a device for further agreement of a delete operation for this device"
+        hospitalVisualizer -> searchManager "Uses to retrive records of devices that belong to a particular section"
         
         # DeviceDataManager components
         server -> DeviceDataManagerGateway "Uses to get high level functionality over raw device data"
@@ -223,15 +223,25 @@ workspace "Public Data Space" "This workspace documents the architecture of the 
             autoLayout
         }        
         
-        dynamic webFrontend "searchAPI" "Summarises how the Device search function works." {
-                searchAPI -> server "Submits search request to Server"
+        dynamic webFrontend "searchManager" "Summarises how the Device search function works." {
+                searchManager -> server "Submits search request to Server"
                 server -> deviceDataManager "Getting the needed data from"
                 deviceDataManager -> devicesRegistry "Fetches data from"
                 devicesRegistry -> deviceDataManager "Returns device data to"
                 deviceDataManager -> server "Returns requested information"
-                server -> searchAPI "Returns request result"
+                server -> searchManager "Returns request result"
                 autoLayout
-        }                 
+        }
+
+        dynamic webFrontend "addDeviceManager" "Summarises how the Add Device function works." {
+                addDeviceManager -> server "Sends add device request to"
+                server -> deviceDataManager "Requests device collection update from"
+                deviceDataManager -> devicesRegistry "Stores data of new device into"
+                devicesRegistry -> deviceDataManager "Returns result of device data storage to"
+                deviceDataManager -> server "Returns result of device addition operation with potentially discovered errors to"
+                server -> addDeviceManager "Returns if new device was added successfully or not to"
+                autoLayout
+        }                    
 
         theme default
 
