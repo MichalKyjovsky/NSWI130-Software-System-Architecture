@@ -7,7 +7,7 @@ This document describes the architecture of the Building Maintenance System for 
 |-------------|-------------------- |
 | **Michal Kyjovsky** | Device Updater | 
 | **Marian Kazimir** | Device/User Data Manager |
-| **Kristina Lhotanova** | HBMS Front-End |
+| **Kristyna Lhotanova** | HBMS Front-End |
 | **Robert Badronov** | HBMS Server |
 
 

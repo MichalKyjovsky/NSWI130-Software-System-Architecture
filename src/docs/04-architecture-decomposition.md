@@ -3,7 +3,7 @@
 The following chapter provides a decomposition and description of each container that is subject to our system.
 
 
-![Hospital Building Maintanance Container Diagram](embed:hospitalBuildingMaintananceContainerDiagram)
+![Hospital Building Maintenance Container Diagram](embed:hospitalBuildingMaintenanceContainerDiagram)
 
 ### HBMS Web Front-End
 The purpose of this container is to introduce the graphical user interface both for the administrator of the application and the regular user.

@@ -39,4 +39,4 @@ The following section summarizes our system's *Non-Functional Requirements* that
 
 All architectonical decisions that consider the points listed above must be documented within the output diagrams.
 
-![](embed:hospitalBuildingMaintananceSystemContextDiagram)
+![](embed:hospitalBuildingMaintenanceSystemContextDiagram)
