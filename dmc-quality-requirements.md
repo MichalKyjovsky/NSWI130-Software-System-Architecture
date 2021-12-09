@@ -1,12 +1,21 @@
 # Doctor Monitoring and Communication (DMC) - Quality Attribute Requirements Scenarios Feedback
 
-This document is intended as a brief summarization of the aspects of the Quality Attributes of the DMC system. The text below further categorizes the
-requirements of the particular QA, so the roadmap is clear and easily extendable.
+This document is intended as a brief summarization of the aspects of the Quality Attributes of the DMC system. The text
+below further categorizes the requirements of the particular QA, so the roadmap is clear and easily extendable.
+
+## List of Contents
+
+1. [System Quality Attributes](#system-quality-attributes)
+    - [Run-Time Quality Attributes](#run-time-quality-attributes)
+    - [Design-Time Quality Attributes](#design-time-quality-attributes)
+2. [Business Quality Attributes](#business-quality-attributes)
+3. [Architectural Quality Attributes](#architectural-quality-attributes)
 
 ### Quality Requirement Scenario - Template
+
 <hr>
 
- <b>Requirement Scenario - \<REQUIREMENT NAME></b>
+<b>Requirement Scenario - \<REQUIREMENT NAME></b>
     <table>
         <tr>
             <th>Source of Stimulus</th>
@@ -50,15 +59,186 @@ requirements of the particular QA, so the roadmap is clear and easily extendable
 
 ### Run-Time Quality Attributes
 
-### Design-Time Quality Attributes 
+#### Performance
 
-<!-- BUSINESS -->
+- <b>Requirement Scenario - Message Sender </b>
 
-## Business Quality Attributes
+  <table>
+      <tr>
+          <th>Source of Stimulus</th>
+          <td>Hospital employee</td>
+      </tr>
+      <tr>
+          <th>Stimulus</th>
+          <td>Send message to a colleague</td>
+      </tr>
+      <tr>
+          <th>Artifact</th>
+          <td>DMC Mobile App</td>
+      </tr>
+      <tr>
+          <th>Environment</th>
+          <td>Normal operation</td>
+      </tr>
+      <tr>
+          <th>Response</th>
+          <td>Message sent and delivered</td>
+      </tr>
+      <tr>
+          <th>Measure</th>
+          <td>
+              <ul>
+                  <li>
+                      Message is sent with average latency of 10 milliseconds (instantly from user's point of view)
+                  </li>
+                   <li>
+                      Message is delivered with average latency of 1 second (notification of successfull delivery is received within this interval)
+                  </li>
+              </ul>
+          </td>
+      </tr>
+      <tr>
+          <th>Requirement Fulfilled</th>
+          <td><input type="checkbox" checked></td>
+      </tr>
+      <tr>
+          <th>Comment</th>
+          <td>Messages are stored within DMC system using Data Storage container with MySQL DB for internal data storage. Request is sent to the server through firewall gate and once the server receives a send message request, it can respond to it immediately (the message is considered sent if it's accepted by the server). External services don't need to be requested for sending the message successfully in terms of delivering it to the server. More time is needed to actually deliver the message as its recipient needs to be found first. The whole process of message exchange could be handled within Data Storage as we don't need to extract additional information of the recipient through Employees Catalog.</td>
+      </tr>
+  </table>
 
-<!-- ARCHITECTURE -->
+- <b>Requirement Scenario - Monitoring Info Extraction </b>
 
-## Architectural Quality Attributes
+  <table>
+      <tr>
+          <th>Source of Stimulus</th>
+          <td>Hospital employee</td>
+      </tr>
+      <tr>
+          <th>Stimulus</th>
+          <td>Monitor colleague's actions</td>
+      </tr>
+      <tr>
+          <th>Artifact</th>
+          <td>DMC Desktop App</td>
+      </tr>
+      <tr>
+          <th>Environment</th>
+          <td>Normal operation</td>
+      </tr>
+      <tr>
+          <th>Response</th>
+          <td>All available information of the particular employee received</td>
+      </tr>
+      <tr>
+          <th>Measure</th>
+          <td>Result is provided with average latency of 1 second</td>
+      </tr>
+      <tr>
+          <th>Requirement Fulfilled</th>
+          <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+          <th>Comment</th>
+          <td>
+              We have rather low latency tolerance and the system doesn't implement caching of employees and departments. It fetches data from external software systems for each monitoring request which generates overhead of additional API calls and network connection. A solution might be to add container for employees and departments data caching or extend usage of Data Storage container to handle the caching (it takes care of internal data storage already).
+          </td>
+      </tr>
+  </table>
+
+#### Security
+
+- <b>Requirement Scenario - Security Scenario Mobile/Web app login</b>
+    <table>
+        <tr>
+            <th>Source of Stimulus</th>
+            <td>Malicious attacker Pepan</td>
+        </tr>
+        <tr>
+            <th>Stimulus</th>
+            <td>Bruteforce password attack to login as an existing user into the mobile/web application</td>
+        </tr>
+        <tr>
+            <th>Artifact</th>
+            <td>DMC Mobile App / DMC Web app</td>
+        </tr>
+        <tr>
+            <th>Environment</th>
+            <td>Live online production version</td>
+        </tr>
+        <tr>
+            <th>Response</th>
+            <td>After three unsuccessful logins the user account is blocked</td>
+        </tr>
+        <tr>
+            <th>Measure</th>
+            <td>
+                <ul>
+                    <li>
+                        Logging of all activity to trace where the attack comes from
+                    </li>
+                    <li>
+                        After 3 unsuccessful login attempts the user has to request account unblock with mail/telephone/on place verification
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Requirement Fulfilled</th>
+            <td><input type="checkbox" checked></td>
+        </tr>
+        <tr>
+            <th>Comment</th>
+            <td>Security is on the first place and by this way the requirement is nicely fulfilled. </td>
+        </tr>
+    </table>
+
+- <b>Requirement Scenario - Security of messages</b>
+    <table>
+        <tr>
+            <th>Source of Stimulus</th>
+            <td>malicious attacker Vojtech</td>
+        </tr>
+        <tr>
+            <th>Stimulus</th>
+            <td>Interception of sent messages</td>
+        </tr>
+        <tr>
+            <th>Artifact</th>
+            <td>DMC Mobile App / DMC Web app</td>
+        </tr>
+        <tr>
+            <th>Environment</th>
+            <td>Live online production version, user and attacker connected on the hospital Wifi network</td>
+        </tr>
+        <tr>
+            <th>Response</th>
+            <td>Attacker intercepts encoded messages but cannot decode them</td>
+        </tr>
+        <tr>
+            <th>Measure</th>
+            <td>
+                <ul>
+                    <li>
+                        Messages are sent/received to/from the server encrypted by some standard safe encryption algorithm
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Requirement Fulfilled</th>
+            <td><input type="checkbox" checked></td>
+        </tr>
+        <tr>
+            <th>Comment</th>
+            <td>
+               Even though Vojtech can intercept the traffic between server and client it is just bunch of encrypted data which he cannot interpret without encryption keys that are securely stored and changed on a regular basis.
+            </td>
+        </tr>
+    </table>
+
+
+### Design-Time Quality Attributes
 
 #### Testability
 
@@ -153,4 +333,13 @@ requirements of the particular QA, so the roadmap is clear and easily extendable
             </td>
         </tr>
     </table>
+
+
+<!-- BUSINESS -->
+
+## Business Quality Attributes
+
+<!-- ARCHITECTURE -->
+
+## Architectural Quality Attributes
 
