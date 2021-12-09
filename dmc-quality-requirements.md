@@ -237,6 +237,98 @@ below further categorizes the requirements of the particular QA, so the roadmap 
         </tr>
     </table>
 
+#### Availability
+
+- <b>Requirement Scenario - Availability Scenario - Server failure</b>
+
+    <table>
+        <tr>
+            <th>Source of Stimulus</th>
+            <td>Hospital employees</td>
+        </tr>
+        <tr>
+            <th>Stimulus</th>
+            <td>System recovery after failures</td>
+        </tr>
+        <tr>
+            <th>Artifact</th>
+            <td>DMC server</td>
+        </tr>
+        <tr>
+            <th>Environment</th>
+            <td>TEST, Prod</td>
+        </tr>
+        <tr>
+            <th>Response</th>
+            <td>System recovered after failure</td>
+        </tr>
+        <tr>
+            <th>Measure</th>
+            <td>
+                <ul>
+                    <li>
+                        System is up after 5 minutes after failure
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Requirement Fulfilled</th>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <th>Comment</th>
+            <td>Since communication between hospital employees(doctors) is important for hospital functioning, the system must be available 24/7 and in case of failure(system crash etc.), it should be recovered relatively fast. It might be achieved using containers and load balancer which, in case of falling of any container, will start a new one. It might be useful to create healthcheck endpoint so it will be possible to check whether system is available or not. Healthcheck endpoint might be called every 5 seconds.</td>
+        </tr>
+    </table>
+
+#### Scalability
+
+- <b>Requirement Scenario - Scalability Scenario - High number of requests</b>
+
+    <table>
+        <tr>
+            <th>Source of Stimulus</th>
+            <td>Hospital employees</td>
+        </tr>
+        <tr>
+            <th>Stimulus</th>
+            <td>System stable during high requests ratio</td>
+        </tr>
+        <tr>
+            <th>Artifact</th>
+            <td>DMC server</td>
+        </tr>
+        <tr>
+            <th>Environment</th>
+            <td>Performance, Prod</td>
+        </tr>
+        <tr>
+            <th>Response</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Measure</th>
+            <td>
+                <ul>
+                    <li>
+                        High amount of requests are sent
+                    </li>
+                    <li>
+                        System works as expected, without failures
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Requirement Fulfilled</th>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <th>Comment</th>
+            <td>Since communication between hospital employees(doctors) is important for hospital functioning, the system must be stable even during high load. It might be achieved using containers and load balancer(or some alternative) which, in case of exceeding a certain limit of requests will start a new container(new instance). The other solution is to predict the maximum amount of requests and create a necessary amount of containers in advance.</td>
+        </tr>
+    </table>
 
 ### Design-Time Quality Attributes
 
