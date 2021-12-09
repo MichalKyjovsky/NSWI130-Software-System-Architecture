@@ -240,10 +240,11 @@ below further categorizes the requirements of the particular QA, so the roadmap 
 #### Availability
 
 - <b>Requirement Scenario - Availability Scenario - Server failure</b>
+
     <table>
         <tr>
             <th>Source of Stimulus</th>
-            <td>Hospital employee</td>
+            <td>Hospital employees</td>
         </tr>
         <tr>
             <th>Stimulus</th>
@@ -255,7 +256,7 @@ below further categorizes the requirements of the particular QA, so the roadmap 
         </tr>
         <tr>
             <th>Environment</th>
-            <td>TEST</td>
+            <td>TEST, Prod</td>
         </tr>
         <tr>
             <th>Response</th>
@@ -284,10 +285,11 @@ below further categorizes the requirements of the particular QA, so the roadmap 
 #### Scalability
 
 - <b>Requirement Scenario - Scalability Scenario - High number of requests</b>
+
     <table>
         <tr>
             <th>Source of Stimulus</th>
-            <td>Hospital employe</td>
+            <td>Hospital employees</td>
         </tr>
         <tr>
             <th>Stimulus</th>
@@ -299,7 +301,7 @@ below further categorizes the requirements of the particular QA, so the roadmap 
         </tr>
         <tr>
             <th>Environment</th>
-            <td>Performance</td>
+            <td>Performance, Prod</td>
         </tr>
         <tr>
             <th>Response</th>
