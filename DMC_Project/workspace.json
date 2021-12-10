@@ -1,0 +1,1777 @@
+{
+  "id" : 1,
+  "name" : "Hospital Software Systems",
+  "description" : "This workspace documents architecture of the Hospital Software Systems which enables hospital to monitor its employees and provides secure instant messaging functionality for employees",
+  "revision" : 0,
+  "lastModifiedDate" : "2021-11-25T04:29:05Z",
+  "lastModifiedAgent" : "structurizr-web/2527/diagram",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJIb3NwaXRhbCBTb2Z0d2FyZSBTeXN0ZW1zIiAiVGhpcyB3b3Jrc3BhY2UgZG9jdW1lbnRzIGFyY2hpdGVjdHVyZSBvZiB0aGUgSG9zcGl0YWwgU29mdHdhcmUgU3lzdGVtcyB3aGljaCBlbmFibGVzIGhvc3BpdGFsIHRvIG1vbml0b3IgaXRzIGVtcGxveWVlcyBhbmQgcHJvdmlkZXMgc2VjdXJlIGluc3RhbnQgbWVzc2FnaW5nIGZ1bmN0aW9uYWxpdHkgZm9yIGVtcGxveWVlcyIgewoKICAgIG1vZGVsIHsKICAgICAgICBkb2N0b3JNb25pdG9yaW5nID0gc29mdHdhcmVTeXN0ZW0gIkRvY3RvciBNb25pdG9yaW5nIFN5c3RlbSAoRE1DKSIgIlByb3ZpZGVzIGRvY3RvciBtb25pdG9yaW5nIHN5c3RlbSBhbmQgc2VjdXJlIGVuY3J5cHRlZCBpbnN0YW50IG1lc3NhZ2luZyBiZXR3ZWVuIGVtcGxveWVlcyIgewogICAgICAgICAgICBtb2JpbGVBcHAgPSBjb250YWluZXIgIkRNQyBNb2JpbGUgQXBwIiAiUHJvdmlkZXMgYWxsIGZ1bmN0aW9uYWxpdHkgZm9yIGRvY3RvciBtb25pdG9yaW5nIGFuZCBpbnN0YW50IG1lc3NhZ2luZyB2aWEgbW9iaWxlIGFwcCIgewogICAgICAgICAgICAgICAgZ3JvdXAgIlVzZXIgaW50ZXJmYWNlIiB7CiAgICAgICAgICAgICAgICAgICAgdWlIYW5kbGVyTSA9IGNvbXBvbmVudCAiVXNlciBpbnRlcmZhY2UgaGFuZGxlciIgIkhhbmRsZXMgYWxsIHVzZXIgYWN0aW9ucyBhbmQgY2FsbHMgcmVzcG9uc2libGUgY29tcG9uZW50cyIKICAgICAgICAgICAgICAgICAgICBtZXNzYWdpbmdIYW5kbGVyTSA9IGNvbXBvbmVudCAiTWVzc2FnaW5nIGhhbmRsZXIiICJQcm92aWRlcyBtZXNzYWdlIGhpc3RvcnksIHNlbmRzIGFuZCByZWNlaXZlIG1lc3NhZ2VzIgogICAgICAgICAgICAgICAgICAgIG1vbml0b3JpbmdIYW5kbGVyTSA9IGNvbXBvbmVudCAiRG9jdG9yIG1vbml0b3JpbmcgaGFuZGxlciIgIlZhbGlkYXRlcyBkYXRhIGZyb20gdXNlciBhbmQgcHJvY2VzcyBkYXRhIGZyb20gc2VydmVyIGludG8gZGVzaXJlZCBmb3JtYXQiCiAgICAgICAgICAgICAgICAgICAgbm90aWZpY2F0aW9uSGFuZGxlck0gPSBjb21wb25lbnQgIk5vdGlmaWNhdGlvbiBoYW5kbGVyIiAiQ29tcG9uZW50IHJlc3BvbnNpYmxlIGZvciBwcm9wZXIgbm90aWZpY2F0aW9uIHNlbmRpbmciCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBncm91cCAiU2VydmVyIGNvbm5lY3Rpb24gcHJvdmlkZXJzIiB7CiAgICAgICAgICAgICAgICAgICAgZGF0YUVuY29kZXJNID0gY29tcG9uZW50ICJEYXRhIGVuY29kZXIiICJFbmNvZGVzIGRhdGEgd2hpY2ggdXNlciB3YW50cyB0byBzZW5kIHRvIHNlcnZlciIKICAgICAgICAgICAgICAgICAgICBkYXRhRGVjb2Rlck0gPSBjb21wb25lbnQgIkRhdGEgZGVjb2RlciIgIkRlY29kZXMgZGF0YSB3aGljaCB1c2VyIHJlY2VpdmVkIGZyb20gc2VydmVyIgogICAgICAgICAgICAgICAgICAgIHNlcnZlclN0dWJNID0gY29tcG9uZW50ICJTZXJ2ZXIgc3R1YiIgIlByb3ZpZGVzIGNvbW11bmljYXRpb24gd2l0aCBzZXJ2ZXIiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRlc2t0b3BBcHAgPSBjb250YWluZXIgIkRNQyBEZXNrdG9wIEFwcCIgIlByb3ZpZGVzIGFsbCBmdW5jdGlvbmFsaXR5IGZvciBkb2N0b3IgbW9uaXRvcmluZyBhbmQgaW5zdGFudCBtZXNzYWdpbmcgdmlhIGRlc2t0b3AgYXBwIiB7CiAgICAgICAgICAgICAgICBncm91cCAiVXNlciBpbnRlcmZhY2UiIHsKICAgICAgICAgICAgICAgICAgICB1aUhhbmRsZXJEID0gY29tcG9uZW50ICJVc2VyIGludGVyZmFjZSBoYW5kbGVyIiAiSGFuZGxlcyBhbGwgdXNlciBhY3Rpb25zIGFuZCBjYWxscyByZXNwb25zaWJsZSBjb21wb25lbnRzIgogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2luZ0hhbmRsZXJEID0gY29tcG9uZW50ICJNZXNzYWdpbmcgaGFuZGxlciIgIlByb3ZpZGVzIG1lc3NhZ2UgaGlzdG9yeSwgc2VuZHMgYW5kIHJlY2VpdmUgbWVzc2FnZXMiCiAgICAgICAgICAgICAgICAgICAgbW9uaXRvcmluZ0hhbmRsZXJEID0gY29tcG9uZW50ICJEb2N0b3IgbW9uaXRvcmluZyBoYW5kbGVyIiAiVmFsaWRhdGVzIGRhdGEgZnJvbSB1c2VyIGFuZCBwcm9jZXNzIGRhdGEgZnJvbSBzZXJ2ZXIgaW50byBkZXNpcmVkIGZvcm1hdCIKICAgICAgICAgICAgICAgICAgICBub3RpZmljYXRpb25IYW5kbGVyRCA9IGNvbXBvbmVudCAiTm90aWZpY2F0aW9uIGhhbmRsZXIiICJDb21wb25lbnQgcmVzcG9uc2libGUgZm9yIHByb3BlciBub3RpZmljYXRpb24gc2VuZGluZyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGdyb3VwICJTZXJ2ZXIgY29ubmVjdGlvbiBwcm92aWRlcnMiIHsKICAgICAgICAgICAgICAgICAgICBkYXRhRW5jb2RlckQgPSBjb21wb25lbnQgIkRhdGEgZW5jb2RlciIgIkVuY29kZXMgZGF0YSB3aGljaCB1c2VyIHdhbnRzIHRvIHNlbmQgdG8gc2VydmVyIgogICAgICAgICAgICAgICAgICAgIGRhdGFEZWNvZGVyRCA9IGNvbXBvbmVudCAiRGF0YSBkZWNvZGVyIiAiRGVjb2RlcyBkYXRhIHdoaWNoIHVzZXIgcmVjZWl2ZWQgZnJvbSBzZXJ2ZXIiCiAgICAgICAgICAgICAgICAgICAgc2VydmVyU3R1YkQgPSBjb21wb25lbnQgIlNlcnZlciBzdHViIiAiUHJvdmlkZXMgY29tbXVuaWNhdGlvbiB3aXRoIHNlcnZlciIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgc2VydmVyID0gY29udGFpbmVyICJETUMgU2VydmVyIiAiSW1wbGVtZW50cyBhcHBsaWNhdGlvbiBzZWN1cml0eSBhbmQgYWxsIGJ1c2luZXNzIGZ1bmN0aW9uYWxpdHkgZm9yIGRvY3RvciBtb25pdG9yaW5nIGFuZCBpbnN0YW50IG1lc3NhZ2luZyIgewogICAgICAgICAgICAgICAgZ3JvdXAgIkRhdGEgZW5jcnlwdGlvbiIgewogICAgICAgICAgICAgICAgICAgIGRhdGFFbmNvZGVyUyA9IGNvbXBvbmVudCAiRGF0YSBlbmNvZGVyIiAiRW5jb2RlcyBkYXRhIHdoaWNoIHNlcnZlciB3YW50cyB0byBzZW5kIHRvIHVzZXIiCiAgICAgICAgICAgICAgICAgICAgZGF0YURlY29kZXJTID0gY29tcG9uZW50ICJEYXRhIGRlY29kZXIiICJEZWNvZGVzIGRhdGEgd2hpY2ggc2VydmVyIHJlY2VpdmVkIGZyb20gdXNlciIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGdyb3VwICJCdXNpbmVzcyBsb2dpYyBpbXBsZW1lbnRhdGlvbiIgewogICAgICAgICAgICAgICAgICAgIHJlcXVlc3RSZXNvbHZlciA9IGNvbXBvbmVudCAiUmVxdWVzdCByZXNvbHZlciIgIlJlc29sdmVzIHJlcXVlc3QgYW5kIGNob29zZXMgcmVzcG9uc2libGUgYnVzaW5lc3MgbG9naWMgbW9kdWxlIgogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2luZ0xvZ2ljID0gY29tcG9uZW50ICJNZXNzYWdpbmcgbG9naWMiICJJbXBsZW1lbnRzIG93biBpbnN0YW50IG1lc3NhZ2luZyBidXNpbmVzcyBsb2dpYyIKICAgICAgICAgICAgICAgICAgICBtb25pdG9yaW5nTG9naWMgPSBjb21wb25lbnQgIk1vbml0b3JpbmcgbG9naWMiICJJbXBsZW1lbnRzIG93biBkb2N0b3IgbW9uaXRvcmluZyBidXNpbmVzcyBsb2dpYyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGF0YSA9IGNvbnRhaW5lciAiRGF0YSBDb2xsZWN0b3IiICJQcm92aWRlcyB1bmlmb3JtIGRhdGEgYWNjZXNzIHBvaW50IGFuZCBjb2xsZWN0cyByZXF1ZXN0ZWQgZGF0YSBmcm9tIGRpZmZlcmVudCBzb3VyY2VzIiB7CiAgICAgICAgICAgICAgICBzb3VyY2VSZXNvbHZlciA9IGNvbXBvbmVudCAiRGF0YSBzb3VyY2UgcmVzb2x2ZXIiICJSZXNvbHZlcyBkYXRhIHNvdXJjZSBmb3IgcmVxdWVzdCIKICAgICAgICAgICAgICAgIGRlcGFydG1lbnRzUmVhZGVyID0gY29tcG9uZW50ICJEZXBhcnRtZW50cyByZWFkZXIiICJSZWFkcyBkYXRhIGZyb20gZGVwYXJ0bWVudHMgY2F0YWxvZyIKICAgICAgICAgICAgICAgIGVtcGxveWVlc1JlYWRlciA9IGNvbXBvbmVudCAiRW1wbG95ZWVzIHJlYWRlciIgIlJlYWRzIGRhdGEgZnJvbSBlbXBsb3llZXMgY2F0YWxvZyIKICAgICAgICAgICAgICAgIGludGVybmFsUmVhZGVyID0gY29tcG9uZW50ICJJbnRlcm5hbCBkYXRhIHJlYWRlciIgIlJlYWRzIGludGVybmFsbHkgc3RvcmVkIGRhdGEiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRiID0gY29udGFpbmVyICJEYXRhIFN0b3JhZ2UiICJTdG9yYWdlIG9mIG1lc3NhZ2VzIGFuZCBvdGhlciBpbnRlcm5hbGx5IG5lZWRlZCBkYXRhIgoKICAgICAgICAgICAgIWRvY3MgZG9jcwogICAgICAgIH0KCiAgICAgICAgZW1wbG95ZWVzQ2F0YWxvZyA9IHNvZnR3YXJlU3lzdGVtICJFbXBsb3llZXMgQ2F0YWxvZyIgIkhvc3BpdGFsIHNvZnR3YXJlIHN5c3RlbSB3aGljaCBwcm92aWRlcyBpbmZvcm1hdGlvbiBhYm91dCBlbXBsb3llZXMiICJFeGlzdGluZyBTeXN0ZW0iCgogICAgICAgIGRlcGFydG1lbnRzQ2F0YWxvZyA9IHNvZnR3YXJlU3lzdGVtICJEZXBhcnRtZW50cyBDYXRhbG9nIiAiSG9zcGl0YWwgc29mdHdhcmUgc3lzdGVtIHdoaWNoIHByb3ZpZGVzIGluZm9ybWF0aW9uIGFib3V0IGRlcGFydG1lbnRzIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICBlbXBsb3llZSA9IHBlcnNvbiAiRW1wbG95ZWUiICJIb3NwaXRhbCBlbXBsb3llZSB3aXRoaW4gaG9zcGl0YWwgbmV0d29yayB3aG8gbmVlZHMgdG8gY29udGFjdCBkb2N0b3JzIGZyb20gdmFyaW91cyBwdXJwb3NlcyIgIkVtcGxveWVlIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBzb2Z0d2FyZSBzeXN0ZW1zCiAgICAgICAgZW1wbG95ZWUgLT4gZG9jdG9yTW9uaXRvcmluZyAiSW50ZXJhY3RzIHdpdGggb3RoZXIgZW1wbG95ZWVzIGluIgoKICAgICAgICBkb2N0b3JNb25pdG9yaW5nIC0+IGVtcGxveWVlc0NhdGFsb2cgIlJlYWRzIGRhdGEgYWJvdXQgZG9jdG9ycyBmcm9tIgogICAgICAgIGRvY3Rvck1vbml0b3JpbmcgLT4gZGVwYXJ0bWVudHNDYXRhbG9nICJSZWFkcyBkYXRhIGFib3V0IGRlcGFydG1lbnRzIGZyb20iCgogICAgICAgIGVtcGxveWVlc0NhdGFsb2cgLT4gZGVwYXJ0bWVudHNDYXRhbG9nICJSZWFkcyBkYXRhIGFib3V0IGRlcGFydG1lbnRzIGZyb20iCgogICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIGNvbnRhaW5lcnMKICAgICAgICBlbXBsb3llZSAtPiBtb2JpbGVBcHAgIkFjY2VzcyBzeXN0ZW0gZnVuY3Rpb25hbGl0eSBmcm9tIHNtYXJ0cGhvbmUiCiAgICAgICAgZW1wbG95ZWUgLT4gZGVza3RvcEFwcCAiQWNjZXNzIHN5c3RlbSBmdW5jdGlvbmFsaXR5IGZyb20gY29tcHV0ZXIiCgogICAgICAgIG1vYmlsZUFwcCAtPiBzZXJ2ZXIgIlVzZXMgdG8gZGVsaXZlciBmdW5jdGlvbmFsaXR5IgogICAgICAgIGRlc2t0b3BBcHAgLT4gc2VydmVyICJVc2VzIHRvIGRlbGl2ZXIgZnVuY3Rpb25hbGl0eSIKCiAgICAgICAgc2VydmVyIC0+IGRhdGEgIlVzZXMgdG8gYWNxdWlyZSBkYXRhIgoKICAgICAgICBkYXRhIC0+IGRiICJSZWFkcyBpbnRlcm5hbCBkYXRhIGZyb20iCiAgICAgICAgZGF0YSAtPiBlbXBsb3llZXNDYXRhbG9nICJSZWFkcyBlbXBsb3llZXMgZGF0YSBmcm9tIgogICAgICAgIGRhdGEgLT4gZGVwYXJ0bWVudHNDYXRhbG9nICJSZWFkcyBkZXBhcnRtZW50cyBkYXRhIGZyb20iCgogICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIG1vYmlsZSBhcHAgY29tcG9uZW50cwogICAgICAgIGVtcGxveWVlIC0+IHVpSGFuZGxlck0gIlVzZXMgYXBwIGZ1bmN0aW9ucyBieSIKICAgICAgICBzZXJ2ZXJTdHViTSAtPiBzZXJ2ZXIgIkNvbXVuaWNhdGVzIHdpdGgiCgogICAgICAgIHVpSGFuZGxlck0gLT4gbWVzc2FnaW5nSGFuZGxlck0gIlVzZXMgdG8gZXZhbHVhdGUgbWVzc2FnaW5nIGFjdGlvbnMiCiAgICAgICAgdWlIYW5kbGVyTSAtPiBtb25pdG9yaW5nSGFuZGxlck0gIlVzZXMgdG8gZXZhbHVhdGUgZG9jdG9yIG1vbml0b3JpbmcgYWN0aW9ucyIKCiAgICAgICAgbm90aWZpY2F0aW9uSGFuZGxlck0gLT4gdWlIYW5kbGVyTSAiVXNlcyB0byBkaXNwbGF5IG5vdGlmaWNhdGlvbnMgdG8gdXNlciIKICAgICAgICBtZXNzYWdpbmdIYW5kbGVyTSAtPiBub3RpZmljYXRpb25IYW5kbGVyTSAiU2VuZHMgc3lzdGVtIG5vdGlmaWNhdGlvbnMgYnkiCiAgICAgICAgbW9uaXRvcmluZ0hhbmRsZXJNIC0+IG5vdGlmaWNhdGlvbkhhbmRsZXJNICJTZW5kcyBzeXN0ZW0gbm90aWZpY2F0aW9ucyBieSIKCiAgICAgICAgbWVzc2FnaW5nSGFuZGxlck0gLT4gZGF0YUVuY29kZXJNICJFbmNvZGUgbWVzc2FnZXMgd2l0aCIKICAgICAgICBtb25pdG9yaW5nSGFuZGxlck0gLT4gZGF0YUVuY29kZXJNICJFbmNvZGUgZG9jdG9ycyBtb25pdG9yaW5nIHVwZGF0ZXMgd2l0aCIKICAgICAgICBkYXRhRGVjb2Rlck0gLT4gbWVzc2FnaW5nSGFuZGxlck0gIlByb3ZpZGVzIGRlY29kZWQgaW5jb21pbmcgbWVzc2FnZXMgdG8iCiAgICAgICAgZGF0YURlY29kZXJNIC0+IG1vbml0b3JpbmdIYW5kbGVyTSAiUHJvdmlkZXMgZGVjb2RlZCBkb2N0b3JzIG1vbml0b3JpbmcgaGlzdG9yeSB0byIKCiAgICAgICAgZGF0YUVuY29kZXJNIC0+IHNlcnZlclN0dWJNICJTZW5kcyBkYXRhIHRvIHNlcnZlciBieSIKICAgICAgICBzZXJ2ZXJTdHViTSAtPiBkYXRhRGVjb2Rlck0gIlByb3ZpZGVzIGRhdGEgZnJvbSBzZXJ2ZXIgdG8iCgogICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIGRlc2t0b3AgYXBwIGNvbXBvbmVudHMKICAgICAgICBlbXBsb3llZSAtPiB1aUhhbmRsZXJEICJVc2VzIGFwcCBmdW5jdGlvbnMgYnkiCiAgICAgICAgc2VydmVyU3R1YkQgLT4gc2VydmVyICJDb211bmljYXRlcyB3aXRoIgoKICAgICAgICB1aUhhbmRsZXJEIC0+IG1lc3NhZ2luZ0hhbmRsZXJEICJVc2VzIHRvIGV2YWx1YXRlIG1lc3NhZ2luZyBhY3Rpb25zIgogICAgICAgIHVpSGFuZGxlckQgLT4gbW9uaXRvcmluZ0hhbmRsZXJEICJVc2VzIHRvIGV2YWx1YXRlIGRvY3RvciBtb25pdG9yaW5nIGFjdGlvbnMiCgogICAgICAgIG5vdGlmaWNhdGlvbkhhbmRsZXJEIC0+IHVpSGFuZGxlckQgIlVzZXMgdG8gZGlzcGxheSBub3RpZmljYXRpb25zIHRvIHVzZXIiCiAgICAgICAgbWVzc2FnaW5nSGFuZGxlckQgLT4gbm90aWZpY2F0aW9uSGFuZGxlckQgIlNlbmRzIHN5c3RlbSBub3RpZmljYXRpb25zIGJ5IgogICAgICAgIG1vbml0b3JpbmdIYW5kbGVyRCAtPiBub3RpZmljYXRpb25IYW5kbGVyRCAiU2VuZHMgc3lzdGVtIG5vdGlmaWNhdGlvbnMgYnkiCgogICAgICAgIG1lc3NhZ2luZ0hhbmRsZXJEIC0+IGRhdGFFbmNvZGVyRCAiRW5jb2RlIG1lc3NhZ2VzIHdpdGgiCiAgICAgICAgbW9uaXRvcmluZ0hhbmRsZXJEIC0+IGRhdGFFbmNvZGVyRCAiRW5jb2RlIGRvY3RvcnMgbW9uaXRvcmluZyB1cGRhdGVzIHdpdGgiCiAgICAgICAgZGF0YURlY29kZXJEIC0+IG1lc3NhZ2luZ0hhbmRsZXJEICJQcm92aWRlcyBkZWNvZGVkIGluY29taW5nIG1lc3NhZ2VzIHRvIgogICAgICAgIGRhdGFEZWNvZGVyRCAtPiBtb25pdG9yaW5nSGFuZGxlckQgIlByb3ZpZGVzIGRlY29kZWQgZG9jdG9ycyBtb25pdG9yaW5nIGhpc3RvcnkgdG8iCgogICAgICAgIGRhdGFFbmNvZGVyRCAtPiBzZXJ2ZXJTdHViRCAiU2VuZHMgZGF0YSB0byBzZXJ2ZXIgYnkiCiAgICAgICAgc2VydmVyU3R1YkQgLT4gZGF0YURlY29kZXJEICJQcm92aWRlcyBkYXRhIGZyb20gc2VydmVyIHRvIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBzZXJ2ZXIgY29tcG9uZW50cwogICAgICAgIG1vYmlsZUFwcCAtPiBkYXRhRGVjb2RlclMgIkRlbGl2ZXJzIGVuY3J5cHRlZCByZXF1ZXN0IHRvIgogICAgICAgIGRlc2t0b3BBcHAgLT4gZGF0YURlY29kZXJTICJEZWxpdmVycyBlbmNyeXB0ZWQgcmVxdWVzdCB0byIKCiAgICAgICAgZGF0YUVuY29kZXJTIC0+IG1vYmlsZUFwcCAiRGVsaXZlcnMgZW5jcnlwdGVkIHJlc3BvbnNlIHRvIgogICAgICAgIGRhdGFFbmNvZGVyUyAtPiBkZXNrdG9wQXBwICJEZWxpdmVycyBlbmNyeXB0ZWQgcmVwc3BvbnNlIHRvIgoKICAgICAgICBkYXRhRGVjb2RlclMgLT4gcmVxdWVzdFJlc29sdmVyICJVc2VzIHRvIGNob29zZSByZXNwb25zaWJsZSBtb2R1bGUiCiAgICAgICAgcmVxdWVzdFJlc29sdmVyIC0+IG1lc3NhZ2luZ0xvZ2ljICJVc2VzIHRvIGV2YWx1YXRlIHJlcXVlc3QiCiAgICAgICAgcmVxdWVzdFJlc29sdmVyIC0+IG1vbml0b3JpbmdMb2dpYyAiVXNlcyB0byBldmFsdWF0ZSByZXF1ZXN0IgoKICAgICAgICBtZXNzYWdpbmdMb2dpYyAtPiBkYXRhICJSZXF1ZXN0cyBkYXRhIGZyb20iCiAgICAgICAgbW9uaXRvcmluZ0xvZ2ljIC0+IGRhdGEgIlJlcXVlc3RzIGRhdGEgZnJvbSIKCiAgICAgICAgbWVzc2FnaW5nTG9naWMgLT4gZGF0YUVuY29kZXJTICJVc2VzIHRvIGVuY3J5cHQgcmVzcG9uc2UiCiAgICAgICAgbW9uaXRvcmluZ0xvZ2ljIC0+IGRhdGFEZWNvZGVyUyAiVXNlcyB0byBlbmNyeXB0IHJlc3BvbnNlIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBkYXRhIGNvbXBvbmVudHMKICAgICAgICBzZXJ2ZXIgLT4gc291cmNlUmVzb2x2ZXIgIlVzZXMgdG8gY2hvb3NlIGNvcnJlY3QgZGF0YSBzb3VyY2UiCiAgICAgICAgCiAgICAgICAgc291cmNlUmVzb2x2ZXIgLT4gaW50ZXJuYWxSZWFkZXIgIlJlYWRzIGRhdGEgYnkiCiAgICAgICAgc291cmNlUmVzb2x2ZXIgLT4gZW1wbG95ZWVzUmVhZGVyICJSZWFkcyBkYXRhIGJ5IgogICAgICAgIHNvdXJjZVJlc29sdmVyIC0+IGRlcGFydG1lbnRzUmVhZGVyICJSZWFkcyBkYXRhIGJ5IgogICAgICAgIAogICAgICAgIGVtcGxveWVlc1JlYWRlciAtPiBlbXBsb3llZXNDYXRhbG9nICJSZXF1ZXN0cyBleHRlcm5hbCBkYXRhIGZyb20iCiAgICAgICAgZGVwYXJ0bWVudHNSZWFkZXIgLT4gZGVwYXJ0bWVudHNDYXRhbG9nICJSZXF1ZXN0cyBleHRlcm5hbCBkYXRhIGZyb20iCiAgICAgICAgaW50ZXJuYWxSZWFkZXIgLT4gZGIgIlJlYWRzIGludGVybmFsIGRhdGEiCgogICAgICAgIGRlcGxveW1lbnRFbnZpcm9ubWVudCAiTGl2ZSIgICB7CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJNb2JpbGUgZGV2aWNlIiAiIiAiQW5kcm9pZCA4LjAgb3IgbmV3ZXIiICB7CiAgICAgICAgICAgICAgICBtb2JpbGUgPSBjb250YWluZXJJbnN0YW5jZSBtb2JpbGVBcHAKICAgICAgICAgICAgfQogICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQ29tcHV0ZXIiICIiICJNaWNyb3NvZnQgV2luZG93cyBvciBMaW51eCIgIHsKICAgICAgICAgICAgICAgIGRlc2t0b3AgPSBjb250YWluZXJJbnN0YW5jZSBkZXNrdG9wQXBwCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJIb3NwaXRhbCBzZXJ2ZXIiICIiICJVYnVudHUgMjAuMDQgTFRTIiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRmlyZXdhbGwiIHsKICAgICAgICAgICAgICAgICAgICBmaXJld2FsbCA9IGluZnJhc3RydWN0dXJlTm9kZSAiR2F0ZSIgIkFsbG93cyBvbmx5IGNvbW11bmljYXRpb24gZnJvbSBob3NwaXRhbCBuZXR3b3JrIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIlBIUCA4LjAuKiIgIiIgIlBIUCIgewogICAgICAgICAgICAgICAgICAgIGxpdmVTZXJ2ZXIgPSBjb250YWluZXJJbnN0YW5jZSBzZXJ2ZXIKICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBkYXRhCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiTXlTUUwgREIiICIiICJNeVNRTCA4LjAuKiIgewogICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGRiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRXh0ZXJuYWwgaG9zcGl0YWwgZGF0YSIgICAgewogICAgICAgICAgICAgICAgICAgIHNvZnR3YXJlU3lzdGVtSW5zdGFuY2UgZW1wbG95ZWVzQ2F0YWxvZwogICAgICAgICAgICAgICAgICAgIHNvZnR3YXJlU3lzdGVtSW5zdGFuY2UgZGVwYXJ0bWVudHNDYXRhbG9nCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgbW9iaWxlIC0+IGZpcmV3YWxsICJTZW5kcyByZXF1ZXN0IHRvIHNlcnZlciB0aHJvdWdodCIKICAgICAgICAgICAgZGVza3RvcCAtPiBmaXJld2FsbCAiU2VuZHMgcmVxdWVzdCB0byBzZXJ2ZXIgdGhyb3VnaHQiCiAgICAgICAgICAgIGZpcmV3YWxsIC0+IGxpdmVTZXJ2ZXIgIkRlbGl2ZXJzIHJlcXVlc3QgZnJvbSBpbnRlcm5hbCBuZXR3b3JrIHRvIgogICAgICAgIH0KCiAgICAgICAgZGVwbG95bWVudEVudmlyb25tZW50ICJNb2JpbGUgQXBwIERldmVsb3BtZW50IiB7CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJEZXZlbG9wZXIgTGFwdG9wIiAgewogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRldmVsb3BtZW50IGVudmlyb21lbnQiICIiICJBbmRyb2lkIFN0dWRpbyBvciBJbnRlbGxpaiBJZGVhIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgbW9iaWxlQXBwCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRNQyBkZXZlbG9wIiAiIiAiRE1DIGRldmVsb3BtZW50IGluZnJhc3RydWN0dXJlIiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRE1DIGRldiBzZXJ2ZXIiICIiICJVYnVudHUgMjAuMDQgTFRTIiAgewogICAgICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJQSFAiICIiICJQSFAgOC4wLioiIHsKICAgICAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugc2VydmVyCiAgICAgICAgICAgICAgICAgICAgICAgIGRhdGFNID0gY29udGFpbmVySW5zdGFuY2UgZGF0YQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJETUMgZGV2IGRhdGEiICIiICJVYnVudHUgMjAuMDQgTFRTIiAgewogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJNeVNRTCBEQiIgIiIgIk15U1FMIDguMC4qIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGRiCiAgICAgICAgICAgICAgICAgICAgICAgIHN0dWJNID0gaW5mcmFzdHJ1Y3R1cmVOb2RlICJFeHRlcm5hbCBEQnMgUHJvdmlkZXIiICJXb3JrcyBhcyBhIHN0dWIgb2YgZW1wbG95ZWVzIGFuZCBkZXBhcnRtZW50cyBjYXRhbG9nIiAiTXlTUUwiICJJbmZyYXN0cnVjdHVyZSIKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZGF0YU0gLT4gc3R1Yk0gIkFjY2Vzc2VzIGV4dGVybmFsIGRldmVsb3BtZW50IGRhdGEgZnJvbSIKICAgICAgICB9CgogICAgICAgIGRlcGxveW1lbnRFbnZpcm9ubWVudCAiRGVza3RvcCBBcHAgRGV2ZWxvcG1lbnQiIHsKICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRldmVsb3BlciBMYXB0b3AiICIiICJXaW5kb3dzIG9yIExpbnV4IiAgewogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgZGVza3RvcEFwcAogICAgICAgICAgICB9CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJETUMgZGV2ZWxvcCIgIiIgIkRNQyBkZXZlbG9wbWVudCBpbmZyYXN0cnVjdHVyZSIgewogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRNQyBkZXYgc2VydmVyIiAiIiAiVWJ1bnR1IDIwLjA0IExUUyIgIHsKICAgICAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiUEhQIiAiIiAiUEhQIDguMC4qIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIHNlcnZlcgogICAgICAgICAgICAgICAgICAgICAgICBkYXRhRCA9IGNvbnRhaW5lckluc3RhbmNlIGRhdGEKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRE1DIGRldiBkYXRhIiAiIiAiVWJ1bnR1IDIwLjA0IExUUyIgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiTXlTUUwgREIiICIiICJNeVNRTCA4LjAuKiIgewogICAgICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBkYgogICAgICAgICAgICAgICAgICAgICAgICBzdHViRCA9IGluZnJhc3RydWN0dXJlTm9kZSAiRXh0ZXJuYWwgREJzIFByb3ZpZGVyIiAiV29ya3MgYXMgYSBzdHViIG9mIGVtcGxveWVlcyBhbmQgZGVwYXJ0bWVudHMgY2F0YWxvZyIgIk15U1FMIiAiSW5mcmFzdHJ1Y3R1cmUiCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGRhdGFEIC0+IHN0dWJEICJBY2Nlc3NlcyBleHRlcm5hbCBkZXZlbG9wbWVudCBkYXRhIGZyb20iCiAgICAgICAgfQogICAgfQogICAgCiAgICB2aWV3cyB7CiAgICAgICAgCiAgICAgICAgc3lzdGVtQ29udGV4dCBkb2N0b3JNb25pdG9yaW5nICJkb2N0b3JNb25pdG9yaW5nU3lzdGVtQ29udGV4dERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgZG9jdG9yTW9uaXRvcmluZyAiZG9jdG9yTW9uaXRvcmluZ0NvbnRhaW5lckRpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgbW9iaWxlQXBwICJtb2JpbGVBcHBDb21wb25lbnREaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGRlc2t0b3BBcHAgImRlc2t0b3BBcHBDb21wb25lbnREaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IHNlcnZlciAic2VydmVyQ29tcG9uZW50RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBkYXRhICJkYXRhQ29tcG9uZW50RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGRlcGxveW1lbnQgZG9jdG9yTW9uaXRvcmluZyAiTGl2ZSIgIkxpdmVfRGVwbG95bWVudCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgZXhjbHVkZSBtb2JpbGVBcHAgLT4gc2VydmVyCiAgICAgICAgICAgIGV4Y2x1ZGUgZGVza3RvcEFwcCAtPiBzZXJ2ZXIKICAgICAgICB9CgogICAgICAgIGRlcGxveW1lbnQgZG9jdG9yTW9uaXRvcmluZyAiTW9iaWxlIEFwcCBEZXZlbG9wbWVudCIgIk1vYmlsZV9BcHBfRGV2ZWxvcG1lbnRfRGVwbG95bWVudCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGRlcGxveW1lbnQgZG9jdG9yTW9uaXRvcmluZyAiRGVza3RvcCBBcHAgRGV2ZWxvcG1lbnQiICJEZXNrdG9wX0FwcF9EZXZlbG9wbWVudF9EZXBsb3ltZW50IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyAqICJNb25pdG9yaW5nX1N5c3RlbV9EeW5hbWljX1ZpZXciICJEb2N0b3IgTW9uaXRvcmluZyBTeXN0ZW0gU2NlbmFyaW8gLSBTb2Z0d2FyZSBTeXN0ZW0gRHluYW1pY3MiICB7CiAgICAgICAgICAgIGVtcGxveWVlIC0+IGRvY3Rvck1vbml0b3JpbmcgIkxvb2tzIGZvciBvdGhlciBlbXBsb3llZSBieSIKICAgICAgICAgICAgZG9jdG9yTW9uaXRvcmluZyAtPiBkZXBhcnRtZW50c0NhdGFsb2cKICAgICAgICAgICAgZG9jdG9yTW9uaXRvcmluZyAtPiBlbXBsb3llZXNDYXRhbG9nCiAgICAgICAgfQoKICAgICAgICBkeW5hbWljIGRvY3Rvck1vbml0b3JpbmcgIk1vbml0b3JpbmdfQ29udGFpbmVyX0R5bmFtaWNfVmlldyIgIkRvY3RvciBNb25pdG9yaW5nIFN5c3RlbSBTY2VuYXJpbyAtIENvbnRhaW5lciBEeW5hbWljcyIgIHsKICAgICAgICAgICAgZW1wbG95ZWUgLT4gbW9iaWxlQXBwICJMb29rcyBmb3Igb3RoZXIgZW1wbG95ZWVzIGJ5IgogICAgICAgICAgICBtb2JpbGVBcHAgLT4gc2VydmVyCiAgICAgICAgICAgIHNlcnZlciAtPiBkYXRhCiAgICAgICAgICAgIGRhdGEgLT4gZGVwYXJ0bWVudHNDYXRhbG9nCiAgICAgICAgICAgIGRhdGEgLT4gZW1wbG95ZWVzQ2F0YWxvZwogICAgICAgICAgICBzZXJ2ZXIgLT4gbW9iaWxlQXBwCiAgICAgICAgfQoKICAgICAgICB0aGVtZSBkZWZhdWx0CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIkV4aXN0aW5nIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn0K"
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "32",
+      "tags" : "Element,Person,Employee",
+      "name" : "Employee",
+      "description" : "Hospital employee within hospital network who needs to contact doctors from various purposes",
+      "relationships" : [ {
+        "id" : "38",
+        "tags" : "Relationship",
+        "sourceId" : "32",
+        "destinationId" : "10",
+        "description" : "Access system functionality from computer"
+      }, {
+        "id" : "37",
+        "tags" : "Relationship",
+        "sourceId" : "32",
+        "destinationId" : "2",
+        "description" : "Access system functionality from smartphone"
+      }, {
+        "id" : "33",
+        "tags" : "Relationship",
+        "sourceId" : "32",
+        "destinationId" : "1",
+        "description" : "Interacts with other employees in"
+      }, {
+        "id" : "58",
+        "tags" : "Relationship",
+        "sourceId" : "32",
+        "destinationId" : "11",
+        "description" : "Uses app functions by"
+      }, {
+        "id" : "45",
+        "tags" : "Relationship",
+        "sourceId" : "32",
+        "destinationId" : "3",
+        "description" : "Uses app functions by"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "1",
+      "tags" : "Element,Software System",
+      "name" : "Doctor Monitoring System (DMC)",
+      "description" : "Provides doctor monitoring system and secure encrypted instant messaging between employees",
+      "relationships" : [ {
+        "id" : "34",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "30",
+        "description" : "Reads data about doctors from"
+      }, {
+        "id" : "35",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "31",
+        "description" : "Reads data about departments from"
+      } ],
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "2",
+        "tags" : "Element,Container",
+        "name" : "DMC Mobile App",
+        "description" : "Provides all functionality for doctor monitoring and instant messaging via mobile app",
+        "relationships" : [ {
+          "id" : "39",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "18",
+          "description" : "Uses to deliver functionality"
+        }, {
+          "id" : "71",
+          "tags" : "Relationship",
+          "sourceId" : "2",
+          "destinationId" : "20",
+          "description" : "Delivers encrypted request to"
+        } ],
+        "components" : [ {
+          "id" : "5",
+          "tags" : "Element,Component",
+          "name" : "Doctor monitoring handler",
+          "description" : "Validates data from user and process data from server into desired format",
+          "relationships" : [ {
+            "id" : "53",
+            "tags" : "Relationship",
+            "sourceId" : "5",
+            "destinationId" : "7",
+            "description" : "Encode doctors monitoring updates with"
+          }, {
+            "id" : "51",
+            "tags" : "Relationship",
+            "sourceId" : "5",
+            "destinationId" : "6",
+            "description" : "Sends system notifications by"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "6",
+          "tags" : "Element,Component",
+          "name" : "Notification handler",
+          "description" : "Component responsible for proper notification sending",
+          "relationships" : [ {
+            "id" : "49",
+            "tags" : "Relationship",
+            "sourceId" : "6",
+            "destinationId" : "3",
+            "description" : "Uses to display notifications to user"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "3",
+          "tags" : "Element,Component",
+          "name" : "User interface handler",
+          "description" : "Handles all user actions and calls responsible components",
+          "relationships" : [ {
+            "id" : "47",
+            "tags" : "Relationship",
+            "sourceId" : "3",
+            "destinationId" : "4",
+            "description" : "Uses to evaluate messaging actions"
+          }, {
+            "id" : "48",
+            "tags" : "Relationship",
+            "sourceId" : "3",
+            "destinationId" : "5",
+            "description" : "Uses to evaluate doctor monitoring actions"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "7",
+          "tags" : "Element,Component",
+          "name" : "Data encoder",
+          "description" : "Encodes data which user wants to send to server",
+          "relationships" : [ {
+            "id" : "56",
+            "tags" : "Relationship",
+            "sourceId" : "7",
+            "destinationId" : "9",
+            "description" : "Sends data to server by"
+          } ],
+          "group" : "Server connection providers",
+          "size" : 0
+        }, {
+          "id" : "9",
+          "tags" : "Element,Component",
+          "name" : "Server stub",
+          "description" : "Provides communication with server",
+          "relationships" : [ {
+            "id" : "57",
+            "tags" : "Relationship",
+            "sourceId" : "9",
+            "destinationId" : "8",
+            "description" : "Provides data from server to"
+          }, {
+            "id" : "46",
+            "tags" : "Relationship",
+            "sourceId" : "9",
+            "destinationId" : "18",
+            "description" : "Comunicates with"
+          } ],
+          "group" : "Server connection providers",
+          "size" : 0
+        }, {
+          "id" : "4",
+          "tags" : "Element,Component",
+          "name" : "Messaging handler",
+          "description" : "Provides message history, sends and receive messages",
+          "relationships" : [ {
+            "id" : "50",
+            "tags" : "Relationship",
+            "sourceId" : "4",
+            "destinationId" : "6",
+            "description" : "Sends system notifications by"
+          }, {
+            "id" : "52",
+            "tags" : "Relationship",
+            "sourceId" : "4",
+            "destinationId" : "7",
+            "description" : "Encode messages with"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "8",
+          "tags" : "Element,Component",
+          "name" : "Data decoder",
+          "description" : "Decodes data which user received from server",
+          "relationships" : [ {
+            "id" : "55",
+            "tags" : "Relationship",
+            "sourceId" : "8",
+            "destinationId" : "5",
+            "description" : "Provides decoded doctors monitoring history to"
+          }, {
+            "id" : "54",
+            "tags" : "Relationship",
+            "sourceId" : "8",
+            "destinationId" : "4",
+            "description" : "Provides decoded incoming messages to"
+          } ],
+          "group" : "Server connection providers",
+          "size" : 0
+        } ]
+      }, {
+        "id" : "18",
+        "tags" : "Element,Container",
+        "name" : "DMC Server",
+        "description" : "Implements application security and all business functionality for doctor monitoring and instant messaging",
+        "relationships" : [ {
+          "id" : "76",
+          "tags" : "Relationship",
+          "sourceId" : "18",
+          "destinationId" : "10",
+          "description" : "Delivers encrypted repsponse to"
+        }, {
+          "id" : "41",
+          "tags" : "Relationship",
+          "sourceId" : "18",
+          "destinationId" : "24",
+          "description" : "Uses to acquire data"
+        }, {
+          "id" : "84",
+          "tags" : "Relationship",
+          "sourceId" : "18",
+          "destinationId" : "25",
+          "description" : "Uses to choose correct data source"
+        }, {
+          "id" : "74",
+          "tags" : "Relationship",
+          "sourceId" : "18",
+          "destinationId" : "2",
+          "description" : "Delivers encrypted response to"
+        } ],
+        "components" : [ {
+          "id" : "23",
+          "tags" : "Element,Component",
+          "name" : "Monitoring logic",
+          "description" : "Implements own doctor monitoring business logic",
+          "relationships" : [ {
+            "id" : "83",
+            "tags" : "Relationship",
+            "sourceId" : "23",
+            "destinationId" : "20",
+            "description" : "Uses to encrypt response"
+          }, {
+            "id" : "81",
+            "tags" : "Relationship",
+            "sourceId" : "23",
+            "destinationId" : "24",
+            "description" : "Requests data from"
+          } ],
+          "group" : "Business logic implementation",
+          "size" : 0
+        }, {
+          "id" : "22",
+          "tags" : "Element,Component",
+          "name" : "Messaging logic",
+          "description" : "Implements own instant messaging business logic",
+          "relationships" : [ {
+            "id" : "82",
+            "tags" : "Relationship",
+            "sourceId" : "22",
+            "destinationId" : "19",
+            "description" : "Uses to encrypt response"
+          }, {
+            "id" : "80",
+            "tags" : "Relationship",
+            "sourceId" : "22",
+            "destinationId" : "24",
+            "description" : "Requests data from"
+          } ],
+          "group" : "Business logic implementation",
+          "size" : 0
+        }, {
+          "id" : "21",
+          "tags" : "Element,Component",
+          "name" : "Request resolver",
+          "description" : "Resolves request and chooses responsible business logic module",
+          "relationships" : [ {
+            "id" : "79",
+            "tags" : "Relationship",
+            "sourceId" : "21",
+            "destinationId" : "23",
+            "description" : "Uses to evaluate request"
+          }, {
+            "id" : "78",
+            "tags" : "Relationship",
+            "sourceId" : "21",
+            "destinationId" : "22",
+            "description" : "Uses to evaluate request"
+          } ],
+          "group" : "Business logic implementation",
+          "size" : 0
+        }, {
+          "id" : "19",
+          "tags" : "Element,Component",
+          "name" : "Data encoder",
+          "description" : "Encodes data which server wants to send to user",
+          "relationships" : [ {
+            "id" : "73",
+            "tags" : "Relationship",
+            "sourceId" : "19",
+            "destinationId" : "2",
+            "description" : "Delivers encrypted response to"
+          }, {
+            "id" : "75",
+            "tags" : "Relationship",
+            "sourceId" : "19",
+            "destinationId" : "10",
+            "description" : "Delivers encrypted repsponse to"
+          } ],
+          "group" : "Data encryption",
+          "size" : 0
+        }, {
+          "id" : "20",
+          "tags" : "Element,Component",
+          "name" : "Data decoder",
+          "description" : "Decodes data which server received from user",
+          "relationships" : [ {
+            "id" : "77",
+            "tags" : "Relationship",
+            "sourceId" : "20",
+            "destinationId" : "21",
+            "description" : "Uses to choose responsible module"
+          } ],
+          "group" : "Data encryption",
+          "size" : 0
+        } ]
+      }, {
+        "id" : "29",
+        "tags" : "Element,Container",
+        "name" : "Data Storage",
+        "description" : "Storage of messages and other internally needed data"
+      }, {
+        "id" : "24",
+        "tags" : "Element,Container",
+        "name" : "Data Collector",
+        "description" : "Provides uniform data access point and collects requested data from different sources",
+        "relationships" : [ {
+          "id" : "43",
+          "tags" : "Relationship",
+          "sourceId" : "24",
+          "destinationId" : "30",
+          "description" : "Reads employees data from"
+        }, {
+          "id" : "44",
+          "tags" : "Relationship",
+          "sourceId" : "24",
+          "destinationId" : "31",
+          "description" : "Reads departments data from"
+        }, {
+          "id" : "42",
+          "tags" : "Relationship",
+          "sourceId" : "24",
+          "destinationId" : "29",
+          "description" : "Reads internal data from"
+        } ],
+        "components" : [ {
+          "id" : "27",
+          "tags" : "Element,Component",
+          "name" : "Employees reader",
+          "description" : "Reads data from employees catalog",
+          "relationships" : [ {
+            "id" : "88",
+            "tags" : "Relationship",
+            "sourceId" : "27",
+            "destinationId" : "30",
+            "description" : "Requests external data from"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "28",
+          "tags" : "Element,Component",
+          "name" : "Internal data reader",
+          "description" : "Reads internally stored data",
+          "relationships" : [ {
+            "id" : "90",
+            "tags" : "Relationship",
+            "sourceId" : "28",
+            "destinationId" : "29",
+            "description" : "Reads internal data"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "25",
+          "tags" : "Element,Component",
+          "name" : "Data source resolver",
+          "description" : "Resolves data source for request",
+          "relationships" : [ {
+            "id" : "87",
+            "tags" : "Relationship",
+            "sourceId" : "25",
+            "destinationId" : "26",
+            "description" : "Reads data by"
+          }, {
+            "id" : "86",
+            "tags" : "Relationship",
+            "sourceId" : "25",
+            "destinationId" : "27",
+            "description" : "Reads data by"
+          }, {
+            "id" : "85",
+            "tags" : "Relationship",
+            "sourceId" : "25",
+            "destinationId" : "28",
+            "description" : "Reads data by"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "26",
+          "tags" : "Element,Component",
+          "name" : "Departments reader",
+          "description" : "Reads data from departments catalog",
+          "relationships" : [ {
+            "id" : "89",
+            "tags" : "Relationship",
+            "sourceId" : "26",
+            "destinationId" : "31",
+            "description" : "Requests external data from"
+          } ],
+          "size" : 0
+        } ]
+      }, {
+        "id" : "10",
+        "tags" : "Element,Container",
+        "name" : "DMC Desktop App",
+        "description" : "Provides all functionality for doctor monitoring and instant messaging via desktop app",
+        "relationships" : [ {
+          "id" : "72",
+          "tags" : "Relationship",
+          "sourceId" : "10",
+          "destinationId" : "20",
+          "description" : "Delivers encrypted request to"
+        }, {
+          "id" : "40",
+          "tags" : "Relationship",
+          "sourceId" : "10",
+          "destinationId" : "18",
+          "description" : "Uses to deliver functionality"
+        } ],
+        "components" : [ {
+          "id" : "15",
+          "tags" : "Element,Component",
+          "name" : "Data encoder",
+          "description" : "Encodes data which user wants to send to server",
+          "relationships" : [ {
+            "id" : "69",
+            "tags" : "Relationship",
+            "sourceId" : "15",
+            "destinationId" : "17",
+            "description" : "Sends data to server by"
+          } ],
+          "group" : "Server connection providers",
+          "size" : 0
+        }, {
+          "id" : "13",
+          "tags" : "Element,Component",
+          "name" : "Doctor monitoring handler",
+          "description" : "Validates data from user and process data from server into desired format",
+          "relationships" : [ {
+            "id" : "64",
+            "tags" : "Relationship",
+            "sourceId" : "13",
+            "destinationId" : "14",
+            "description" : "Sends system notifications by"
+          }, {
+            "id" : "66",
+            "tags" : "Relationship",
+            "sourceId" : "13",
+            "destinationId" : "15",
+            "description" : "Encode doctors monitoring updates with"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "14",
+          "tags" : "Element,Component",
+          "name" : "Notification handler",
+          "description" : "Component responsible for proper notification sending",
+          "relationships" : [ {
+            "id" : "62",
+            "tags" : "Relationship",
+            "sourceId" : "14",
+            "destinationId" : "11",
+            "description" : "Uses to display notifications to user"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "17",
+          "tags" : "Element,Component",
+          "name" : "Server stub",
+          "description" : "Provides communication with server",
+          "relationships" : [ {
+            "id" : "70",
+            "tags" : "Relationship",
+            "sourceId" : "17",
+            "destinationId" : "16",
+            "description" : "Provides data from server to"
+          }, {
+            "id" : "59",
+            "tags" : "Relationship",
+            "sourceId" : "17",
+            "destinationId" : "18",
+            "description" : "Comunicates with"
+          } ],
+          "group" : "Server connection providers",
+          "size" : 0
+        }, {
+          "id" : "11",
+          "tags" : "Element,Component",
+          "name" : "User interface handler",
+          "description" : "Handles all user actions and calls responsible components",
+          "relationships" : [ {
+            "id" : "60",
+            "tags" : "Relationship",
+            "sourceId" : "11",
+            "destinationId" : "12",
+            "description" : "Uses to evaluate messaging actions"
+          }, {
+            "id" : "61",
+            "tags" : "Relationship",
+            "sourceId" : "11",
+            "destinationId" : "13",
+            "description" : "Uses to evaluate doctor monitoring actions"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        }, {
+          "id" : "16",
+          "tags" : "Element,Component",
+          "name" : "Data decoder",
+          "description" : "Decodes data which user received from server",
+          "relationships" : [ {
+            "id" : "68",
+            "tags" : "Relationship",
+            "sourceId" : "16",
+            "destinationId" : "13",
+            "description" : "Provides decoded doctors monitoring history to"
+          }, {
+            "id" : "67",
+            "tags" : "Relationship",
+            "sourceId" : "16",
+            "destinationId" : "12",
+            "description" : "Provides decoded incoming messages to"
+          } ],
+          "group" : "Server connection providers",
+          "size" : 0
+        }, {
+          "id" : "12",
+          "tags" : "Element,Component",
+          "name" : "Messaging handler",
+          "description" : "Provides message history, sends and receive messages",
+          "relationships" : [ {
+            "id" : "63",
+            "tags" : "Relationship",
+            "sourceId" : "12",
+            "destinationId" : "14",
+            "description" : "Sends system notifications by"
+          }, {
+            "id" : "65",
+            "tags" : "Relationship",
+            "sourceId" : "12",
+            "destinationId" : "15",
+            "description" : "Encode messages with"
+          } ],
+          "group" : "User interface",
+          "size" : 0
+        } ]
+      } ]
+    }, {
+      "id" : "30",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Employees Catalog",
+      "description" : "Hospital software system which provides information about employees",
+      "relationships" : [ {
+        "id" : "36",
+        "tags" : "Relationship",
+        "sourceId" : "30",
+        "destinationId" : "31",
+        "description" : "Reads data about departments from"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "31",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Departments Catalog",
+      "description" : "Hospital software system which provides information about departments",
+      "location" : "Unspecified"
+    } ],
+    "deploymentNodes" : [ {
+      "id" : "137",
+      "tags" : "Element,Deployment Node",
+      "name" : "DMC develop",
+      "environment" : "Desktop App Development",
+      "technology" : "DMC development infrastructure",
+      "instances" : 1,
+      "children" : [ {
+        "id" : "138",
+        "tags" : "Element,Deployment Node",
+        "name" : "DMC dev server",
+        "environment" : "Desktop App Development",
+        "technology" : "Ubuntu 20.04 LTS",
+        "instances" : 1,
+        "children" : [ {
+          "id" : "139",
+          "tags" : "Element,Deployment Node",
+          "name" : "PHP",
+          "environment" : "Desktop App Development",
+          "technology" : "PHP 8.0.*",
+          "instances" : 1,
+          "containerInstances" : [ {
+            "id" : "143",
+            "tags" : "Container Instance",
+            "relationships" : [ {
+              "id" : "148",
+              "sourceId" : "143",
+              "destinationId" : "147",
+              "description" : "Reads internal data from",
+              "linkedRelationshipId" : "42"
+            }, {
+              "id" : "150",
+              "tags" : "Relationship",
+              "sourceId" : "143",
+              "destinationId" : "149",
+              "description" : "Accesses external development data from"
+            } ],
+            "environment" : "Desktop App Development",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "24"
+          }, {
+            "id" : "140",
+            "tags" : "Container Instance",
+            "relationships" : [ {
+              "id" : "144",
+              "sourceId" : "140",
+              "destinationId" : "143",
+              "description" : "Uses to acquire data",
+              "linkedRelationshipId" : "41"
+            }, {
+              "id" : "141",
+              "sourceId" : "140",
+              "destinationId" : "136",
+              "description" : "Delivers encrypted repsponse to",
+              "linkedRelationshipId" : "76"
+            } ],
+            "environment" : "Desktop App Development",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "18"
+          } ]
+        } ]
+      }, {
+        "id" : "145",
+        "tags" : "Element,Deployment Node",
+        "name" : "DMC dev data",
+        "environment" : "Desktop App Development",
+        "technology" : "Ubuntu 20.04 LTS",
+        "instances" : 1,
+        "children" : [ {
+          "id" : "146",
+          "tags" : "Element,Deployment Node",
+          "name" : "MySQL DB",
+          "environment" : "Desktop App Development",
+          "technology" : "MySQL 8.0.*",
+          "instances" : 1,
+          "infrastructureNodes" : [ {
+            "id" : "149",
+            "tags" : "Element,Infrastructure Node,Infrastructure",
+            "name" : "External DBs Provider",
+            "description" : "Works as a stub of employees and departments catalog",
+            "environment" : "Desktop App Development",
+            "technology" : "MySQL"
+          } ],
+          "containerInstances" : [ {
+            "id" : "147",
+            "tags" : "Container Instance",
+            "environment" : "Desktop App Development",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "29"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "93",
+      "tags" : "Element,Deployment Node",
+      "name" : "Computer",
+      "environment" : "Live",
+      "technology" : "Microsoft Windows or Linux",
+      "instances" : 1,
+      "containerInstances" : [ {
+        "id" : "94",
+        "tags" : "Container Instance",
+        "relationships" : [ {
+          "id" : "101",
+          "sourceId" : "94",
+          "destinationId" : "99",
+          "description" : "Uses to deliver functionality",
+          "linkedRelationshipId" : "40"
+        }, {
+          "id" : "116",
+          "tags" : "Relationship",
+          "sourceId" : "94",
+          "destinationId" : "97",
+          "description" : "Sends request to server throught"
+        } ],
+        "environment" : "Live",
+        "deploymentGroups" : [ "Default" ],
+        "instanceId" : 1,
+        "containerId" : "10"
+      } ]
+    }, {
+      "id" : "95",
+      "tags" : "Element,Deployment Node",
+      "name" : "Hospital server",
+      "environment" : "Live",
+      "technology" : "Ubuntu 20.04 LTS",
+      "instances" : 1,
+      "children" : [ {
+        "id" : "109",
+        "tags" : "Element,Deployment Node",
+        "name" : "External hospital data",
+        "environment" : "Live",
+        "instances" : 1,
+        "softwareSystemInstances" : [ {
+          "id" : "112",
+          "tags" : "Software System Instance",
+          "environment" : "Live",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "softwareSystemId" : "31"
+        }, {
+          "id" : "110",
+          "tags" : "Software System Instance",
+          "relationships" : [ {
+            "id" : "114",
+            "sourceId" : "110",
+            "destinationId" : "112",
+            "description" : "Reads data about departments from",
+            "linkedRelationshipId" : "36"
+          } ],
+          "environment" : "Live",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "softwareSystemId" : "30"
+        } ]
+      }, {
+        "id" : "98",
+        "tags" : "Element,Deployment Node",
+        "name" : "PHP 8.0.*",
+        "environment" : "Live",
+        "technology" : "PHP",
+        "instances" : 1,
+        "containerInstances" : [ {
+          "id" : "99",
+          "tags" : "Container Instance",
+          "relationships" : [ {
+            "id" : "102",
+            "sourceId" : "99",
+            "destinationId" : "92",
+            "description" : "Delivers encrypted response to",
+            "linkedRelationshipId" : "74"
+          }, {
+            "id" : "105",
+            "sourceId" : "99",
+            "destinationId" : "104",
+            "description" : "Uses to acquire data",
+            "linkedRelationshipId" : "41"
+          }, {
+            "id" : "100",
+            "sourceId" : "99",
+            "destinationId" : "94",
+            "description" : "Delivers encrypted repsponse to",
+            "linkedRelationshipId" : "76"
+          } ],
+          "environment" : "Live",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "18"
+        }, {
+          "id" : "104",
+          "tags" : "Container Instance",
+          "relationships" : [ {
+            "id" : "113",
+            "sourceId" : "104",
+            "destinationId" : "112",
+            "description" : "Reads departments data from",
+            "linkedRelationshipId" : "44"
+          }, {
+            "id" : "111",
+            "sourceId" : "104",
+            "destinationId" : "110",
+            "description" : "Reads employees data from",
+            "linkedRelationshipId" : "43"
+          }, {
+            "id" : "108",
+            "sourceId" : "104",
+            "destinationId" : "107",
+            "description" : "Reads internal data from",
+            "linkedRelationshipId" : "42"
+          } ],
+          "environment" : "Live",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "24"
+        } ]
+      }, {
+        "id" : "106",
+        "tags" : "Element,Deployment Node",
+        "name" : "MySQL DB",
+        "environment" : "Live",
+        "technology" : "MySQL 8.0.*",
+        "instances" : 1,
+        "containerInstances" : [ {
+          "id" : "107",
+          "tags" : "Container Instance",
+          "environment" : "Live",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "29"
+        } ]
+      }, {
+        "id" : "96",
+        "tags" : "Element,Deployment Node",
+        "name" : "Firewall",
+        "environment" : "Live",
+        "instances" : 1,
+        "infrastructureNodes" : [ {
+          "id" : "97",
+          "tags" : "Element,Infrastructure Node",
+          "name" : "Gate",
+          "description" : "Allows only communication from hospital network",
+          "relationships" : [ {
+            "id" : "117",
+            "tags" : "Relationship",
+            "sourceId" : "97",
+            "destinationId" : "99",
+            "description" : "Delivers request from internal network to"
+          } ],
+          "environment" : "Live"
+        } ]
+      } ]
+    }, {
+      "id" : "121",
+      "tags" : "Element,Deployment Node",
+      "name" : "DMC develop",
+      "environment" : "Mobile App Development",
+      "technology" : "DMC development infrastructure",
+      "instances" : 1,
+      "children" : [ {
+        "id" : "122",
+        "tags" : "Element,Deployment Node",
+        "name" : "DMC dev server",
+        "environment" : "Mobile App Development",
+        "technology" : "Ubuntu 20.04 LTS",
+        "instances" : 1,
+        "children" : [ {
+          "id" : "123",
+          "tags" : "Element,Deployment Node",
+          "name" : "PHP",
+          "environment" : "Mobile App Development",
+          "technology" : "PHP 8.0.*",
+          "instances" : 1,
+          "containerInstances" : [ {
+            "id" : "127",
+            "tags" : "Container Instance",
+            "relationships" : [ {
+              "id" : "134",
+              "tags" : "Relationship",
+              "sourceId" : "127",
+              "destinationId" : "133",
+              "description" : "Accesses external development data from"
+            }, {
+              "id" : "132",
+              "sourceId" : "127",
+              "destinationId" : "131",
+              "description" : "Reads internal data from",
+              "linkedRelationshipId" : "42"
+            } ],
+            "environment" : "Mobile App Development",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "24"
+          }, {
+            "id" : "124",
+            "tags" : "Container Instance",
+            "relationships" : [ {
+              "id" : "125",
+              "sourceId" : "124",
+              "destinationId" : "120",
+              "description" : "Delivers encrypted response to",
+              "linkedRelationshipId" : "74"
+            }, {
+              "id" : "128",
+              "sourceId" : "124",
+              "destinationId" : "127",
+              "description" : "Uses to acquire data",
+              "linkedRelationshipId" : "41"
+            } ],
+            "environment" : "Mobile App Development",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "18"
+          } ]
+        } ]
+      }, {
+        "id" : "129",
+        "tags" : "Element,Deployment Node",
+        "name" : "DMC dev data",
+        "environment" : "Mobile App Development",
+        "technology" : "Ubuntu 20.04 LTS",
+        "instances" : 1,
+        "children" : [ {
+          "id" : "130",
+          "tags" : "Element,Deployment Node",
+          "name" : "MySQL DB",
+          "environment" : "Mobile App Development",
+          "technology" : "MySQL 8.0.*",
+          "instances" : 1,
+          "infrastructureNodes" : [ {
+            "id" : "133",
+            "tags" : "Element,Infrastructure Node,Infrastructure",
+            "name" : "External DBs Provider",
+            "description" : "Works as a stub of employees and departments catalog",
+            "environment" : "Mobile App Development",
+            "technology" : "MySQL"
+          } ],
+          "containerInstances" : [ {
+            "id" : "131",
+            "tags" : "Container Instance",
+            "environment" : "Mobile App Development",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "29"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "135",
+      "tags" : "Element,Deployment Node",
+      "name" : "Developer Laptop",
+      "environment" : "Desktop App Development",
+      "technology" : "Windows or Linux",
+      "instances" : 1,
+      "containerInstances" : [ {
+        "id" : "136",
+        "tags" : "Container Instance",
+        "relationships" : [ {
+          "id" : "142",
+          "sourceId" : "136",
+          "destinationId" : "140",
+          "description" : "Uses to deliver functionality",
+          "linkedRelationshipId" : "40"
+        } ],
+        "environment" : "Desktop App Development",
+        "deploymentGroups" : [ "Default" ],
+        "instanceId" : 1,
+        "containerId" : "10"
+      } ]
+    }, {
+      "id" : "91",
+      "tags" : "Element,Deployment Node",
+      "name" : "Mobile device",
+      "environment" : "Live",
+      "technology" : "Android 8.0 or newer",
+      "instances" : 1,
+      "containerInstances" : [ {
+        "id" : "92",
+        "tags" : "Container Instance",
+        "relationships" : [ {
+          "id" : "115",
+          "tags" : "Relationship",
+          "sourceId" : "92",
+          "destinationId" : "97",
+          "description" : "Sends request to server throught"
+        }, {
+          "id" : "103",
+          "sourceId" : "92",
+          "destinationId" : "99",
+          "description" : "Uses to deliver functionality",
+          "linkedRelationshipId" : "39"
+        } ],
+        "environment" : "Live",
+        "deploymentGroups" : [ "Default" ],
+        "instanceId" : 1,
+        "containerId" : "2"
+      } ]
+    }, {
+      "id" : "118",
+      "tags" : "Element,Deployment Node",
+      "name" : "Developer Laptop",
+      "environment" : "Mobile App Development",
+      "instances" : 1,
+      "children" : [ {
+        "id" : "119",
+        "tags" : "Element,Deployment Node",
+        "name" : "Development enviroment",
+        "environment" : "Mobile App Development",
+        "technology" : "Android Studio or Intellij Idea",
+        "instances" : 1,
+        "containerInstances" : [ {
+          "id" : "120",
+          "tags" : "Container Instance",
+          "relationships" : [ {
+            "id" : "126",
+            "sourceId" : "120",
+            "destinationId" : "124",
+            "description" : "Uses to deliver functionality",
+            "linkedRelationshipId" : "39"
+          } ],
+          "environment" : "Mobile App Development",
+          "deploymentGroups" : [ "Default" ],
+          "instanceId" : 1,
+          "containerId" : "2"
+        } ]
+      } ]
+    } ]
+  },
+  "documentation" : {
+    "sections" : [ {
+      "elementId" : "1",
+      "title" : "Views",
+      "order" : 3,
+      "format" : "Markdown",
+      "content" : "## Views\n\n### How are the views documented?\n\nThe software architecture of NODC is further documented according to \nthe [C4 model](https://c4model.com/) using its 2 levels - \n[container](https://c4model.com/#ContainerDiagram) level and \n[component](https://c4model.com/#ComponentDiagram) level. The documentation \nalso uses supplementary diagrams - \n[deployment diagrams](https://c4model.com/#DeploymentDiagram) and \n[dynamic diagrams](https://c4model.com/#DynamicDiagram).\n\n### DMC Decomposition View\n\nDMC business functionality is implemented by the DMC Server container. Human \nusers interact with mobile or desktop application provided by DMC Mobile App or \nDMC Desktop app container respectively. The server container uses two \nsupplemental containers Data Collector and Data Storage for collecting external \nand storing internal data respectivelly.\n\n![](embed:doctorMonitoringContainerDiagram)\n\n### DMC Mobile App and Desktop App Decomposition Views\n\nDMC Client Apps (Mobile App and Desktop app) has very similar decomposition and \nonly technologies used differ, so this description applies to both diagrams.\n\nClient apps internal architecture comprises 2 layers:\n- User Interface layer provides user friendly interface for users on thier \nmobile devices and commputers.\n- Server Connection Providers layer provides data encryption, decription and \nalso secure connection to server instance itself.\n\n#### Mobile Component Diagram\n\n![](embed:mobileAppComponentDiagram)\n\n#### Desktop Component Diagram\n\n![](embed:desktopAppComponentDiagram)\n\n### DMC Server Decomposition Views\n\nServer internal architecture comprises 2 layers:\n- Data Encryption layer provides data encryption and decryption\n- Business Logic layer provides implementation of business logic\n\n![](embed:serverComponentDiagram)\n\n### DMC Data Collector Decomposition Views\n\nIs responsible for collecting data from different data sources.\n\n![](embed:dataComponentDiagram)\n\n### DMC Deployments\n\nThere exist various DMC deployment environments.\n\n#### DMC Live Deployment\n\nThis deployment is the desired production environment of DMC.\n\n![](embed:Live_Deployment)\n\n#### DMC Mobile App Development Deployment\n\nThis deployment is mandatory for all DMC Mobile App developers and their unit tests.\n\n![](embed:Mobile_App_Development_Deployment)\n\n#### DMC Mobile App Development Deployment\n\nThis deployment is mandatory for all DMC Desktop App developers and their unit tests.\n\n![](embed:Desktop_App_Development_Deployment)\n"
+    }, {
+      "elementId" : "1",
+      "title" : "Context",
+      "order" : 2,
+      "format" : "Markdown",
+      "content" : "## Context\n\nDMC monitors current location of all medical personal in hospital and provides \nthem with secure encoded instant messaging system. DMC software uses other \nhospital software systems to acquire data about employees and departments.\n\nThe described DMC context is displayed on the following \n[C4 model](https://c4model.com/) \n[software system](https://c4model.com/#SystemContextDiagram) diagram.\n\n![](embed:doctorMonitoringSystemContextDiagram)\n"
+    }, {
+      "elementId" : "1",
+      "title" : "Roadmap",
+      "order" : 1,
+      "format" : "Markdown",
+      "content" : "## Roadmap\n\nThis document describes the architecture of the Doctor Monitoring System (DMC).\nIt is intended primarily for the DMS development team and secondary for \nthe development teams of other hospital development systems.\n"
+    } ]
+  },
+  "views" : {
+    "systemContextViews" : [ {
+      "softwareSystemId" : "1",
+      "key" : "doctorMonitoringSystemContextDiagram",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 2480,
+        "height" : 1748
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1015,
+        "y" : 695
+      }, {
+        "id" : "30",
+        "x" : 1825,
+        "y" : 270
+      }, {
+        "id" : "31",
+        "x" : 1835,
+        "y" : 1090
+      }, {
+        "id" : "32",
+        "x" : 165,
+        "y" : 650
+      } ],
+      "relationships" : [ {
+        "id" : "36"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "33"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "softwareSystemId" : "1",
+      "key" : "doctorMonitoringContainerDiagram",
+      "dimensions" : {
+        "width" : 3754,
+        "height" : 1888
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "2",
+        "x" : 813,
+        "y" : 219
+      }, {
+        "id" : "24",
+        "x" : 2403,
+        "y" : 750
+      }, {
+        "id" : "18",
+        "x" : 1503,
+        "y" : 750
+      }, {
+        "id" : "29",
+        "x" : 2408,
+        "y" : 1295
+      }, {
+        "id" : "30",
+        "x" : 3104,
+        "y" : 1299
+      }, {
+        "id" : "31",
+        "x" : 3099,
+        "y" : 229
+      }, {
+        "id" : "32",
+        "x" : 199,
+        "y" : 694
+      }, {
+        "id" : "10",
+        "x" : 808,
+        "y" : 1279
+      } ],
+      "relationships" : [ {
+        "id" : "37"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "40"
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "44"
+      }, {
+        "id" : "38"
+      }, {
+        "id" : "39"
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "dataComponentDiagram",
+      "dimensions" : {
+        "width" : 3470,
+        "height" : 1665
+      },
+      "containerId" : "24",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "25",
+        "x" : 1040,
+        "y" : 644
+      }, {
+        "id" : "26",
+        "x" : 1980,
+        "y" : 299
+      }, {
+        "id" : "27",
+        "x" : 1980,
+        "y" : 639
+      }, {
+        "id" : "28",
+        "x" : 1980,
+        "y" : 994
+      }, {
+        "id" : "29",
+        "x" : 2820,
+        "y" : 1165
+      }, {
+        "id" : "18",
+        "x" : 200,
+        "y" : 639
+      }, {
+        "id" : "30",
+        "x" : 2815,
+        "y" : 775
+      }, {
+        "id" : "31",
+        "x" : 2810,
+        "y" : 200
+      } ],
+      "relationships" : [ {
+        "id" : "86"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "87"
+      }, {
+        "id" : "84"
+      }, {
+        "id" : "85"
+      }, {
+        "id" : "88"
+      }, {
+        "id" : "89"
+      }, {
+        "id" : "90"
+      } ]
+    }, {
+      "key" : "mobileAppComponentDiagram",
+      "dimensions" : {
+        "width" : 5085,
+        "height" : 2528
+      },
+      "containerId" : "2",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "3",
+        "x" : 1030,
+        "y" : 1104
+      }, {
+        "id" : "4",
+        "x" : 1891,
+        "y" : 220
+      }, {
+        "id" : "5",
+        "x" : 1886,
+        "y" : 1935
+      }, {
+        "id" : "6",
+        "x" : 1892,
+        "y" : 1094
+      }, {
+        "id" : "18",
+        "x" : 4435,
+        "y" : 1094
+      }, {
+        "id" : "7",
+        "x" : 2650,
+        "y" : 764
+      }, {
+        "id" : "8",
+        "x" : 2655,
+        "y" : 1429
+      }, {
+        "id" : "9",
+        "x" : 3525,
+        "y" : 1104
+      }, {
+        "id" : "32",
+        "x" : 200,
+        "y" : 1059
+      } ],
+      "relationships" : [ {
+        "id" : "50"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "49"
+      } ]
+    }, {
+      "key" : "serverComponentDiagram",
+      "dimensions" : {
+        "width" : 3624,
+        "height" : 1856
+      },
+      "containerId" : "18",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "22",
+        "x" : 2059,
+        "y" : 239
+      }, {
+        "id" : "23",
+        "x" : 2059,
+        "y" : 1179
+      }, {
+        "id" : "24",
+        "x" : 2974,
+        "y" : 729
+      }, {
+        "id" : "2",
+        "x" : 199,
+        "y" : 494
+      }, {
+        "id" : "19",
+        "x" : 1079,
+        "y" : 244
+      }, {
+        "id" : "20",
+        "x" : 1079,
+        "y" : 1189
+      }, {
+        "id" : "10",
+        "x" : 199,
+        "y" : 939
+      }, {
+        "id" : "21",
+        "x" : 2059,
+        "y" : 709
+      } ],
+      "relationships" : [ {
+        "id" : "82"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "80"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "81"
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "73"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "77"
+      }, {
+        "id" : "79"
+      } ]
+    }, {
+      "key" : "desktopAppComponentDiagram",
+      "dimensions" : {
+        "width" : 5019,
+        "height" : 2502
+      },
+      "containerId" : "10",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 974,
+        "y" : 1054
+      }, {
+        "id" : "12",
+        "x" : 1849,
+        "y" : 219
+      }, {
+        "id" : "13",
+        "x" : 1844,
+        "y" : 1909
+      }, {
+        "id" : "14",
+        "x" : 1844,
+        "y" : 1054
+      }, {
+        "id" : "15",
+        "x" : 2654,
+        "y" : 734
+      }, {
+        "id" : "16",
+        "x" : 2659,
+        "y" : 1389
+      }, {
+        "id" : "17",
+        "x" : 3474,
+        "y" : 1044
+      }, {
+        "id" : "18",
+        "x" : 4369,
+        "y" : 1034
+      }, {
+        "id" : "32",
+        "x" : 199,
+        "y" : 1014
+      } ],
+      "relationships" : [ {
+        "id" : "70"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "69"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "59"
+      } ]
+    } ],
+    "dynamicViews" : [ {
+      "description" : "Doctor Monitoring System Scenario - Software System Dynamics",
+      "key" : "Monitoring_System_Dynamic_View",
+      "dimensions" : {
+        "width" : 2705,
+        "height" : 1225
+      },
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "33",
+        "description" : "Looks for other employee by",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "35",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "34",
+        "order" : "3",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1090,
+        "y" : 460
+      }, {
+        "id" : "30",
+        "x" : 2055,
+        "y" : 725
+      }, {
+        "id" : "31",
+        "x" : 2050,
+        "y" : 200
+      }, {
+        "id" : "32",
+        "x" : 200,
+        "y" : 406
+      } ]
+    }, {
+      "description" : "Doctor Monitoring System Scenario - Container Dynamics",
+      "key" : "Monitoring_Container_Dynamic_View",
+      "dimensions" : {
+        "width" : 3476,
+        "height" : 1561
+      },
+      "elementId" : "1",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "37",
+        "description" : "Looks for other employees by",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "39",
+        "order" : "2",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1741,
+          "y" : 855
+        } ]
+      }, {
+        "id" : "41",
+        "order" : "3",
+        "response" : false
+      }, {
+        "id" : "44",
+        "order" : "4",
+        "response" : false
+      }, {
+        "id" : "43",
+        "order" : "5",
+        "response" : false
+      }, {
+        "id" : "74",
+        "order" : "6",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1736,
+          "y" : 1265
+        } ]
+      } ],
+      "elements" : [ {
+        "id" : "2",
+        "x" : 1065,
+        "y" : 927
+      }, {
+        "id" : "24",
+        "x" : 1981,
+        "y" : 220
+      }, {
+        "id" : "18",
+        "x" : 1981,
+        "y" : 940
+      }, {
+        "id" : "30",
+        "x" : 2821,
+        "y" : 956
+      }, {
+        "id" : "31",
+        "x" : 2826,
+        "y" : 215
+      }, {
+        "id" : "32",
+        "x" : 200,
+        "y" : 882
+      } ]
+    } ],
+    "deploymentViews" : [ {
+      "softwareSystemId" : "1",
+      "key" : "Desktop_App_Development_Deployment",
+      "dimensions" : {
+        "width" : 3780,
+        "height" : 1464
+      },
+      "environment" : "Desktop App Development",
+      "elements" : [ {
+        "id" : "143",
+        "x" : 2054,
+        "y" : 504
+      }, {
+        "id" : "145",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "135",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "146",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "136",
+        "x" : 299,
+        "y" : 514
+      }, {
+        "id" : "147",
+        "x" : 2979,
+        "y" : 684
+      }, {
+        "id" : "137",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "138",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "149",
+        "x" : 2979,
+        "y" : 349
+      }, {
+        "id" : "139",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "140",
+        "x" : 1259,
+        "y" : 509
+      } ],
+      "relationships" : [ {
+        "id" : "141",
+        "vertices" : [ {
+          "x" : 1003,
+          "y" : 511
+        } ]
+      }, {
+        "id" : "142",
+        "vertices" : [ {
+          "x" : 1004,
+          "y" : 811
+        } ]
+      }, {
+        "id" : "150"
+      }, {
+        "id" : "144"
+      }, {
+        "id" : "148"
+      } ]
+    }, {
+      "softwareSystemId" : "1",
+      "key" : "Live_Deployment",
+      "dimensions" : {
+        "width" : 3750,
+        "height" : 2276
+      },
+      "environment" : "Live",
+      "elements" : [ {
+        "id" : "99",
+        "x" : 1260,
+        "y" : 970
+      }, {
+        "id" : "110",
+        "x" : 3000,
+        "y" : 1290
+      }, {
+        "id" : "112",
+        "x" : 3000,
+        "y" : 655
+      }, {
+        "id" : "104",
+        "x" : 2129,
+        "y" : 974
+      }, {
+        "id" : "106",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "91",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "107",
+        "x" : 2135,
+        "y" : 1590
+      }, {
+        "id" : "92",
+        "x" : 250,
+        "y" : 295
+      }, {
+        "id" : "93",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "109",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "94",
+        "x" : 265,
+        "y" : 960
+      }, {
+        "id" : "95",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "96",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "97",
+        "x" : 1260,
+        "y" : 300
+      }, {
+        "id" : "98",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "relationships" : [ {
+        "id" : "108"
+      }, {
+        "id" : "100"
+      }, {
+        "id" : "111"
+      }, {
+        "id" : "102"
+      }, {
+        "id" : "113"
+      }, {
+        "id" : "115"
+      }, {
+        "id" : "114"
+      }, {
+        "id" : "117"
+      }, {
+        "id" : "116"
+      }, {
+        "id" : "105"
+      } ]
+    }, {
+      "softwareSystemId" : "1",
+      "key" : "Mobile_App_Development_Deployment",
+      "dimensions" : {
+        "width" : 3839,
+        "height" : 1463
+      },
+      "environment" : "Mobile App Development",
+      "elements" : [ {
+        "id" : "130",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "120",
+        "x" : 350,
+        "y" : 546
+      }, {
+        "id" : "131",
+        "x" : 3040,
+        "y" : 685
+      }, {
+        "id" : "121",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "122",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "133",
+        "x" : 3035,
+        "y" : 350
+      }, {
+        "id" : "123",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "124",
+        "x" : 1340,
+        "y" : 545
+      }, {
+        "id" : "127",
+        "x" : 2140,
+        "y" : 535
+      }, {
+        "id" : "118",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "129",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "119",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "relationships" : [ {
+        "id" : "134"
+      }, {
+        "id" : "132"
+      }, {
+        "id" : "128"
+      }, {
+        "id" : "125"
+      }, {
+        "id" : "126"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Existing System",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "lastSavedView" : "Monitoring_Container_Dynamic_View"
+    }
+  }
+}

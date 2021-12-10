@@ -1,0 +1,7 @@
+# Structurizr
+.structurizr/
+c4-language-server.log
+
+# Enviroment specific
+.vscode/
+run
