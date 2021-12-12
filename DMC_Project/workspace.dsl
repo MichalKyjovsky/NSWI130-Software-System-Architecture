@@ -31,7 +31,8 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
             }
 
             server = container "DMC Server" "Implements application security and all business functionality for doctor monitoring and instant messaging" {
-                group "Data encryption" {
+                healthCheck = component "Health check endpoint" "Returns whether the server is alive or not"
+		        group "Data encryption" {
                     dataEncoderS = component "Data encoder" "Encodes data which server wants to send to user"
                     dataDecoderS = component "Data decoder" "Decodes data which server received from user"
                 }
@@ -41,13 +42,19 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                     monitoringLogic = component "Monitoring logic" "Implements own doctor monitoring business logic"
                 }
             }
+	    
+  	    loadBalancer = container "Load Balancer" "" {
+	    	requestHandler = component "Request handler" "Resolves which server will handle the request"
+		    healthChecker = component "Health checker" "Checks whether server is alive or not"
+		    serverRestarter = component "Server restarter" "Starts a new container with server if any of servers is down"
+	    }
 
             data = container "Data Collector" "Provides uniform data access point and collects requested data from different sources" {
                 sourceResolver = component "Data source resolver" "Resolves data source for request"
                 departmentsReader = component "Departments reader" "Reads data from departments catalog"
                 employeesReader = component "Employees reader" "Reads data from employees catalog"
                 internalReader = component "Internal data reader" "Reads internally stored data"
-            }
+            }	    
 
             db = container "Data Storage" "Storage of messages and other internally needed data"
 
@@ -72,8 +79,8 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
         employee -> mobileApp "Access system functionality from smartphone"
         employee -> desktopApp "Access system functionality from computer"
 
-        mobileApp -> server "Uses to deliver functionality"
-        desktopApp -> server "Uses to deliver functionality"
+        mobileApp -> loadBalancer "Uses to deliver functionality through"
+        desktopApp -> loadBalancer "Uses to deliver functionality through"
 
         server -> data "Uses to acquire data"
 
@@ -81,9 +88,12 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
         data -> employeesCatalog "Reads employees data from"
         data -> departmentsCatalog "Reads departments data from"
 
+        loadBalancer -> server "Checks whether server is alive"
+        loadBalancer -> server "Delivers encrypted request to"
+
         # relationships to/from mobile app components
         employee -> uiHandlerM "Uses app functions by"
-        serverStubM -> server "Comunicates with"
+        serverStubM -> loadBalancer "Comunicates with"
 
         uiHandlerM -> messagingHandlerM "Uses to evaluate messaging actions"
         uiHandlerM -> monitoringHandlerM "Uses to evaluate doctor monitoring actions"
@@ -102,7 +112,7 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
 
         # relationships to/from desktop app components
         employee -> uiHandlerD "Uses app functions by"
-        serverStubD -> server "Comunicates with"
+        serverStubD -> loadBalancer "Comunicates with"
 
         uiHandlerD -> messagingHandlerD "Uses to evaluate messaging actions"
         uiHandlerD -> monitoringHandlerD "Uses to evaluate doctor monitoring actions"
@@ -120,11 +130,15 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
         serverStubD -> dataDecoderD "Provides data from server to"
 
         # relationships to/from server components
-        mobileApp -> dataDecoderS "Delivers encrypted request to"
-        desktopApp -> dataDecoderS "Delivers encrypted request to"
+        mobileApp -> requestHandler "Delivers encrypted request through"
+        desktopApp -> requestHandler "Delivers encrypted request through"
 
-        dataEncoderS -> mobileApp "Delivers encrypted response to"
-        dataEncoderS -> desktopApp "Delivers encrypted repsponse to"
+        requestHandler -> dataDecoderS "Delivers encrypted request to"
+        
+        dataEncoderS -> requestHandler "Delivers encrypted response through"
+
+        requestHandler -> mobileApp "Delivers encrypted response to"
+        requestHandler -> desktopApp "Delivers encrypted response to"
 
         dataDecoderS -> requestResolver "Uses to choose responsible module"
         requestResolver -> messagingLogic "Uses to evaluate request"
@@ -135,6 +149,9 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
 
         messagingLogic -> dataEncoderS "Uses to encrypt response"
         monitoringLogic -> dataDecoderS "Uses to encrypt response"
+
+        healthChecker -> healthCheck "Checks whether server is alive"
+        healthChecker -> serverRestarter "Triggers new server instance creation"
 
         # relationships to/from data components
         server -> sourceResolver "Uses to choose correct data source"
@@ -147,7 +164,7 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
         departmentsReader -> departmentsCatalog "Requests external data from"
         internalReader -> db "Reads internal data"
 
-        deploymentEnvironment "Live"   {
+        deploymentEnvironment "Live" {
             deploymentNode "Mobile device" "" "Android 8.0 or newer"  {
                 mobile = containerInstance mobileApp
             }
@@ -159,7 +176,10 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                 deploymentNode "Firewall" {
                     firewall = infrastructureNode "Gate" "Allows only communication from hospital network"
                 }
-                deploymentNode "PHP 8.0.*" "" "PHP" {
+                deploymentNode "nginx" "" "" "" "1" {
+                    balancer = containerInstance loadBalancer
+                }
+                deploymentNode "PHP 8.0.*" "" "PHP" "" "4" {
                     liveServer = containerInstance server
                     containerInstance data
                 }
@@ -171,9 +191,13 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                     softwareSystemInstance departmentsCatalog
                 }
             }
-            mobile -> firewall "Sends request to server throught"
-            desktop -> firewall "Sends request to server throught"
-            firewall -> liveServer "Delivers request from internal network to"
+            mobile -> firewall "Sends request to server through"
+            desktop -> firewall "Sends request to server through"
+            firewall -> balancer "Delivers request from internal network through"
+            balancer -> firewall "Delivers response through"
+            firewall -> mobile "Delivers response"
+            firewall -> desktop "Delivers response"
+
         }
 
         deploymentEnvironment "Mobile App Development" {
@@ -188,6 +212,10 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                         containerInstance server
                         dataM = containerInstance data
                     }
+                    deploymentNode "nginx" "" "" "" "1" {
+                        containerInstance loadBalancer
+                    }
+
                 }
                 deploymentNode "DMC dev data" "" "Ubuntu 20.04 LTS"  {
                     
@@ -209,6 +237,9 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                     deploymentNode "PHP" "" "PHP 8.0.*" {
                         containerInstance server
                         dataD = containerInstance data
+                    }
+                    deploymentNode "nginx" "" "" "" "1" {
+                        containerInstance loadBalancer
                     }
                 }
                 deploymentNode "DMC dev data" "" "Ubuntu 20.04 LTS"  {
@@ -241,6 +272,10 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
             include *
         }
 
+        component loadBalancer "loadBalancerComponentDiagram" {
+            include *
+        }
+
         component server "serverComponentDiagram" {
             include *
         }
@@ -251,8 +286,10 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
 
         deployment doctorMonitoring "Live" "Live_Deployment" {
             include *
-            exclude mobileApp -> server
-            exclude desktopApp -> server
+            exclude mobileApp -> loadBalancer
+            exclude desktopApp -> loadBalancer
+            exclude loadBalancer -> mobileApp
+            exclude loadBalancer -> desktopApp
         }
 
         deployment doctorMonitoring "Mobile App Development" "Mobile_App_Development_Deployment" {
@@ -271,11 +308,13 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
 
         dynamic doctorMonitoring "Monitoring_Container_Dynamic_View" "Doctor Monitoring System Scenario - Container Dynamics"  {
             employee -> mobileApp "Looks for other employees by"
-            mobileApp -> server
+            mobileApp -> loadBalancer
+            loadBalancer -> server
             server -> data
             data -> departmentsCatalog
             data -> employeesCatalog
-            server -> mobileApp
+            server -> loadBalancer
+            loadBalancer -> mobileApp
         }
 
         theme default
