@@ -70,7 +70,7 @@ below further categorizes the requirements of the particular QA, so the roadmap 
       </tr>
       <tr>
           <th>Stimulus</th>
-          <td>Send message to a colleague</td>
+          <td>100 users sends a message to a colleague during interval of 5 seconds</td>
       </tr>
       <tr>
           <th>Artifact</th>
@@ -82,7 +82,7 @@ below further categorizes the requirements of the particular QA, so the roadmap 
       </tr>
       <tr>
           <th>Response</th>
-          <td>Message sent and delivered</td>
+          <td>All messages sent and delivered</td>
       </tr>
       <tr>
           <th>Measure</th>
@@ -116,7 +116,7 @@ below further categorizes the requirements of the particular QA, so the roadmap 
       </tr>
       <tr>
           <th>Stimulus</th>
-          <td>Monitor colleague's actions</td>
+          <td>Monitoring actions of 100 employees during interval of 5 seconds</td>
       </tr>
       <tr>
           <th>Artifact</th>
@@ -194,6 +194,7 @@ below further categorizes the requirements of the particular QA, so the roadmap 
     </table>
 
 - <b>Requirement Scenario - Security of messages</b>
+    
     <table>
         <tr>
             <th>Source of Stimulus</th>
