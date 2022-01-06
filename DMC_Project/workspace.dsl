@@ -57,6 +57,7 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
             }	    
 
             db = container "Data Storage" "Storage of messages and other internally needed data"
+            catalogCache = container "Catalog Cache" "Storage for cached data from employees and department catalogs"
 
             !docs docs
         }
@@ -85,8 +86,9 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
         server -> data "Uses to acquire data"
 
         data -> db "Reads internal data from"
-        data -> employeesCatalog "Reads employees data from"
-        data -> departmentsCatalog "Reads departments data from"
+        data -> catalogCache "Reads cached data from"
+        catalogCache -> employeesCatalog "Reads employees data from"
+        catalogCache -> departmentsCatalog "Reads departments data from"
 
         loadBalancer -> server "Checks whether server is alive"
         loadBalancer -> server "Delivers encrypted request to"
@@ -160,8 +162,8 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
         sourceResolver -> employeesReader "Reads data by"
         sourceResolver -> departmentsReader "Reads data by"
         
-        employeesReader -> employeesCatalog "Requests external data from"
-        departmentsReader -> departmentsCatalog "Requests external data from"
+        employeesReader -> catalogCache "Requests employee data from" 
+        departmentsReader -> catalogCache "Requests department data from" 
         internalReader -> db "Reads internal data"
 
         deploymentEnvironment "Live" {
@@ -185,6 +187,7 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                 }
                 deploymentNode "MySQL DB" "" "MySQL 8.0.*" {
                     containerInstance db
+                    containerInstance catalogCache
                 }
                 deploymentNode "External hospital data"    {
                     softwareSystemInstance employeesCatalog
@@ -221,11 +224,12 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                     
                     deploymentNode "MySQL DB" "" "MySQL 8.0.*" {
                         containerInstance db
+                        cacheM = containerInstance catalogCache
                         stubM = infrastructureNode "External DBs Provider" "Works as a stub of employees and departments catalog" "MySQL" "Infrastructure"
                     }
                 }
             }
-            dataM -> stubM "Accesses external development data from"
+            cacheM -> stubM "Accesses external development data from"
         }
 
         deploymentEnvironment "Desktop App Development" {
@@ -246,11 +250,12 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
                     
                     deploymentNode "MySQL DB" "" "MySQL 8.0.*" {
                         containerInstance db
+                        cacheD = containerInstance catalogCache
                         stubD = infrastructureNode "External DBs Provider" "Works as a stub of employees and departments catalog" "MySQL" "Infrastructure"
                     }
                 }
             }
-            dataD -> stubD "Accesses external development data from"
+            cacheD -> stubD "Accesses external development data from"
         }
     }
     
@@ -311,8 +316,9 @@ workspace "Hospital Software Systems" "This workspace documents architecture of 
             mobileApp -> loadBalancer
             loadBalancer -> server
             server -> data
-            data -> departmentsCatalog
-            data -> employeesCatalog
+            data -> catalogCache
+            catalogCache -> departmentsCatalog
+            catalogCache -> employeesCatalog
             server -> loadBalancer
             loadBalancer -> mobileApp
         }
